@@ -2,20 +2,21 @@
 import webbrowser
 import requests
 
-answer=int(input ("How many houses do you have?"))
+answer=int(input ("How many houses do you have? "))
 if answer <= 10:
     print ("Number of houses: {}".format(answer) + " , that's a lot!")
 else:
     print ("Number of houses: over 10? That's a lot!")
 
-print ("enter your name!")
+print ("enter your name! ")
 y = input()
 print("your name is..." + y)
 
-
-list = input("How much would you like to count?")
-for i in range:
-    print(list)
+##For some reason this counter is broken. Does not do what I want it to do
+##why is that?..
+list = input("How much would you like to count? ")
+for i in list:
+    print(i)
 
 #The code below can be used to open Slack download page
 #webbrowser.open('http://slack.com/download')

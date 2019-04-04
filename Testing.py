@@ -101,7 +101,7 @@ for letter in mystring:
 #    print(x)
 
 #Practicing printing out index location using enumerate()
-inWord = 'abcdefghi'
+inWord = 'abcdefghijklmnop'
 
 for item in enumerate(inWord):
     print(item)

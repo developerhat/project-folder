@@ -101,10 +101,9 @@ for letter in mystring:
 #    print(x)
 
 #Practicing printing out index location using enumerate()
-inWord = 'abcdefghijklmnop'
+inWord = 'abcdefghijklmnopqrs'
 
 for item in enumerate(inWord):
     print(item)
-    print('\n')
 
 #The above code prints out index locations & releases it on tuple format

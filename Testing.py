@@ -107,4 +107,7 @@ for item in enumerate(inWord):
     print(item)
     print('\n')
 
+
+print("If you're reading this, I'm better at source control!")
+
 #The above code prints out index locations & releases it on tuple format

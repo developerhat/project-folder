@@ -115,9 +115,37 @@ new_list2 = ['a', 'b', 'c', 'd']
 for item in zip(new_list, new_list2):
     print(item)
 
-list_test = []
 
+list_test = []
+#This will take the user input, and store iterable values in a list
 for letter in mystring:
     list_test.append(letter)
 
 print(list_test)
+
+#Here, we are running the above code in ONE LINE! Crazy
+#new_list3 = [x for x in 'Word!']
+
+#print(new_list3)
+
+#Here we only print even numbers
+for num in my_list:
+    if num%2==0:
+        print(num)
+
+#Coding problem from Github assessment project
+
+for num in range(1, 101):
+    if num%3 == 0 and num%5 == 0:
+        print('FizzBuzz!')
+    elif num%3 ==0:
+        print('Fizz')
+    elif num%5 ==0:
+        print('Buzz')
+    else:
+        print(num)
+
+st = 'Create a list of the first letters of every word in this string'
+#Printing only the letters that start with each letter
+for word in st.split():
+    print(word[0])

@@ -110,7 +110,14 @@ for item in enumerate(inWord):
 #Practice using zip() function
 
 new_list = [1, 2, 3]
-new_list2 = ['a', 'b', 'c']
+new_list2 = ['a', 'b', 'c', 'd']
 
 for item in zip(new_list, new_list2):
     print(item)
+
+list_test = []
+
+for letter in mystring:
+    list_test.append(letter)
+
+print(list_test)

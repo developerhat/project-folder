@@ -149,3 +149,10 @@ st = 'Create a list of the first letters of every word in this string'
 #Printing only the letters that start with each letter
 for word in st.split():
     print(word[0])
+
+userInput = str(input("What's your name?"))
+
+def testing(userInput):
+    print("Hello!", userInput)
+
+testing(userInput)

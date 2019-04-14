@@ -2,8 +2,8 @@
 
 import os.path
 
-myAge, myName = 20, "Patrick";
-print("Hello, I am " + str(myAge) + " and my name is " + myName);
+#myAge, myName = 20, "Patrick";
+#print("Hello, I am " + str(myAge) + " and my name is " + myName);
 
 my_list = [50, 48, 92, 21, 23, 45, 43, 41]
 #my_list[0] = 55
@@ -49,28 +49,27 @@ with open('myfile.txt', mode ='r') as myfile:
 #    f.write('FOUR on FOURTH!!!')
 
 
-with open('my_new_file.txt', mode = 'r') as f:
-        print(f.read())
+#with open('my_new_file.txt', mode = 'r') as f:
+#        print(f.read())
 
-with open('TESTIIIING.txt', mode ='w') as f:
-    f.write('This file was created by me \n')
-    f.write('This is a 2nd line')
+#with open('TESTIIIING.txt', mode ='w') as f:
+#    f.write('This file was created by me \n')
+#    f.write('This is a 2nd line')
 
 
-with open('TESTIIIING.txt', mode ='r') as d:
-    print(d.read())
+#with open('TESTIIIING.txt', mode ='r') as d:
+#    print(d.read())
 
 #Using Else at the end of the conditional to request for users name & store input
+#name = "Patrick"
 
-name = "Patrick"
-
-if name == 'Michael':
-    print ("Hey Michael!")
-elif name == 'Patrick':
-    print("Hey Patrick!")
-else:
-    userName = input("What is your name?")
-    print("Hey there " + userName)
+#if name == 'Michael':
+#    print ("Hey Michael!")
+#elif name == 'Patrick':
+#    print("Hey Patrick!")
+#else:
+#    userName = input("What is your name?")
+#    print("Hey there " + userName)
 
 #Playing w loops to print all iterable items in my list
 #for i in my_list:
@@ -135,38 +134,38 @@ for num in my_list:
 
 #Coding problem from Github assessment project
 
-for num in range(1, 101):
-    if num%3 == 0 and num%5 == 0:
-        print('FizzBuzz!')
-    elif num%3 ==0:
-        print('Fizz')
-    elif num%5 ==0:
-        print('Buzz')
-    else:
-        print(num)
+#for num in range(1, 101):
+#    if num%3 == 0 and num%5 == 0:
+#        print('FizzBuzz!')
+#    elif num%3 ==0:
+#        print('Fizz')
+#    elif num%5 ==0:
+#        print('Buzz')
+#    else:
+#        print(num)
 
 st = 'Create a list of the first letters of every word in this string'
 #Printing only the letters that start with each letter
 for word in st.split():
     print(word[0])
 
-userInput = str(input("What's your name?"))
+#userInput = str(input("What's your name?"))
 
-def testing(userInput):
-    return "Hello!", userInput
+#def testing(userInput):
+#    return "Hello!", userInput
 #Use return when working with functions in order to RETURN the output of program
-testing(userInput)
+#testing(userInput)
 
-result = testing('HI')
+#result = testing('HI')
 
 def add(n1, n2):
     return n1+n2
 
 numResult = add(20,30)
 
-print(numResult)
+#print(numResult)
 
-urString = str(input("Give me dog input!"))
+urString = str(input("Pig latin conversion: "))
 
 
 def dog_check(mystring):
@@ -175,4 +174,17 @@ def dog_check(mystring):
     else:
         return False
 #Here we are using the dog check function to check if user input string has "dog" in it
-print(dog_check(urString))
+#print(dog_check(urString))
+
+def pig_latin(word):
+
+    first_letter = word[0]
+    #check for vowel
+    if first_letter in 'aeiou':
+        pig_word = word + 'ay'
+    else:
+        pig_word = word[1:] + first_letter + 'ay'
+
+    return pig_word
+
+print(pig_latin(urString))

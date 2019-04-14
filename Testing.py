@@ -153,6 +153,26 @@ for word in st.split():
 userInput = str(input("What's your name?"))
 
 def testing(userInput):
-    print("Hello!", userInput)
-
+    return "Hello!", userInput
+#Use return when working with functions in order to RETURN the output of program
 testing(userInput)
+
+result = testing('HI')
+
+def add(n1, n2):
+    return n1+n2
+
+numResult = add(20,30)
+
+print(numResult)
+
+urString = str(input("Give me dog input!"))
+
+
+def dog_check(mystring):
+    if 'dog' in mystring.lower():
+        return True
+    else:
+        return False
+#Here we are using the dog check function to check if user input string has "dog" in it
+print(dog_check(urString))

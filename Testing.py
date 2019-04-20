@@ -188,3 +188,7 @@ def pig_latin(word):
     return pig_word
 
 print(pig_latin(urString))
+
+
+def myfunc(*args):
+    return sum(args) * 0.05

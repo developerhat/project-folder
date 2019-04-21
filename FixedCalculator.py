@@ -42,5 +42,6 @@ elif choice == '3':
 
 elif choice == '4':
   print(num1,"/",num2,"=", division(num1,num2))
+
 else:
   print("Invalid input")

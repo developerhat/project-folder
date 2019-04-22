@@ -188,3 +188,17 @@ def pig_latin(word):
     return pig_word
 
 print(pig_latin(urString))
+
+#Function below will take an argument and return back sum multiplied by .5
+def myfunc1(*args):
+    return sum(args) * 0.05
+
+#The code below will return only even numbers
+def myfunc(*args):
+    mylist = []
+    for num in args:
+        if num%2==0:
+            mylist.append(num)
+    return mylist
+
+print(myfunc(2,3,4,5,6,10))

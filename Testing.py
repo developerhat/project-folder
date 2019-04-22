@@ -202,3 +202,11 @@ def myfunc(*args):
     return mylist
 
 print(myfunc(2,3,4,5,6,10))
+
+def lesser_of_two_evens(a,b):
+    #Both numbers even below
+    if a%2 == 0 and b%2 == 0:
+        return min(a,b)
+    else:
+        #One or both numbers odd
+        return max(a,b)

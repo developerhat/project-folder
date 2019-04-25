@@ -210,3 +210,21 @@ def lesser_of_two_evens(a,b):
     else:
         #One or both numbers odd
         return max(a,b)
+
+def animal_crackers(a):
+    wordlist = a.lower().split()
+    #Using double index calls to shorten code
+    return wordlist[0][0] == wordlist[1][0]
+
+print(animal_crackers("doop DI!"))
+
+#Function below used to check if sum of both numbers or one number is 20
+def makes_twenty(n1,n2):
+    if n1 + n2 == 20:
+        return True
+    elif n1 == 20:
+        return True
+    elif n2 == 20:
+        return True
+    else:
+        return False

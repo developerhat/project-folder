@@ -202,3 +202,12 @@ def myfunc(*args):
     return mylist
 
 print(myfunc(2,3,4,5,6,10))
+
+#This function below can determine whether or not 2 words have the same first letter. Returns boolean
+def animal_crackers(a):
+    wordlist = a.lower().split()
+    first = wordlist[0]
+    second = wordlist[1]
+    return first[0] == second[0]
+
+print(animal_crackers('f Foo!'))

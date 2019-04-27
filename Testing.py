@@ -241,6 +241,15 @@ print(animal_crackers('f Foo!'))
 
 def old_macdonald(name):
     fourth_letter = name[3].upper()
+    inbetween = name[1:3]
     first_letter = name[0].upper()
+    rest = name[4:]
 
-    return name
+    return first_letter + inbetween + fourth_letter + rest
+
+
+def master_yoda(a):
+    wordlist = a.split()
+    reverse_wordlist = wordlist[::-1]
+
+    return ' '.join(reverse_wordlist)

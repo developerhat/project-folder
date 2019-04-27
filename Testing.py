@@ -237,3 +237,10 @@ def animal_crackers(a):
     return first[0] == second[0]
 
 print(animal_crackers('f Foo!'))
+
+
+def old_macdonald(name):
+    fourth_letter = name[3].upper()
+    first_letter = name[0].upper()
+
+    return name

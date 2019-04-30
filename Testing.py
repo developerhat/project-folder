@@ -253,3 +253,6 @@ def master_yoda(a):
     reverse_wordlist = wordlist[::-1]
 
     return ' '.join(reverse_wordlist)
+
+def almost_there(num3):
+    return (abs(100 - num3) <=10) or (abs(200-num3) <=10)

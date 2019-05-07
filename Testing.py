@@ -277,3 +277,18 @@ def blackjack(a,b,c):
         return sum([a,b,c]) - 10
     else:
         return 'BUST'
+#Checks whether or not a number is 10, or sum is 10
+#Logic is broken, when entering 2,5 it returns true
+def makes10(a, b):
+  if a or b == 10:
+    return True
+  elif a + b == 10:
+    return True
+  elif a or b > 10:
+    return False
+  elif a + b > 10:
+    return False
+  elif a + b < 10:
+    return False
+#Why is this shit broken?!?! This returns true only while testing3 returns false only
+#Fixed it in testing3.py, check it out!

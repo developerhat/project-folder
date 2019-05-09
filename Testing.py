@@ -268,3 +268,26 @@ def paper_doll(text):
     for char in text:
         textResult += char*3
     return textResult
+
+def blackjack(a,b,c):
+    if a+b+c <= 21:
+        return sum([a,b,c]) #Need to use a list to call a,b,c because regular (a,b,c)does not work
+    elif 11 in ([a,b,c]) and sum([a,b,c]) <= 31:
+        return sum([a,b,c]) - 10
+    else:
+        return 'BUST'
+#Checks whether or not a number is 10, or sum is 10
+#Logic is broken, when entering 2,5 it returns true
+def makes10(a, b):
+  if a or b == 10:
+    return True
+  elif a + b == 10:
+    return True
+  elif a or b > 10:
+    return False
+  elif a + b > 10:
+    return False
+  elif a + b < 10:
+    return False
+#Why is this shit broken?!?! This returns true only while testing3 returns false only
+#Fixed it in testing3.py, check it out!

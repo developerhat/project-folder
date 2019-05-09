@@ -2,8 +2,7 @@
 
 import os.path
 
-#myAge, myName = 20, "Patrick";
-#print("Hello, I am " + str(myAge) + " and my name is " + myName);
+#myAge = int(input('How old are you?'))
 
 my_list = [50, 48, 92, 21, 23, 45, 43, 41]
 #my_list[0] = 55

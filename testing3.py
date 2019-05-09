@@ -104,6 +104,7 @@ def make_out_word(out, word):
     word_end = word
 #can't get through this problem. Coding bat string-1 make_out_word problem
 
+#Coding bat logic-1 problem
 def caught_speeding(speed):
     if speed < 60:
         return 0
@@ -113,3 +114,83 @@ def caught_speeding(speed):
         return 1
     elif speed < 80:
         return 1
+
+#Coding bat problem logic-1
+def love6(a,b):
+    if a or b == 6:
+        return True
+    elif a + b == 6:
+        return True
+    elif a - b == 6:
+        return True
+
+#Codingbat logic-1 sorta_sum
+def sorta_sum(a,b):
+    if a + b >= 19:
+        return 20
+    elif a + b < 11:
+        return a + b
+
+#My solution below
+#def array_count9(nums):
+#    for i in nums:
+#        if i == 9:
+#            return nums
+
+
+def array_count9(nums):
+    count = 0
+    for num in nums:
+        if num == 9:
+            count = count +1
+
+    return count
+
+
+#From python 3 bootcamp function pracice problems
+
+def count_primes(num):
+
+    if num < 2:
+        return 0
+        #checking to  see if number is 0 or 1, cos they're excluded
+    primes = [2]
+    x = 3
+    #X is going through every number up to input number
+    while x <= num:
+        #check if X is prime
+        for y in range (3, x, 2):
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
+
+#Homework assignment python3 bootcamp course---I GOT IT ON MY OWN!!!!
+def ran_bool(num, low, high):
+    if num in range(low,high):
+        return True
+    else:
+        return False
+#Same here, did this on my own. Gettin it
+def ran_check(num, low, high):
+    if num in range(low,high):
+        print(num, 'is in range of', low, 'and' ,high)
+    else:
+        print('That number not in range')
+
+#Wow! Got this one on my own too!
+def palindrome(s):
+    if s[::-1] == s[::1]:
+        return True
+    else:
+        return False
+
+
+def multiply(numbers):
+    for i in numbers:
+        i *=numbers
+    return numbers

@@ -98,3 +98,18 @@ def sleep_in2(weekday, vacation):
         return True
     else:
         return False
+
+def make_out_word(out, word):
+    string_end = out.split()
+    word_end = word
+#can't get through this problem. Coding bat string-1 make_out_word problem
+
+def caught_speeding(speed):
+    if speed < 60:
+        return 0
+    elif speed > 81:
+        return 2
+    elif speed >= 61:
+        return 1
+    elif speed < 80:
+        return 1

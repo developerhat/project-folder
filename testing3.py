@@ -189,8 +189,62 @@ def palindrome(s):
     else:
         return False
 
-
+#This is my attempt at this
 def multiply(numbers):
     for i in numbers:
         i *=numbers
     return numbers
+
+#This is the answer copied, getting there!
+def multiply(numbers):
+    total = numbers[0]
+    for i in numbers:
+        total *= i
+    return total
+
+#Codingbat string 2, incomplete
+def count_hi(str):
+    hi = 'hi'
+    for hi in str:
+        return num
+
+#Got through this w minimal help! .reverse() method does not work here
+def reverse3(nums):
+    for i in nums:
+        return nums[::-1]
+
+#Oh shit did this all on my own! CodingBat marking as wrong why? Tested works good
+def middle_way(a,b):
+    for i in a,b:
+        return a[1], b[1]
+
+#This worked too, got it down but doesn't work in codingbat
+def same_first_last(nums):
+    if nums[0] == nums[-1]:
+        return True
+    else:
+        return False
+
+#Sum3 can't figure out but seems simple
+def sum3(nums):
+    return nums[0]+nums[1]+nums[3]
+
+#This works, but it never returns false. Why?
+def has23(nums):
+    if 2 or 3 in nums:
+        return True
+    else:
+        return False
+
+#Heyyy this worked! On my own too
+def make_ends(nums):
+    return [nums[0], nums[-1]]
+
+#This works, however the prompt wanted it to be less than 2 add both numbers. Just adding both for this right here.
+def sum2(sums):
+    for i in sums:
+        return sums[0] + sums[1]
+
+#This was ridiculously easy
+def make_pi():
+    return [3,1,4]

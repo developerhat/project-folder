@@ -248,3 +248,31 @@ def sum2(sums):
 #This was ridiculously easy
 def make_pi():
     return [3,1,4]
+
+#Got through this all on my own no help
+def first_two(str):
+    if len(str) <= 2:
+        return str
+    else:
+        return str[0] + str[1]
+
+#Damn! Got through this by myself too! keep workin
+def extra_end(str):
+    return (str[-2] + str[-1])*3
+
+#Got through this too damn!
+def non_start(a, b):
+    return a[1:] + b[1:]
+
+#Almost got this one, but needed some help on it.
+def first_half(str):
+    return str[:len(str) // 2]
+
+
+#String-2 double char CodingBat
+#This is a bit tougher. Getting closer tho esp w for loop
+#Why isn't this working? why return 0?
+#Keep trying, it's a tough one 
+def double_char(str):
+    for i in range(len(str)):
+        return i*2

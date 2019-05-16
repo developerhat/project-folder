@@ -272,7 +272,7 @@ def first_half(str):
 #String-2 double char CodingBat
 #This is a bit tougher. Getting closer tho esp w for loop
 #Why isn't this working? why return 0?
-#Keep trying, it's a tough one 
+#Keep trying, it's a tough one
 def double_char(str):
     for i in range(len(str)):
         return i*2

@@ -99,10 +99,6 @@ def sleep_in2(weekday, vacation):
     else:
         return False
 
-def make_out_word(out, word):
-    string_end = out.split()
-    word_end = word
-#can't get through this problem. Coding bat string-1 make_out_word problem
 
 #Coding bat logic-1 problem
 def caught_speeding(speed):
@@ -276,3 +272,23 @@ def first_half(str):
 def double_char(str):
     for i in range(len(str)):
         return i*2
+
+#Got through w minimal help
+def without_end(str):
+    return str[1:-1]
+
+def make_out_word(out, word):
+    string_end = out.split()
+    return string_end, out
+#can't get through this problem. Coding bat string-1 make_out_word problem
+
+#Got through this alone
+def make_abba(a,b):
+    return a+b+b+a
+
+#Got it right by myself but no error or exception handling. Work on it list-1
+def first_last6(nums):
+    if nums[-1] or nums[0] == 6:
+        return True
+    else:
+        return False

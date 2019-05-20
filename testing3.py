@@ -271,7 +271,6 @@ def first_half(str):
 #Keep trying, it's a tough one
 def double_char(str):
     for i in range(len(str)):
-<<<<<<< HEAD
         return str*2
 
 #Coding bat warmup got through no help
@@ -292,11 +291,6 @@ def sum_double(a,b):
     else:
         return a+b
 
-#Did this on my own too, learned from the double_char function
-def front3(str):
-    return str[0:3]*3
-=======
-        return i*2
 
 #Got through w minimal help
 def without_end(str):
@@ -317,4 +311,8 @@ def first_last6(nums):
         return True
     else:
         return False
->>>>>>> d1994813547a9a9389ff2c20ea2daa131cb84328
+
+#Did this on my own too, learned from the double_char function
+def front3(str):
+    return str[0:3]*3
+        return i*2

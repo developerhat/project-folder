@@ -205,8 +205,8 @@ def multiply(numbers):
 #Codingbat string 2, incomplete
 def count_hi(str):
     hi = 'hi'
-    for hi in str:
-        return num
+    for hi in range(len(str)):
+            return hi
 
 #Got through this w minimal help! .reverse() method does not work here
 def reverse3(nums):
@@ -275,4 +275,26 @@ def first_half(str):
 #Keep trying, it's a tough one
 def double_char(str):
     for i in range(len(str)):
-        return i*2
+        return str*2
+
+#Coding bat warmup got through no help
+def not_string(str):
+    if 'not' not in str:
+        return 'not ' + str
+    else:
+        return str
+
+#Needed a little help on this one. I was able to extract first and last value from the string tho
+def front_back(str):
+    return str[-1:] + str[1:-1] + str[:1]
+
+#Did this all on my own
+def sum_double(a,b):
+    if a == b:
+        return (a+b)*2
+    else:
+        return a+b
+
+#Did this on my own too, learned from the double_char function
+def front3(str):
+    return str[0:3]*3

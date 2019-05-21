@@ -319,3 +319,22 @@ def first_last6(nums):
 def front3(str):
     return str[0:3]*3
         return i*2
+
+#Holy crap I got this one on my own! Simplified it. Warmup 2
+def front_times(str, n):
+    return str[0:3]*n
+
+#Dang same here got it on my own too easy
+def string_times(str, n):
+    return str*n
+
+#Got through it but no exception handling or "edge" cases. Gotta be a better way to do this
+def lucky_sum(a,b,c):
+    if a == 13:
+        return a+b
+    elif b == 13:
+        return b+c
+    elif c == 13:
+        return a+b
+    else:
+        return a+b+c

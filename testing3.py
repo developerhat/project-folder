@@ -338,3 +338,38 @@ def lucky_sum(a,b,c):
         return a+b
     else:
         return a+b+c
+
+#Don't really understand this. Getting warmer but not quite. Solve it. List 2 coding bat
+def count_evens(nums):
+    for i in nums:
+        if i % 2 ==0:
+            return i
+
+#Dang did this all on my own! Seemed complex but simple. Codingbat list 2
+def big_diff(nums):
+    return max(nums) - min(nums)
+
+#Did this on my own from hackerrank but no edge case or exception handling
+def if_else(n):
+    if n % 2 == 1:
+        return 'Weird'
+    elif n % 2== 0 and n<5 and n>2:
+        return 'Not Weird'
+    elif n % 2 == 0 and n>6 and n<20:
+        return 'Weird'
+
+#Got through this alone too. Boss!
+def split1(str):
+    oldstr = str.split(' ')
+    newstr = '-'.join(str)
+    return oldstr, newstr
+
+#This was too easy. Python doing all the legwork
+def swap_case(s):
+    return s.swapcase()
+
+#Not complete but getting there. The goal is to print up to 123
+def printfunc(n):
+    if n < 123:
+        for i in range(n):
+            print(i)

@@ -305,9 +305,12 @@ def make_out_word(out, word):
 def make_abba(a,b):
     return a+b+b+a
 
-#Got it right by myself but no error or exception handling. Work on it list-1
+
+#Got this right by myself but needed to use verbose method cos OR was not working. Returnig true all the time
 def first_last6(nums):
-    if nums[-1] or nums[0] == 6:
+    if nums[0] == 6:
+        return True
+    elif nums[-1] == 6:
         return True
     else:
         return False

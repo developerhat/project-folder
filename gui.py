@@ -1,36 +1,53 @@
 #usr/bin/python
 
-import tkinter
+from tkinter import *
 
-window = tkinter.Tk()
+root = Tk()
 #Renaming title of window
-window.title('GUI')
+root.title('GUI')
+root.geometry('300x300')
+#root.resizable(width = False, height = False)
+
+name = StringVar()
+world = StringVar()
+
+def print_name():
+    name.set('Patrick')
+
+def hello_world():
+    world.set('Hello World!')
+
+inWindow = Entry(root)
+inWindow.place(x=70, y=200)
+
+inText = Label(root, text="Name: ")
+inText.place(x=0, y=200)
+
+label1 = Label(root, text = 'P1')
+label1.place(x=100, y=50)
+
+label2 = Label(root, text = "P2")
+label2.place(x=50,y=50)
+
+label3 = Label(root, text = "P3")
+label3.place(x=50, y=100)
+
+label4 = Label(root, text = 'P4')
+label4.place(x=100, y=100)
+
+label5 = Label(root, textvariable=name)
+label5.place(x = 75, y = 150)
+
+label6 = Label(root, textvariable=world)
+label6.place(x=150, y = 150)
+
+btn1 = Button(root, text = "Click me", command = lambda: print_name())
+btn1.place(x = 10, y =0)
+
+btn2 = Button(root, text = "Display..", command = lambda: hello_world())
+btn2.place(x = 100, y = 0)
 
 
-#top_frame = tkinter.Frame(window).pack()
-#bottom_frame = tkinter.Frame(window).pack(side = "bottom")
-
-
-#btn1 = tkinter.Button(top_frame, text="Button 1", fg = "red").pack()
-#FG is foreground, color of button
-
-tkinter.Label(window, text = "Username").grid(row = 0)
-tkinter.Entry(window).grid(row = 0, column = 1)
-
-tkinter.Label(window, text = "Password").grid(row = 1)
-tkinter.Entry(window).grid(row = 1, column = 1)
-
-# creating a function called say_hi()
-#def say_hi():
-#    tkinter.Label(window, text = "Hi").pack()
-
-#tkinter.Button(window, text = "Click Me!", command = say_hi).pack()
-# 'Checkbutton' is used to create the check buttons
-
-
-tkinter.Checkbutton(window, text = "Keep Me Logged In").grid(columnspan = 2)
-# 'columnspan' tells to take the width of 2 columns
-# you can also use 'rowspan' in the similar manner
 
 
 
@@ -41,11 +58,4 @@ tkinter.Checkbutton(window, text = "Keep Me Logged In").grid(columnspan = 2)
 
 
 
-
-
-
-
-
-
-
-window.mainloop()
+root.mainloop()

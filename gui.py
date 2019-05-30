@@ -43,17 +43,18 @@ def hello_world():
 #btn2 = Button(root, text = "Display..", command = lambda: hello_world())
 #btn2.place(x = 100, y = 0)
 
+v = StringVar()
 
 label = Label(root, text= "Choose an Item", bg="gray77")
 label.place(x=100, y=10)
 
-r_btn = Radiobutton(root, text = "Banana", bg="gray77")
+r_btn = Radiobutton(root, text = "Banana", bg="gray77", variable = v, value='Banana')
 r_btn.place(x=5, y=30)
 
-r_btn2 = Radiobutton(root, text = "Apple", bg="gray77")
+r_btn2 = Radiobutton(root, text = "Apple", bg="gray77", variable = v, value='Apple')
 r_btn2.place(x=5, y=60)
 
-r_btn3 = Radiobutton(root, text = "Mango", bg="gray77")
+r_btn3 = Radiobutton(root, text = "Mango", bg="gray77", variable = v, value='Mango')
 r_btn3.place(x=5, y=90)
 
 inText = Label(root, text="Result:", bg="gray77")

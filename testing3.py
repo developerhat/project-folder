@@ -221,9 +221,9 @@ def same_first_last(nums):
     else:
         return False
 
-#Sum3 can't figure out but seems simple
+#Sum3 figured it out can't use nums[2] must use nums[-1] for last
 def sum3(nums):
-    return nums[0]+nums[1]+nums[3]
+    return nums[0]+nums[1]+nums[-1]
 
 #This works, but it never returns false. Why?
 def has23(nums):
@@ -373,3 +373,24 @@ def printfunc(n):
     if n < 123:
         for i in range(n):
             print(i)
+
+
+#Codingbat list1
+#Returns larger or smaller number b/t 1st & last value
+def max_end3(nums):
+    if nums[0] > nums[-1]:
+        return nums[0]
+    elif nums[-1] > nums[0]:
+        return nums[-1]
+
+#created to print upper case values
+def upperInput():
+    textIn = str(input('Please enter a value to print: '))
+    return textIn.upper()
+
+def sortingPhrase():
+    raw_input = str(input('Enter a list of values: '))
+    for x in raw_input:
+        x.split(',')
+
+    items = sort()

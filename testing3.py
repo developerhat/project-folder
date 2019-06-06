@@ -388,9 +388,17 @@ def upperInput():
     textIn = str(input('Please enter a value to print: '))
     return textIn.upper()
 
+#From github python programming exercises
 def sortingPhrase():
     raw_input = str(input('Enter a list of values: '))
     for x in raw_input:
         x.split(',')
 
     items = sort()
+
+#Returns remainder of 2 provided numbers
+def remainder(num1, num2):
+    return num1 % num2
+
+def hello_name(name):
+    return 'Hello ', name, '!'

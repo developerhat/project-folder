@@ -509,3 +509,26 @@ def divisibleby5(num):
         return True
     else:
         return False
+
+#Can't return the dashes for some reason
+def dashConvert(num):
+    for i in range(num):
+        return '-'
+
+#Already did this w reverse3 function up above, but wanted to re-write it for muscle memory
+def reverseList(num):
+    for i in num:
+        return num[::-1]
+
+#This only returns true, never returns false. Work in progress
+def same_case(str):
+    if str == str.upper() or str.lower():
+        return True
+    else:
+        return False
+
+#Did this w little help. At first was trying to return list3.sort() but was getting nothing
+#Key is to do 2 separate lines, as sort() permanently changes the values
+def sortList(list3):
+    list3.sort()
+    return list3

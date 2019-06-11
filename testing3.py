@@ -402,3 +402,110 @@ def remainder(num1, num2):
 
 def hello_name(name):
     return 'Hello ', name, '!'
+
+#Wrote the 2 below functions by myself. Super easy tho
+def to_int(num):
+    return int(num)
+
+def to_str(str1):
+    return str(str1)
+
+#determine whether or not a number is less than or equal to 0
+def lessThanZero(num):
+    if num <= 0:
+        return True
+    elif num > 0:
+        return False
+
+#Returns the next number in sequence
+def nextNumber(num):
+    return num+1
+
+#Dang this was easier & simpler than I thought
+def findSmallestNum(list1):
+    return min(list1)
+
+#Returns lastname, firstname
+def concat_name(name1, name2):
+    return name2, name1
+
+#Function to check whether or not an element is in a list
+def inList(list2, num1):
+    if num1 in list2:
+        return True
+    elif num1 not in list2:
+        return False
+
+#function compares 2 different strings
+def compareString(str1, str2):
+    if str1 == str2:
+        return True
+    else:
+        return False
+
+#returns difference of minimum & max value in a list
+def difference_maxmin(list1):
+    return max(list1) - min(list1)
+
+
+#checks to see whether or not a string is plural
+def is_plural(str2):
+    if 's' in str2:
+        return True
+    else:
+        return False
+
+#Edabit "easy" problem can't figure out
+def indexOfCaps(str):
+    if str == str.upper():
+        return str.upper()
+    else:
+        return False
+
+#I know I have to store this into a list & then run logic on it.
+def is_validPIN(pinstr):
+    pinstr = []
+    if pinstr <= 4:
+        return True
+
+#Takes a list & returns the 1st odd number in the list. Created on my own
+def find_odd(list1):
+    for i in list1:
+        if i % 2==1:
+            return i
+
+#Equality of 3 values from edabit. hard! Seems easy
+#def equal(a,b,c):
+#    if a==b:
+
+
+#Challenge problem from edabit can't solve this either but getting warmer
+def amplify(num):
+    for i in range(num):
+        return i
+
+#did this on my own no help
+def concat(list1, list2):
+    return list1 + list2
+
+#Got it down but this never returns True
+def is_empty(str):
+    if str == None:
+        return True
+    else:
+        return False
+
+#Got through this w no help
+def getLastItem(list3):
+    return list3[-1]
+
+#Returns integer after given integer
+def NextNum(num):
+    return num+1
+
+#Did this on my own no help
+def divisibleby5(num):
+    if num % 5==0:
+        return True
+    else:
+        return False

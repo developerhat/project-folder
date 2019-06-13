@@ -532,3 +532,34 @@ def same_case(str):
 def sortList(list3):
     list3.sort()
     return list3
+
+#Did this on my own! Checks for whether or not given string is an integer/str
+def int_or_string(val):
+    if val == str(val):
+        return 'str'
+    elif val == int(val):
+        return 'int'
+
+#Returns largest number in list. Too easy
+def findLargestNum(list1):
+    return max(list1)
+
+#Got a little help from Geeks4Geeks
+#Dang got it to work! Trick here is sorting the list & then grabbing 2nd smallest value
+def sum_two_smallest_nums(list2):
+    list2.sort()
+    return min(list2) +list2[1]
+
+#Need to get middle chars in a string
+#Involves string slicing and getting nth char using x[:n]
+#def get_middle(str):
+#    if len(str) % 2 ==0:
+#        return str[]
+
+#Woah this actually worked! Using STRINGS to return the output.
+def smaller_num(num1, num2):
+    return min(num1, num2)
+
+#Working on very easy problem for Edabit, can't get through tho
+def add_ending(list4, ending):
+    return list4 + ending

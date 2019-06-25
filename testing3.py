@@ -448,13 +448,6 @@ def difference_maxmin(list1):
     return max(list1) - min(list1)
 
 
-#checks to see whether or not a string is plural
-def is_plural(str2):
-    if 's' in str2:
-        return True
-    else:
-        return False
-
 #Edabit "easy" problem can't figure out
 def indexOfCaps(str):
     if str == str.upper():
@@ -560,6 +553,68 @@ def sum_two_smallest_nums(list2):
 def smaller_num(num1, num2):
     return min(num1, num2)
 
+#checks to see whether or not a string is plural
+def is_plural(str2):
+    if str2[-1] == 's':
+        return True
+    else:
+        return False
+
+#Checks to see if value is divisible by 100
+def divisible100(num):
+    if num % 100 == 0:
+        return True
+    else:
+        return False
+
+#Checks to see whether or not a number is even or odd
+def EvenOrOdd(num):
+    if num % 2 == 0:
+        return 'even'
+    else:
+        return 'false'
+
+#Edabit challenge for returning string containing 4 letters in list.
+#NOT COMPLETE! couldn't figure it out. Edabit very easy Conditional challenge
+def isFourLetters(list3):
+    for i in list3:
+        if i < 5:
+            return i
+
+
+#Did this on my own!! Reverses boolean & exception handling
+def reverseBool(bool):
+    if bool == True:
+        return False
+    elif bool == False:
+        return True
+    else:
+        return 'boolean expected'
+
+#Pretty easy got through myself
+def calculate_exponent(base, exp):
+    return base**exp
+
+#Seems easy, need to print dashes for every char given
+def numToDashes(num):
+    for i in num:
+        return '-'
+
+def char_count(char1, string2):
+    for char1 in string2:
+        return char1
+
 #Working on very easy problem for Edabit, can't get through tho
 def add_ending(list4, ending):
     return list4 + ending
+
+#Supposed to countdown from number to 0. Not working tho
+def countdown(num):
+    for i in range(num):
+        return i+1
+
+#Getting closer on this one. I'm sure gotta use loops
+def greetings(names):
+    names = []
+    for i in names:
+        return 'Hello', names

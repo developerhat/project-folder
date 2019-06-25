@@ -401,7 +401,7 @@ def remainder(num1, num2):
     return num1 % num2
 
 def hello_name(name):
-    return 'Hello ', name, '!'
+    return 'Hello ' + name + '!'
 
 #Wrote the 2 below functions by myself. Super easy tho
 def to_int(num):
@@ -522,7 +522,7 @@ def same_case(str):
 
 #Did this w little help. At first was trying to return list3.sort() but was getting nothing
 #Key is to do 2 separate lines, as sort() permanently changes the values
-def sortList(list3):
+def sortNumsAscending(list3):
     list3.sort()
     return list3
 
@@ -596,9 +596,13 @@ def calculate_exponent(base, exp):
     return base**exp
 
 #Seems easy, need to print dashes for every char given
+#def numToDashes(num):
+#    for i in range(num):
+#        return str('-')
+#The above commented code is what I wrote myself. The solution is below...
+#Moral story: SIMPLIFY! dont overthink
 def numToDashes(num):
-    for i in num:
-        return '-'
+    return num * '-'
 
 def char_count(char1, string2):
     for char1 in string2:
@@ -615,6 +619,40 @@ def countdown(num):
 
 #Getting closer on this one. I'm sure gotta use loops
 def greetings(names):
-    names = []
-    for i in names:
+    for i in [names]:
         return 'Hello', names
+
+
+#Dang got this to work!! I'm sure there's a better way to this though
+def slot_machine(list):
+    if list[0] == list[1] == list[2] == list[3]:
+        return True
+    else:
+        return False
+
+#Wow got through this alone!! Crazy!! The trick is to return item in a list
+def repeat(item,times):
+    return [item] * times
+
+#Did this on my own but had to look up how to add , in between strings
+def concat_name(first,last):
+    return last + ', ' + first
+
+#Got through this myself, pretty easy
+def has_spaces(str):
+    if " " in str:
+        return True
+    else:
+        return False
+
+#This only works if the values are exactly the same. Needs to be amount of chars in 1st string
+#Keep working
+def comp(str1, str2):
+    if str1[::-1] == str2[::-1]:
+        return True
+    else:
+        return False
+
+#Got through this on my own!! Turns out you an also reverse STRINGS using the same method for lists
+def reverseString(str):
+    return str[::-1]

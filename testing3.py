@@ -481,9 +481,9 @@ def amplify(num):
 def concat(list1, list2):
     return list1 + list2
 
-#Got it down but this never returns True
+#Fixed it & got it to work! Swapped out str==None to str==''
 def is_empty(str):
-    if str == None:
+    if str == '':
         return True
     else:
         return False
@@ -656,3 +656,84 @@ def comp(str1, str2):
 #Got through this on my own!! Turns out you an also reverse STRINGS using the same method for lists
 def reverseString(str):
     return str[::-1]
+
+
+#Function is meant to return high & low integers. Can't get it to work tho, recognizes space as an integer
+def high_low(nums):
+    return max(nums), min(nums)
+
+
+def addition(num1,num2):
+    return num1 +num2
+
+#Did this on my own! Checks if given element is in a list
+def check(list, el):
+    if el in list:
+        return True
+    else:
+        return False
+
+
+#Trying to return first and last elements as a new list. WORK IN Progress
+def first_last(list):
+    newList = list[0]
+    newList1 = list[::-1]
+    return newList,newList1
+
+#Too easy
+def divisible_by_five(num):
+    if num % 5 == 0:
+        return True
+    else:
+        return False
+
+#Too easy
+def isEvenOrOdd(num):
+    if num % 2 == 0:
+        return 'even'
+    else:
+        return 'odd'
+
+#Returns smallest & largest num in list. Needed to return the numbers in a list, so reformatted
+def minMax(list):
+    return [min(list), max(list)]
+
+#work in progress
+def is_valid(zip):
+    if zip <= 5:
+        return True
+    else:
+        return False
+
+
+#Attempting to reverse elements in a string
+def reverse_case(str):
+    for i in range(str):
+        if i == i.upper():
+            return i.lower()
+        else:
+            return i.upper()
+
+#Trying to remove None from a list.. getting warmer but not quite right
+def remove_none(list):
+    list = []
+    for i in list:
+        if i != None:
+            list.append(i)
+    return list
+
+#Got through this w minimal help! Referred to original palindrome
+def is_palindrome(str):
+    if str[::1] == str[::-1]:
+        return True
+    else:
+        return False
+
+#Got this one down on my own! Checks to see whether or not a string has same case
+def same_case(str):
+    if str == str.upper():
+        return True
+    elif str == str.lower():
+        return True
+    else:
+        return False

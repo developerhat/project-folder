@@ -737,3 +737,24 @@ def same_case(str):
         return True
     else:
         return False
+
+#Checks to see whether or not an element is in a list
+def check(list,el):
+    if el in list:
+        return True
+    else:
+        return False
+
+
+#Checks if all leters are identical... the check is wrong though. Only checks for LAST letter
+def is_identical(str):
+    if str[0] == str[-1]:
+        return True
+    else:
+        return False
+
+#Returns number of times character appears in string. Unfinished
+def char_count(char, str):
+    for char in str:
+        if char in str:
+            return char

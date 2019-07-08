@@ -339,11 +339,6 @@ def lucky_sum(a,b,c):
     else:
         return a+b+c
 
-#Don't really understand this. Getting warmer but not quite. Solve it. List 2 coding bat
-def count_evens(nums):
-    for i in nums:
-        if i % 2 ==0:
-            return i
 
 #Dang did this all on my own! Seemed complex but simple. Codingbat list 2
 def big_diff(nums):
@@ -436,12 +431,6 @@ def inList(list2, num1):
     elif num1 not in list2:
         return False
 
-#function compares 2 different strings
-def compareString(str1, str2):
-    if str1 == str2:
-        return True
-    else:
-        return False
 
 #returns difference of minimum & max value in a list
 def difference_maxmin(list1):
@@ -550,7 +539,9 @@ def sum_two_smallest_nums(list2):
 #        return str[]
 
 #Woah this actually worked! Using STRINGS to return the output.
+#It works, but logic fails when entering 1500 & 16 as values
 def smaller_num(num1, num2):
+    int(num1), int(num2)
     return min(num1, num2)
 
 #checks to see whether or not a string is plural
@@ -604,13 +595,15 @@ def calculate_exponent(base, exp):
 def numToDashes(num):
     return num * '-'
 
+#What does this do? Unfinished
 def char_count(char1, string2):
     for char1 in string2:
         return char1
 
 #Working on very easy problem for Edabit, can't get through tho
 def add_ending(list4, ending):
-    return list4 + ending
+    for str in list4:
+        return str, ending
 
 #Supposed to countdown from number to 0. Not working tho
 def countdown(num):
@@ -645,13 +638,7 @@ def has_spaces(str):
     else:
         return False
 
-#This only works if the values are exactly the same. Needs to be amount of chars in 1st string
-#Keep working
-def comp(str1, str2):
-    if str1[::-1] == str2[::-1]:
-        return True
-    else:
-        return False
+
 
 #Got through this on my own!! Turns out you an also reverse STRINGS using the same method for lists
 def reverseString(str):
@@ -673,13 +660,6 @@ def check(list, el):
     else:
         return False
 
-
-#Trying to return first and last elements as a new list. WORK IN Progress
-def first_last(list):
-    newList = list[0]
-    newList1 = list[::-1]
-    return newList,newList1
-
 #Too easy
 def divisible_by_five(num):
     if num % 5 == 0:
@@ -697,22 +677,6 @@ def isEvenOrOdd(num):
 #Returns smallest & largest num in list. Needed to return the numbers in a list, so reformatted
 def minMax(list):
     return [min(list), max(list)]
-
-#work in progress
-def is_valid(zip):
-    if zip <= 5:
-        return True
-    else:
-        return False
-
-
-#Attempting to reverse elements in a string
-def reverse_case(str):
-    for i in range(str):
-        if i == i.upper():
-            return i.lower()
-        else:
-            return i.upper()
 
 #Trying to remove None from a list.. getting warmer but not quite right
 def remove_none(list):
@@ -746,9 +710,9 @@ def check(list,el):
         return False
 
 
-#Checks if all leters are identical... the check is wrong though. Only checks for LAST letter
+#Checks if all leters are identical... got it right w a lil help
 def is_identical(str):
-    if str[0] == str[-1]:
+    if str.count(str[0]) == len(str):
         return True
     else:
         return False
@@ -758,3 +722,92 @@ def char_count(char, str):
     for char in str:
         if char in str:
             return char
+
+#Attempting to repeat each char given by n. Ex: Nnniiiccceee
+def repeat_char(txt, n):
+    for n in txt:
+        return n*txt
+
+#Getting closer but not quite! Need to capitalize 1st letter of all values given
+def cap_me(list):
+    for i in list:
+        return i[0].upper()
+
+#Got it right w a lil help. Needed to convert to grab length + convert to string
+def find_digit_amount(num):
+    return len(str(num))
+
+
+#function compares 2 different strings. If the strings are same, return True
+def compareString(str1, str2):
+    if str1 == str2:
+        return True
+    else:
+        return False
+
+#This only works if the values are exactly the same. Needs to be amount of chars in 1st string
+#Got it to work now!! Little help
+def comp(str1, str2):
+    if len(str1) == len(str2):
+        return True
+    else:
+        return False
+
+#Did this on my own no help. Nice!
+def match(str1, str2):
+    if str1.lower() == str2.lower():
+        return True
+    else:
+        return False
+
+#Trying to make it so that all 4 values are same, return True. If not return false
+#Wow got it to work! Needed to use .count() to count values in the list
+def test_jackpot(result):
+    if result.count(result[0]) == len(result):
+        return True
+    else:
+        return False
+
+
+#Wow... the method I was trying to use was to iterate through each char, check char isupper or lower, and then change the value
+#Easier to jut use built in method, sheesh.
+def reverse_case(str):
+    return str.swapcase()
+
+
+#Trying to return first and last elements as a new list. WORK IN Progress
+#Got it done!!!! No help on this one. Just re-read question & reformatted
+def first_last(list):
+    newList =[list[0], list[-1]]
+    return newList
+
+#work in progress
+def is_valid(zip):
+    if zip <= 5:
+        return True
+    else:
+        return False
+
+
+#Don't really understand this. Getting warmer but not quite. Solve it. List 2 coding bat
+def count_evens(nums):
+    for i in [nums]:
+        if i % 2 ==0:
+            return 'hey'
+
+
+#Having trouble removing first & last character in a string
+#Strings are immutable, so the string must be recreated somehow
+
+def remove_first_last(txt):
+    newtxt = txt.replace(, '')
+    return newtxt
+
+
+#Creating this function myself. Removes vowels from user input
+#Good use of for loop to remove the vowels, but is not very efficient. All good
+def remove_vowel(input):
+    #print('I will be removing all vowels from this! Please provide a phrase')
+    for letter in 'aeiou':
+        input = input.replace(letter, '')
+    return input

@@ -18,6 +18,9 @@ def print_name():
 def hello_world():
     world.set('Hello World!')
 
+def cal_price():
+    pass
+
 
 #label1 = Label(root, text = 'P1')
 #label1.place(x=100, y=50)
@@ -68,7 +71,7 @@ inWindow2 = Entry(root, width = 20)
 inWindow2.place(x=70, y=160)
 
 
-r_btn4 = Button(root, text="Calculate", highlightbackground = 'gray77')
+r_btn4 = Button(root, text="Calculate", highlightbackground = 'gray77', command = lambda: cal_price())
 r_btn4.place(x=0, y = 160)
 
 

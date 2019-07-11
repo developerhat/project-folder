@@ -811,3 +811,57 @@ def remove_vowel(input):
     for letter in 'aeiou':
         input = input.replace(letter, '')
     return input
+
+#Dang did this on my own. Simple!
+def say_hello_bye(name, num):
+    if num == 1:
+        return 'Hello ' + name
+    else:
+        return "Bye " + name
+
+#A bit silly. Did it myself. Good practice for control flow + using IN Operator
+def prevent_distractions(txt):
+    if 'anime' in txt:
+        return 'NO'
+    elif 'meme' in txt:
+        return 'NO'
+    elif 'vine' in txt:
+        return 'NO'
+    elif 'roasts' in txt:
+        return 'NO'
+    elif 'long hair' in txt:
+        return 'Keep growing!'
+    else:
+        return 'Safe watching!'
+
+
+#This challenge is interesting. Not finished, bookmarked in Edabit
+def transform(list):
+    if list % 2 == 0:
+        return i-1
+    else:
+        return list+1
+
+#This ones tough too!! Keep workin
+def secret_society(friends):
+    for i in friends:
+        return i[0]
+
+#Super easy.
+def month_name(num):
+    if num == 1:
+        return 'January'
+    elif num == 2:
+        return 'February'
+    elif num == 3:
+        return 'March'
+    elif num == 4:
+        return 'April'
+    elif num == 5:
+        return 'May'
+    elif num == 6:
+        return 'June'
+    elif num == 7:
+        return 'July'
+    elif num == 8:
+        return 'August'

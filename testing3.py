@@ -865,3 +865,18 @@ def month_name(num):
         return 'July'
     elif num == 8:
         return 'August'
+
+#Not complete. On Edabit to determine how many times 'A' appears in the string
+def count_a(str):
+    letter = 'a'
+    for letter in str:
+        return letter
+
+# Determining online free shipping eligiblity, but having to use a dictionary to loop through
+def free_shipping(order):
+    order = {}
+    for i in order:
+        if i > 50:
+            return True
+        else:
+            return False

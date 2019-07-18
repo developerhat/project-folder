@@ -595,10 +595,10 @@ def calculate_exponent(base, exp):
 def numToDashes(num):
     return num * '-'
 
-#What does this do? Unfinished
+#God damn!! Was stuck on this for so long thinking it needed a for loop & all That
+#Key was to use the .count() Method
 def char_count(char1, string2):
-    for char1 in string2:
-        return char1
+    return string2.count(char1)
 
 #Working on very easy problem for Edabit, can't get through tho
 def add_ending(list4, ending):
@@ -678,14 +678,6 @@ def isEvenOrOdd(num):
 def minMax(list):
     return [min(list), max(list)]
 
-#Trying to remove None from a list.. getting warmer but not quite right
-def remove_none(list):
-    list = []
-    for i in list:
-        if i != None:
-            list.append(i)
-    return list
-
 #Got through this w minimal help! Referred to original palindrome
 def is_palindrome(str):
     if str[::1] == str[::-1]:
@@ -717,11 +709,6 @@ def is_identical(str):
     else:
         return False
 
-#Returns number of times character appears in string. Unfinished
-def char_count(char, str):
-    for char in str:
-        if char in str:
-            return char
 
 #Attempting to repeat each char given by n. Ex: Nnniiiccceee
 def repeat_char(txt, n):
@@ -815,9 +802,9 @@ def remove_vowel(input):
 #Dang did this on my own. Simple!
 def say_hello_bye(name, num):
     if num == 1:
-        return 'Hello ' + name
-    else:
-        return "Bye " + name
+        return 'Hello ' + name.capitalize()
+    elif num == 0:
+        return "Bye " + name.capitalize()
 
 #A bit silly. Did it myself. Good practice for control flow + using IN Operator
 def prevent_distractions(txt):
@@ -841,11 +828,6 @@ def transform(list):
         return i-1
     else:
         return list+1
-
-#This ones tough too!! Keep workin
-def secret_society(friends):
-    for i in friends:
-        return i[0]
 
 #Super easy.
 def month_name(num):
@@ -880,3 +862,35 @@ def free_shipping(order):
             return True
         else:
             return False
+
+
+#Returns number of times character appears in string.
+#Works, but tried 'y' and 'wazup' & it returned 1--why?
+def char_count(char, str):
+    for char in str:
+        if char in str:
+            return str.count(char)
+        else:
+            return 'not in string'
+
+#This supposed to work! Takes all list values & checks to see if all are even
+#Unfinished
+def check_all_even(lst):
+    for x in lst:
+        if all(lst) % 2 == 0:
+            return True
+        else:
+            return False
+
+
+#This ones tough
+#Getting warmer. It works when removing the other 2, but it's not "scalable"
+#What if user enters 4 values?
+#Unfinished
+def secret_society(friends):
+    for i in friends:
+        return i[0][0], i[0][1], i[0][2]
+
+#Oh shit!! Got this on my own. Just gotta make it simple, used count
+def hash_plus_count(str):
+    return [str.count('#'), str.count('+')]

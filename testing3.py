@@ -209,6 +209,7 @@ def reverse3(nums):
     for i in nums:
         return nums[::-1]
 
+
 #Oh shit did this all on my own! CodingBat marking as wrong why? Tested works good
 def middle_way(a,b):
     for i in a,b:
@@ -809,25 +810,17 @@ def say_hello_bye(name, num):
 #A bit silly. Did it myself. Good practice for control flow + using IN Operator
 def prevent_distractions(txt):
     if 'anime' in txt:
-        return 'NO'
+        return 'NO!'
     elif 'meme' in txt:
-        return 'NO'
+        return 'NO!'
     elif 'vine' in txt:
-        return 'NO'
+        return 'NO!'
     elif 'roasts' in txt:
-        return 'NO'
+        return 'NO!'
     elif 'long hair' in txt:
         return 'Keep growing!'
     else:
         return 'Safe watching!'
-
-
-#This challenge is interesting. Not finished, bookmarked in Edabit
-def transform(list):
-    if list % 2 == 0:
-        return i-1
-    else:
-        return list+1
 
 #Super easy.
 def month_name(num):
@@ -894,3 +887,69 @@ def secret_society(friends):
 #Oh shit!! Got this on my own. Just gotta make it simple, used count
 def hash_plus_count(str):
     return [str.count('#'), str.count('+')]
+
+#Easy money
+def flip(y):
+    if y == 1:
+        return 0
+    elif y == 0:
+        return 1
+
+#Trying to figure these 2 conversions out, not exactly working out
+def to_list(num):
+    return [num]
+
+def to_number(lst):
+    return (lst)
+
+
+#Why doesnt this work? Supposed to run a check for all values given but 3 returns false
+def is_omnipresent(lst,val):
+    for i in range(len(lst[:])):
+        if val in lst:
+            return True
+        else:
+            return False
+
+#Answer pretty much given on this one
+def profitable_gamble(prob, prize, pay):
+    if prob * prize > pay:
+        return True
+    else:
+        return False
+
+#Converts a character to ASCII value
+
+def ctoa(char):
+    return ord(char)
+
+#Did this on my own! Dang! Getting back into the swing of things
+def number_syllables(word):
+    return word.count('-')+1
+
+
+#Did this on my own too. Just counted spacing to count for words
+def count_words(txt):
+    return txt.count(' ')+1
+
+
+#This challenge is interesting. Not finished, bookmarked in Edabit
+#What am I doing wrong here?
+def transform(list):
+    for i in list:
+        if i % 2 == 0:
+            i = i-1
+            return list
+        else:
+            i = i+1
+            return list
+
+#Figured this out on my own! Sick! Got a little help to find out how ot reverse an integer
+#Convert to string
+def largest_swap(num):
+    if str(num)[::-1] < str(num):
+        return True
+    elif str(num)[::-1] == str(num):
+        return True
+    else:
+        return False

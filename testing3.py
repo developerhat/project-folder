@@ -953,3 +953,7 @@ def largest_swap(num):
         return True
     else:
         return False
+
+#Got this on my own
+def get_word(left, right):
+    return left.capitalize() + right

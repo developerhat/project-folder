@@ -319,7 +319,6 @@ def first_last6(nums):
 #Did this on my own too, learned from the double_char function
 def front3(str):
     return str[0:3]*3
-        return i*2
 
 #Holy crap I got this one on my own! Simplified it. Warmup 2
 def front_times(str, n):
@@ -957,3 +956,5 @@ def largest_swap(num):
 #Got this on my own
 def get_word(left, right):
     return left.capitalize() + right
+
+def first_half():

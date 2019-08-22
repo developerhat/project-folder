@@ -875,15 +875,6 @@ def check_all_even(lst):
         else:
             return False
 
-
-#This ones tough
-#Getting warmer. It works when removing the other 2, but it's not "scalable"
-#What if user enters 4 values?
-#Unfinished
-def secret_society(friends):
-    for i in friends:
-        return i[0][0], i[0][1], i[0][2]
-
 #Oh shit!! Got this on my own. Just gotta make it simple, used count
 def hash_plus_count(str):
     return [str.count('#'), str.count('+')]
@@ -953,3 +944,29 @@ def largest_swap(num):
         return True
     else:
         return False
+
+#Super easy
+def get_first_value(list):
+    return list[0]
+
+#Pretty easy & it works fine but rejected by Edabit. I think it's a bug?
+def remove_none(list):
+    if None in list:
+        list.remove(None)
+        return list
+
+#This ones tough
+#Getting warmer. It works when removing the other 2, but it's not "scalable"
+#What if user enters 4 values?
+#Unfinished
+def secret_society(friends):
+    for i in friends:
+        return i[0][0], i[0][1], i[0][2]
+
+
+def first_vowel(txt):
+    vowels = ['a', 'e', 'i', 'o', 'i', 'u']
+    return txt.index(vowels)
+
+def first_vowel(txt):
+    return txt.find()

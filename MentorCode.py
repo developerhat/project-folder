@@ -40,9 +40,9 @@ def reverse_list(lst):
 
 
 
-sam = ['a','c','p','g','f','m','k','z','r','z','l' ]
+sam = ['a','c','p','g','f', 'y' ]
 
-def reverse_char(chars_input):
+def reverse_char(chars_input, start_index = 0, end_index = 0):
   # iterate the list of characters, and start from 0 index
   # do the following when the difference between start and end indices are greater than 1
     # take start index and end index and swap their values
@@ -50,10 +50,9 @@ def reverse_char(chars_input):
     # increment the end index by -1
   # then you are done
 
-  start_index = 0
-  end_index = len(chars_input) - 1
-
-  while end_index - start_index > 1:
+  if end_index == 0:
+      end_index = len(chars_input) - 1
+  while start_index < end_index:
     chars_input[start_index], chars_input[end_index] = chars_input[end_index], chars_input[start_index]
     start_index = start_index +1
     end_index = end_index -1
@@ -62,7 +61,7 @@ reverse_char(sam)
 print(sam)
 
 
-print reverse_char(chars)
+#print reverse_char(chars)
 
 
 message = [ 'c', 'a', 'k', 'e', ' ',
@@ -70,18 +69,30 @@ message = [ 'c', 'a', 'k', 'e', ' ',
            's', 't', 'e', 'a', 'l' ]
 
 
+
 def reverse_word(chars_input):
   # reverse all characters in chars_input
   #Only run reverse in characters of the word. The differentiator is the ' '
   #Iterate until hitting a space
   # From 1st to space, just reverse all except for the space. Keep going until you find another space. Keep doing until reach end of array. Then reverse back the word
+  #Need to reverse back words after initial reverse
+  #For every character
+
+  #Start index always 0, end index is always length -1..
+  #Find start index of every word, then skip this word
 
 
+  #How do you identify these numbers? That's the answer in order ot not hard code
+  #The numbers are 0,4,6,10, etc.
+  reverse_char(chars_input)
+  reverse_char(chars_input, 0, 4)
 
+  reverse_char(chars_input, 6, 10)
+  reverse_char(chars_input, 12, 15)
 
-  pass
+reverse_word(message)
+print(message)
 
-#reverse_word(message)
 
 # expect message now to be [ 's', 't', 'e', 'a', 'l', ' ',
           #  'p', 'o', 'u', 'n', 'd', ' ',

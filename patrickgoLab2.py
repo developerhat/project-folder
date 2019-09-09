@@ -44,10 +44,11 @@ print('expression 5: ', expression5)
 expression6 = my_id / num_let + 1100
 print('expression 6: ',expression6)
 
-expression7 = num_let % num_let, my_id * my_id
+
+expression7 = bool((num_let % num_let) and (my_id * my_id))
 print('expression 7: ',expression7)
 
-expression8 = 1
+expression8 = bool(1 or my_id / 0)
 print('expression 8: ',expression8)
 
 expression9 = round(3.15,1)

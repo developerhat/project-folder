@@ -974,3 +974,17 @@ def first_vowel(txt):
 #Got this on my own
 def get_word(left, right):
     return left.capitalize() + right
+
+
+
+
+
+
+
+
+if grocery_bill.isinstance(grocery_bill, float):
+    grocery_bill = float(grocery_bill)
+elif grocery_bill.isinstance(grocery_bill, int):
+    grocery_bill = int(grocery_bill)
+    print('you entered: ',grocery_bill)
+    break

@@ -783,14 +783,6 @@ def count_evens(nums):
             return 'hey'
 
 
-#Having trouble removing first & last character in a string
-#Strings are immutable, so the string must be recreated somehow
-
-def remove_first_last(txt):
-    newtxt = txt.replace(, '')
-    return newtxt
-
-
 #Creating this function myself. Removes vowels from user input
 #Good use of for loop to remove the vowels, but is not very efficient. All good
 def remove_vowel(input):
@@ -923,17 +915,6 @@ def count_words(txt):
     return txt.count(' ')+1
 
 
-#This challenge is interesting. Not finished, bookmarked in Edabit
-#What am I doing wrong here?
-def transform(list):
-    for i in list:
-        if i % 2 == 0:
-            i = i-1
-            return list
-        else:
-            i = i+1
-            return list
-
 #Figured this out on my own! Sick! Got a little help to find out how ot reverse an integer
 #Convert to string
 def largest_swap(num):
@@ -975,6 +956,44 @@ def first_vowel(txt):
 def get_word(left, right):
     return left.capitalize() + right
 
+<<<<<<< HEAD
+#This challenge is interesting. Not finished, bookmarked in Edabit
+#What am I doing wrong here?
+def transform(list):
+    for i in list:
+        if i % 2 == 0:
+            i = i-1
+            return list
+        else:
+            i = i+1
+            return list
+
+
+#Having trouble removing first & last character in a string
+#Strings are immutable, so the string must be recreated somehow
+
+def remove_first_last(txt):
+    newtxt = txt.replace(, '')
+    return newtxt
+
+#wow!! Did this on my own. Took some time & troubleshooting but got it down
+#Removes 1st & last char of string. Scalable!
+def remove_first_last(txt):
+    return txt[1:-1]
+
+
+def exists_higher(lst, n):
+    for i in lst:
+        if i >= n:
+            return True
+        else:
+            return False
+
+#Using reverse method to reverse a list
+def reverse_list(lst):
+    lst.reverse()
+    print (lst)
+=======
 
 
 
@@ -988,3 +1007,4 @@ elif grocery_bill.isinstance(grocery_bill, int):
     grocery_bill = int(grocery_bill)
     print('you entered: ',grocery_bill)
     break
+>>>>>>> 8b2f7efeab1cded450c7c6d535da32adaecdd2b1

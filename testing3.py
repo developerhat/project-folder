@@ -866,15 +866,6 @@ def check_all_even(lst):
         else:
             return False
 
-
-#This ones tough
-#Getting warmer. It works when removing the other 2, but it's not "scalable"
-#What if user enters 4 values?
-#Unfinished
-def secret_society(friends):
-    for i in friends:
-        return i[0][0], i[0][1], i[0][2]
-
 #Oh shit!! Got this on my own. Just gotta make it simple, used count
 def hash_plus_count(str):
     return [str.count('#'), str.count('+')]
@@ -934,10 +925,38 @@ def largest_swap(num):
     else:
         return False
 
+<<<<<<< HEAD
+#Super easy
+def get_first_value(list):
+    return list[0]
+
+#Pretty easy & it works fine but rejected by Edabit. I think it's a bug?
+def remove_none(list):
+    if None in list:
+        list.remove(None)
+        return list
+
+#This ones tough
+#Getting warmer. It works when removing the other 2, but it's not "scalable"
+#What if user enters 4 values?
+#Unfinished
+def secret_society(friends):
+    for i in friends:
+        return i[0][0], i[0][1], i[0][2]
+
+
+def first_vowel(txt):
+    vowels = ['a', 'e', 'i', 'o', 'i', 'u']
+    return txt.index(vowels)
+
+def first_vowel(txt):
+    return txt.find()
+
 #Got this on my own
 def get_word(left, right):
     return left.capitalize() + right
 
+<<<<<<< HEAD
 #This challenge is interesting. Not finished, bookmarked in Edabit
 #What am I doing wrong here?
 def transform(list):
@@ -974,3 +993,18 @@ def exists_higher(lst, n):
 def reverse_list(lst):
     lst.reverse()
     print (lst)
+=======
+
+
+
+
+
+
+
+if grocery_bill.isinstance(grocery_bill, float):
+    grocery_bill = float(grocery_bill)
+elif grocery_bill.isinstance(grocery_bill, int):
+    grocery_bill = int(grocery_bill)
+    print('you entered: ',grocery_bill)
+    break
+>>>>>>> 8b2f7efeab1cded450c7c6d535da32adaecdd2b1

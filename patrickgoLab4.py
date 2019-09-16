@@ -16,7 +16,7 @@
 #    except:
 #        continue
 
-#This reads file
+#This reads input file
 while True:
     read_user_prompt = str(input('Please enter filename for input: '))
     try:
@@ -31,6 +31,11 @@ read_me = open(read_user_prompt, 'r')
 
 print(read_me.read())
 
+#Goal is to write to output file, with prices to left & names to right
+#Also add all together
+
+
+#Not sure what I was doing here. Trying to write to new file though
 while True:
     write_user_prompt = str(input('Please enter filename for output: '))
     try:

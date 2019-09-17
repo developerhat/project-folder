@@ -29,7 +29,12 @@ while True:
 read_me = open(read_user_prompt, 'r')
 
 
-print(read_me.read())
+print(read_me.readline())
+
+#Read the lines, then split the lines into a list
+#Search: Python readline strip file from new file
+#Store data into list
+#Can store data into new lines in a list using .splitlines()
 
 #Goal is to write to output file, with prices to left & names to right
 #Also add all together

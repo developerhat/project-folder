@@ -25,12 +25,7 @@ def how_many_seconds(hours):
 def minutes_and_hours(hours, minutes):
     return hours * 3600, minutes * 60
 
-
-MAGIC_NUM = 5
-
-def magic(num):
-    return num + 2 * 10
-
-result = magic(MAGIC_NUM)
-
-print(result)
+def index_of_caps(word):
+    for x in word:
+        if x == x.isupper():
+            return x.index(x.isupper())

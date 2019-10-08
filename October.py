@@ -55,3 +55,20 @@ def add_ending(lst, ending):
     ending = str(ending)
     for x in lst:
         return x + ending
+
+#Heyyyy got this right all on my own!!
+#This works, but not entirely
+#Entering 104 & 806 don't get removed even if they are divisible by 13. Weird
+def unlucky_13(nums):
+    for i in nums:
+        if i % 13 == 0:
+            nums.remove(i)
+    return nums
+
+
+#This was easy but silly looking. Basic
+def is_truthy(val):
+    if val == False or None or 0 or [] or {} or "":
+        return 0
+    else:
+        return 1

@@ -72,3 +72,38 @@ def is_truthy(val):
         return 0
     else:
         return 1
+
+#From coding bat, returns given string 3 times
+def string_times(str, n):
+    return str*n
+
+#From CodingBat, returns first 3 chars times 3
+def front_times(str, n):
+    return str[:3] * n
+
+#Returns number of times 9 appears in a list
+#Getting better using the count function!
+def array_count9(nums):
+    return nums.count(9)
+
+#Returns True if first 4 values contains the integer 9
+def array_front9(nums):
+    if 9 in nums[0:4]:
+        return True
+    else:
+        return False
+
+#Returns False. We need it to return True.. why?
+def array123(nums):
+    if [1,2,3] in nums [0:3]:
+        return True
+    else:
+        return False
+
+#Supposed to return evens in a list
+#Only returns the first even
+#NEED TO SOLVE CODINGBAT LIST 2
+def count_evens(nums):
+    for i in nums:
+        if i % 2 == 0:
+            return nums.count(i)

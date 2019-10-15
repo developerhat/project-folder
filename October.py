@@ -107,3 +107,33 @@ def count_evens(nums):
     for i in nums:
         if i % 2 == 0:
             return nums.count(i)
+
+#Returns True if values are 6 or add up to 6, etc.
+def love6(a,b):
+    if a or b == 6:
+        return True
+    elif a + b == 6:
+        return True
+    elif a - b or b - a == 6:
+        return True
+    else:
+        return False
+
+
+#wow got this on my own!! Seemed so difficult but got it down!
+def operation24(num1, num2):
+    if num1 + num2 == 24:
+        return 'added'
+    elif num1 - num2 == 24:
+        return 'subtracted'
+    elif num1 * num2 == 24:
+        return 'multiplied'
+    elif num1 / num2 == 24:
+        return 'divided'
+    else:
+        return None
+
+#Working on very easy problem for Edabit, making progress! only does 1st one tho..
+def add_ending(list4, ending):
+    for str in list4:
+        return str + ending

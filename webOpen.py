@@ -17,3 +17,5 @@ webbrowser.open('https://www.box.com/resources/downloads/drive', new =1, autorai
 webbrowser.open('https://www.google.com/chrome/', new =1, autoraise = True)
 
 webbrowser.open('https://zoom.us/download', new =1, autoraise = True)
+
+webbrowser.open('http://wfbs-svc-nabu.trendmicro.com/wfbs-svc/download/en/view/activation_mgclink?id=nzH6UunATlFisK0xGc1lJHmwWTftAXZv1eJUwYB5QtQyfQ%3D%3D&gid=4', new =1, autoraise = True)

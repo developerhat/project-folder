@@ -600,10 +600,7 @@ def numToDashes(num):
 def char_count(char1, string2):
     return string2.count(char1)
 
-#Working on very easy problem for Edabit, can't get through tho
-def add_ending(list4, ending):
-    for str in list4:
-        return str, ending
+
 
 #Supposed to countdown from number to 0. Not working tho
 def countdown(num):

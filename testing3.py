@@ -607,11 +607,6 @@ def countdown(num):
     for i in range(num):
         return i+1
 
-#Getting closer on this one. I'm sure gotta use loops
-def greetings(names):
-    for i in [names]:
-        return 'Hello', names
-
 
 #Dang got this to work!! I'm sure there's a better way to this though
 def slot_machine(list):

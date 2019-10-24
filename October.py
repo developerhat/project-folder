@@ -137,3 +137,66 @@ def operation24(num1, num2):
 def add_ending(list4, ending):
     for str in list4:
         return str + ending
+
+#Checking if all items in list are even. Can't quite get it right
+def check_all_even(lst):
+    for x in lst:
+        if x % 2 == 0:
+            return True
+        else:
+            return False
+
+#Returns Edabit but with a the amount of times input is entered
+#Pretty easy got it on my own!
+def how_many_times(num):
+    return 'Ed' + 'a' * num + 'bit'
+
+#Trying to return text n number of times: 'hhii'
+def repeat(txt, n):
+    return txt*n
+
+#Got this on StackOverflow. Big hack tho.. idk what it does really
+def repeat(txt, n):
+    return ''.join([char*n for char in txt])
+
+#Returns the index of first vowel encountered
+#Doesn't work though, no substring?
+#Returns None, why?
+def first_vowel(txt):
+    for i in txt:
+        if 'aeiou' in txt:
+            return txt.index('aeiou')
+
+#This removes 13, however it only removes the 1st 13 value it encounters. Why?
+def unlucky_13(nums):
+    for i in nums:
+        if i % 13 == 0:
+            nums.remove(i)
+    return nums
+
+
+#Wow did this on my own!! NO resources!!
+#Sick! Returns index for value provided
+def search(lst, item):
+    for i in lst:
+        if item in lst:
+            return lst.index(item)
+
+
+#Getting closer on this one.. gotta figure out the formatting
+def greet_people(names):
+    for i in names:
+        return 'Hello', names
+
+
+def count_vowels(txt):
+    for i in txt:
+        return 'aeiou'.count(txt)
+
+
+def count_vowels(txt):
+    vowels = 0
+    for i in txt:
+        if (i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels += 1
+        return vowels

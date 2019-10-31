@@ -50,7 +50,7 @@ def calculator(num1, operator, num2):
         return "Can't divide by 0!"
 
 #Need to add ending to strings provided
-#Returns holy
+#Returns only once, need ot return for each item in list
 def add_ending(lst, ending):
     ending = str(ending)
     for x in lst:
@@ -188,15 +188,36 @@ def greet_people(names):
     for i in names:
         return 'Hello', names
 
-
+#Doens't work, see answer below. This was my attempt
 def count_vowels(txt):
     for i in txt:
         return 'aeiou'.count(txt)
 
-
+#Got this code from online
+#Works tho!
 def count_vowels(txt):
     vowels = 0
     for i in txt:
         if (i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
             vowels += 1
-        return vowels
+    return vowels
+
+#Got this all on my own, easy
+def tri_area(base, height):
+    return base * height / 2
+
+
+#This is supposed to return a list of numbers counting down from numbers given to 0
+#Can't get through it though. Edabit bookmarked problem
+def countdown_to_zero(start):
+    for i in start:
+        while i != 0:
+            i = i - 1
+    return i
+
+
+#Couldn't figure this out. Edabit bookmarked problem
+def amplify4(num):
+    if num % 4 == 0:
+        for i in range(num):
+            return

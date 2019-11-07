@@ -49,12 +49,7 @@ def calculator(num1, operator, num2):
     else:
         return "Can't divide by 0!"
 
-#Need to add ending to strings provided
-#Returns only once, need ot return for each item in list
-def add_ending(lst, ending):
-    ending = str(ending)
-    for x in lst:
-        return x + ending
+
 
 #Heyyyy got this right all on my own!!
 #This works, but not entirely
@@ -221,3 +216,22 @@ def amplify4(num):
     if num % 4 == 0:
         for i in range(num):
             return
+
+
+#Need to add ending to strings provided
+#Returns only once, need ot return for each item in list
+def add_ending(lst, ending):
+    for x in lst:
+        return x + ending
+
+#Wow got this w minimal help! Needed to add list()
+def get_sequence(low, high):
+    return list(range(low, high+1))
+
+
+def reverse(lst):
+    return lst[::-1]
+
+
+def exists_higher(lst, n):
+    

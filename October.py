@@ -234,4 +234,23 @@ def reverse(lst):
 
 
 def exists_higher(lst, n):
-    
+    pass
+
+#converts hours & minutes + adds for seconds
+def convert(hours, minutes):
+    hours = hours * 3600
+    minutes = minutes * 60
+    return hours + minutes
+
+#Wow! Returns index of given string in list
+#Did this on my own no help
+def find_index(lst, txt):
+    return lst.index(txt)
+
+#Damn!! Got this on my own too! Used exception handling
+#Instead of using if else, used exception handling
+def search(lst, item):
+    try:
+        return lst.index(item)
+    except:
+	    return -1

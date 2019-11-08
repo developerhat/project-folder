@@ -51,16 +51,6 @@ def calculator(num1, operator, num2):
 
 
 
-#Heyyyy got this right all on my own!!
-#This works, but not entirely
-#Entering 104 & 806 don't get removed even if they are divisible by 13. Weird
-def unlucky_13(nums):
-    for i in nums:
-        if i % 13 == 0:
-            nums.remove(i)
-    return nums
-
-
 #This was easy but silly looking. Basic
 def is_truthy(val):
     if val == False or None or 0 or [] or {} or "":
@@ -232,9 +222,13 @@ def get_sequence(low, high):
 def reverse(lst):
     return lst[::-1]
 
-
+#Got through this w minimal help, needed to use max()
 def exists_higher(lst, n):
-    pass
+    for i in lst:
+        if max(lst) >= n:
+            return True
+        else:
+            return False
 
 #converts hours & minutes + adds for seconds
 def convert(hours, minutes):
@@ -254,3 +248,56 @@ def search(lst, item):
         return lst.index(item)
     except:
 	    return -1
+
+#Figuring this out, how can you multiply list values w length of list?
+def MultiplyByLength(arr):
+    for i in arr:
+        return i * len(arr)
+
+#Need to use list comprehension or lamda, filter, map to remove all values in list
+#Why does it only remove one value in list?
+def remove_none(list):
+    for i in list:
+        if i == None:
+            list.remove(i)
+        return list
+
+#Got through this w a lil help!
+#It works but is rejected by Edabit
+def even_odd_partition(lst):
+    even_list = []
+    odd_list = []
+    for i in lst:
+        if i % 2 == 0:
+            even_list.append(i)
+        else:
+            odd_list.append(i)
+    return even_list, odd_list
+
+
+
+#Got through this w minimal help
+#Needed to copy the list using [:]?
+def no_odds(lst):
+    for i in lst[:]:
+        if i % 2 != 0:
+            lst.remove(i)
+    return lst
+
+#Needed help on this one but got the fundamentals right on my own(using the for loop + range)
+def sum_recursively(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total
+
+
+#Heyyyy got this right all on my own!!
+#This works, but not entirely
+#Entering 104 & 806 don't get removed even if they are divisible by 13. Weird
+#Fixed this by copying the list nums[:]
+def unlucky_13(nums):
+    for i in nums[:]:
+        if i % 13 == 0:
+            nums.remove(i)
+    return nums

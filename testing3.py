@@ -922,11 +922,7 @@ def largest_swap(num):
 def get_first_value(list):
     return list[0]
 
-#Pretty easy & it works fine but rejected by Edabit. I think it's a bug?
-def remove_none(list):
-    if None in list:
-        list.remove(None)
-        return list
+
 
 #This ones tough
 #Getting warmer. It works when removing the other 2, but it's not "scalable"

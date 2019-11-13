@@ -311,3 +311,32 @@ def MultiplyByLength(arr):
     for i in arr:
         result.append(i * len(arr))
     return result
+
+
+#Got through this w a little help!
+#Reverses a string
+def rev(n):
+    n = abs(n)
+    return str(n)[::-1]
+
+
+#This challenge is interesting. Not finished, bookmarked in Edabit
+#What am I doing wrong here?
+def transform(list):
+    for i in list:
+        if i % 2 == 0:
+            i = i-1
+            return list
+        else:
+            i = i+1
+            return list
+
+#Works & did this on my own but pretty simple
+def same_first_last(nums):
+    if nums[0] == nums[-1]:
+        return True
+    else:
+        return False
+
+def lucky_sum(a,b,c):
+    

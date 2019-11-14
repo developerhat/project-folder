@@ -337,3 +337,39 @@ def same_first_last(nums):
         return True
     else:
         return False
+
+#This runs & works but doesn't return absolute value?
+def get_abs_sum(lst):
+    total = 0
+    abs_value = [abs(i) for i in lst]
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total
+
+#Did this on my own! Pretty simple but good nontheless
+#Works but doesn't pass Edabit test
+def smaller_num(n1, n2):
+    result = min(n1, n2)
+    n1 = str(n1)
+    n2 = str(n2)
+    return result
+
+#Trying to return number of arguments passed through
+#Wow got through this! had an overcomplicated answer.
+#Simplify it, key is simplify
+def number_args(*argv):
+    return len(argv)
+=======
+#Can't figure this out yet
+#Need to return the difference between highest & lowest number in list
+def list_difference(nums):
+    for i in nums:
+        result = nums.max(nums) - nums.min(nums)
+    return result
+
+#Trying to check if all numbers in list are even
+def check_all_even(lst):
+    if all(lst) % 2 == 0:
+        return True
+    else:
+        return False

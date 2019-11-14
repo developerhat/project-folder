@@ -338,4 +338,16 @@ def same_first_last(nums):
     else:
         return False
 
-def lucky_sum(a,b,c):
+#Can't figure this out yet
+#Need to return the difference between highest & lowest number in list
+def list_difference(nums):
+    for i in nums:
+        result = nums.max(nums) - nums.min(nums)
+    return result
+
+#Trying to check if all numbers in list are even
+def check_all_even(lst):
+    if all(lst) % 2 == 0:
+        return True
+    else:
+        return False

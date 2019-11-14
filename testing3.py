@@ -944,17 +944,7 @@ def first_vowel(txt):
 def get_word(left, right):
     return left.capitalize() + right
 
-<<<<<<< HEAD
-#This challenge is interesting. Not finished, bookmarked in Edabit
-#What am I doing wrong here?
-def transform(list):
-    for i in list:
-        if i % 2 == 0:
-            i = i-1
-            return list
-        else:
-            i = i+1
-            return list
+
 
 
 #Having trouble removing first & last character in a string

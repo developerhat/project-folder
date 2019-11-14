@@ -249,10 +249,6 @@ def search(lst, item):
     except:
 	    return -1
 
-#Figuring this out, how can you multiply list values w length of list?
-def MultiplyByLength(arr):
-    for i in arr:
-        return i * len(arr)
 
 #Need to use list comprehension or lamda, filter, map to remove all values in list
 #Why does it only remove one value in list?
@@ -302,17 +298,44 @@ def unlucky_13(nums):
             nums.remove(i)
     return nums
 
-
-#Can't figure this out yet
-#Need to return the difference between highest & lowest number in list
-def list_difference(nums):
+#Did this on my own! Simple
+def difference(nums):
     for i in nums:
-        result = nums.max(nums) - nums.min(nums)
+        return max(nums) - min(nums)
+
+#Figuring this out, how can you multiply list values w length of list?
+#Got it! needed to create a new list & store the results in that list
+#Needed some help but makes sense
+def MultiplyByLength(arr):
+    result = []
+    for i in arr:
+        result.append(i * len(arr))
     return result
 
-#Trying to check if all numbers in list are even 
-def check_all_even(lst):
-    if all(lst) % 2 == 0:
+
+#Got through this w a little help!
+#Reverses a string
+def rev(n):
+    n = abs(n)
+    return str(n)[::-1]
+
+
+#This challenge is interesting. Not finished, bookmarked in Edabit
+#What am I doing wrong here?
+def transform(list):
+    for i in list:
+        if i % 2 == 0:
+            i = i-1
+            return list
+        else:
+            i = i+1
+            return list
+
+#Works & did this on my own but pretty simple
+def same_first_last(nums):
+    if nums[0] == nums[-1]:
         return True
     else:
         return False
+
+def lucky_sum(a,b,c):

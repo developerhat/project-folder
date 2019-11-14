@@ -359,7 +359,7 @@ def smaller_num(n1, n2):
 #Simplify it, key is simplify
 def number_args(*argv):
     return len(argv)
-=======
+
 #Can't figure this out yet
 #Need to return the difference between highest & lowest number in list
 def list_difference(nums):

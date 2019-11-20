@@ -123,14 +123,6 @@ def add_ending(list4, ending):
     for str in list4:
         return str + ending
 
-#Checking if all items in list are even. Can't quite get it right
-def check_all_even(lst):
-    for x in lst:
-        if x % 2 == 0:
-            return True
-        else:
-            return False
-
 #Returns Edabit but with a the amount of times input is entered
 #Pretty easy got it on my own!
 def how_many_times(num):
@@ -367,9 +359,39 @@ def list_difference(nums):
         result = nums.max(nums) - nums.min(nums)
     return result
 
+
 #Trying to check if all numbers in list are even
 def check_all_even(lst):
     if all(lst) % 2 == 0:
         return True
     else:
         return False
+
+#Checking if all items in list are even. Can't quite get it right
+def check_all_even(lst):
+    for x in lst:
+        if x % 2 == 0:
+            return True
+        else:
+            return False
+
+#Wow got this done on my own! Didn't think it worked but gave it a try
+def programmers(one, two, three):
+    return max(one, two, three) - min(one, two, three)
+
+#I get what it's asking for but havin trouble formatting..
+#Hey got this on my own! Pretty simple
+def animals(chickens, cows, pigs):
+    return (chickens*2) + (cows*4) + (pigs*4)
+
+#Got this on my own pretty simple
+def k_to_k(n, k):
+    if k**k == n:
+        return True
+    else:
+        return False
+
+#Wow got this all on my own!!
+#At first wasn't taking reverse(), so used built-in copy method
+def reverse_capitalize(txt):
+    return txt.upper()[::-1]

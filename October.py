@@ -158,6 +158,8 @@ def search(lst, item):
     for i in lst:
         if item in lst:
             return lst.index(item)
+        else:
+            return -1
 
 
 #Getting closer on this one.. gotta figure out the formatting
@@ -395,3 +397,22 @@ def k_to_k(n, k):
 #At first wasn't taking reverse(), so used built-in copy method
 def reverse_capitalize(txt):
     return txt.upper()[::-1]
+
+#Wow pretty much did this on my own!
+#Needed some pushing to use sum(), was thinking of using for loop
+def mean(nums):
+    result = sum(nums)
+    mean_result = result / len(nums)
+    return round(mean_result, 1)
+
+
+#Just messing round here!
+def testing():
+    question = str(input('Hi! What is your name? '))
+    print('Hi, ' + question + '!')
+    age = int(input('How old are you? '))
+    print("Nice! You are " + str(age) + ' years old. You oldie!')
+
+
+
+    

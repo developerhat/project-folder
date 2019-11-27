@@ -342,11 +342,9 @@ def get_abs_sum(lst):
 
 #Did this on my own! Pretty simple but good nontheless
 #Works but doesn't pass Edabit test
+#Tried 2 strings: 1500 & 16 but returns 1500
 def smaller_num(n1, n2):
-    result = min(n1, n2)
-    n1 = str(n1)
-    n2 = str(n2)
-    return result
+    return str(min(n1, n2))
 
 #Trying to return number of arguments passed through
 #Wow got through this! had an overcomplicated answer.
@@ -414,5 +412,17 @@ def testing():
     print("Nice! You are " + str(age) + ' years old. You oldie!')
 
 
+#Can't figure this out, nested and statements
+def leap(year):
+    if year % 400 and year % 4 == 0 and year % 100 != 0:
+        return True
+    else:
+        return False
 
-    
+#Works but doesn't pass Edabit
+#Checks last 2 chars of both strings? Why's it wrong?
+def check_ending(str1, str2):
+    if str1[-2] == str2[-2]:
+        return True
+    else:
+        return False

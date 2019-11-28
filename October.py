@@ -426,3 +426,20 @@ def check_ending(str1, str2):
         return True
     else:
         return False
+
+#Wow got this on my own!
+#Only issue is, Edabit is using a 2D list with more than 1 list passed
+def count_ones(matrix):
+    for i in matrix:
+        result = matrix.count(1)
+    return result
+
+#Found this answer on Stack overflow
+#Same thing tho, weird?
+def count_ones(matrix):
+    sum(i.count(1) for i in matrix)
+
+#Trying to get this to sum cubes
+def sum_of_cubes(nums):
+    for i in nums:
+        i = i**3

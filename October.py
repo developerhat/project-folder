@@ -202,12 +202,6 @@ def amplify4(num):
             return
 
 
-#Need to add ending to strings provided
-#Returns only once, need ot return for each item in list
-def add_ending(lst, ending):
-    for x in lst:
-        return x + ending
-
 #Wow got this w minimal help! Needed to add list()
 def get_sequence(low, high):
     return list(range(low, high+1))
@@ -439,7 +433,37 @@ def count_ones(matrix):
 def count_ones(matrix):
     sum(i.count(1) for i in matrix)
 
+
+#Need to add ending to strings provided
+#Returns only once, need ot return for each item in list
+def add_ending(lst, ending):
+    for x in lst:
+        return x + ending
+
+#Got this answer from Stackoverflow, not exactly sure what it does though?
+#Uses format()
+def add_ending(lst, ending):
+    output = ["{}{}".format(i, ending) for i in lst]
+    return output
+
+#No luck here..
+#Need to use regular expressions?
+def is_valid(zip_code):
+    zip_code = int(zip_code)
+    if zip_code.isinteger() == True:
+        return True
+    else:
+        return False
+
+#Way too easy
+#Calculates max edge for triangles
+def next_edge(side1, side2):
+    return (side1 + side2) -1
+
+
 #Trying to get this to sum cubes
+#Getting closer but it only cubes the last item in list. Why?
 def sum_of_cubes(nums):
     for i in nums:
         i = i**3
+    return i

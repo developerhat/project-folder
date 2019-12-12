@@ -51,7 +51,8 @@ def calculator(num1, operator, num2):
 
 
 
-#This was easy but silly looking. Basic
+#This was easy but silly looking.
+#Doesn't go through in Edabit though...
 def is_truthy(val):
     if val == False or None or 0 or [] or {} or "":
         return 0
@@ -237,15 +238,6 @@ def search(lst, item):
     except:
 	    return -1
 
-
-#Need to use list comprehension or lamda, filter, map to remove all values in list
-#Why does it only remove one value in list?
-def remove_none(list):
-    for i in list:
-        if i == None:
-            list.remove(i)
-        return list
-
 #Got through this w a lil help!
 #It works but is rejected by Edabit
 def even_odd_partition(lst):
@@ -406,13 +398,6 @@ def testing():
     print("Nice! You are " + str(age) + ' years old. You oldie!')
 
 
-#Can't figure this out, nested and statements
-def leap(year):
-    if year % 400 and year % 4 == 0 and year % 100 != 0:
-        return True
-    else:
-        return False
-
 #Works but doesn't pass Edabit
 #Checks last 2 chars of both strings? Why's it wrong?
 def check_ending(str1, str2):
@@ -467,3 +452,59 @@ def sum_of_cubes(nums):
     for i in nums:
         i = i**3
     return i
+
+#Got this online, not my code. Still not working though
+def sum_of_cubes(nums):
+    return sum([2**x for x in nums])
+
+
+#Can't figure this out, nested and statements
+def is_leap(year):
+    if year % 400 and year % 4 == 0 and year % 100 != 0:
+        return True
+    else:
+        return False
+
+
+#Got this down, but need to account for negative numbers
+def score_calculator(easy, med, hard):
+    for i in easy,med,hard:
+        if i == -i:
+            return "Invalid"
+        else:
+            easy = easy * 5
+            med = med * 10
+            hard = hard * 20
+            return easy + med + hard
+
+#Determines how many negative integers are in the list
+#Did this all ony my own!
+def is_negative(nums):
+    count = 0
+    for i in nums:
+        if i < 0:
+            count +=1
+    return count
+
+#Got through this w minimal help
+def is_empty(dictionary):
+    if not dictionary:
+        return True
+    else:
+        return False
+
+#Need to use list comprehension or lamda, filter, map to remove all values in list
+#Why does it only remove one value in list?
+def remove_none(list):
+    for i in list:
+        if i == None:
+            list.remove(i)
+        return list
+
+#Got through this w minimal help
+def is_palindrome(n):
+    n = str(n)
+    if n[::-1] == n[0::]:
+        return True
+    else:
+        return False

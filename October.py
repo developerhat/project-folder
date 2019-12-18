@@ -508,3 +508,10 @@ def is_palindrome(n):
         return True
     else:
         return False
+
+#Return all list values, capitalized first letter
+def cap_me(lst):
+    for i in lst:
+        lst = lst.capitalize()
+
+    return lst

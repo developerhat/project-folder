@@ -1,26 +1,14 @@
 import smtplib
 #SERVER = "localhost"
 
-FROM = 'monty@python.com'
+connection = smtplib.SMTP('smtp.gmail.com', 587)
 
-TO = ["jon@mycompany.com"] # must be a list
+connection.ehlo()
 
-SUBJECT = "Hello!"
+connection.starttls()
 
-TEXT = "This message was sent with Python's smtplib."
+connection.login('pwgbusiness@gmail.com', 'M0neytalkss')
 
-# Prepare actual message
+connection.sendmail('pwgbusiness@gmail.com', 'bprimer@wearexyz.com', 'Subject: Testing \n\n Dear Hello, \n, I am testing sending email with Python. It rocks! \n\n -Pat')
 
-message = """\
-From: %s
-To: %s
-Subject: %s
-
-%s
-""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
-
-# Send the mail
-
-server = smtplib.SMTP('myserver')
-server.sendmail(FROM, TO, message)
-server.quit()
+connection.quit()

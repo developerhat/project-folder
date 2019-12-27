@@ -6,6 +6,7 @@
 #Importing webbrowser module
 import webbrowser
 
+
 #This script opens the URL's listed below.
 #Each link will open in a new tab
 

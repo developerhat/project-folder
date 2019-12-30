@@ -329,6 +329,7 @@ def get_abs_sum(lst):
 #Did this on my own! Pretty simple but good nontheless
 #Works but doesn't pass Edabit test
 #Tried 2 strings: 1500 & 16 but returns 1500
+#OH! Returns 1500 b/c it only compares 1st 2 digits?
 def smaller_num(n1, n2):
     return str(min(n1, n2))
 
@@ -510,8 +511,25 @@ def is_palindrome(n):
         return False
 
 #Return all list values, capitalized first letter
+#Only returns the last value though?
 def cap_me(lst):
     for i in lst:
-        lst = lst.capitalize()
+        i = i.capitalize()
+    return i
 
-    return lst
+def divides_evenly(a, b):
+    if a/b % 2 == 0:
+        return True
+    else:
+        return False
+
+#What is this supposed to do?.. All returns True
+def both_zero(n1, n2):
+    if n1 and n2 == 0:
+        return True
+    elif n1 and n2 < 0:
+        return True
+    elif n1 and n2 > 0:
+        return True
+    else:
+        return False

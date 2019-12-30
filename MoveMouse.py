@@ -1,22 +1,5 @@
 #usr/bin/python
 
-<<<<<<< HEAD
-#Using web browser to scrape sites
-
-import webbrowser
-import sys
-import pyperclip
-
-user_input = str(input(sys.argv)) # Parameters will be ['mapit.py', '870', 'Valencia', 'St']
-
-#Check if command line arguments were passed
-if len(sys.argv) > 1:
-    address = ' '.join(sys.argv[1:]) #Doing formatting here
-else:
-    address = pyperclip.paste()
-
-webbrowser.open('https://www.google.com/maps/place/' + address)
-=======
 #Web scraping script
 #from selenium import webdriver
 #from BeautifulSoup import BeautifulSoup
@@ -66,4 +49,3 @@ server.sendmail(email,sms_gateway,sms)
 
 # lastly quit the server
 server.quit()
->>>>>>> 8e1c9b28bbf3541b2bfc4205879689bde33c0c5e

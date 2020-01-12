@@ -37,6 +37,6 @@ elif prompt.lower() == 'y':
     authenticate_account() #Authenticate account here
 else:
     #Add exception handling, maybe put in a loop?
-
+    
     #Next steps: Need to add a way to validate password, work w text file, etc
     #Good progress tho!

@@ -1,5 +1,8 @@
 #Creating login program for Python
 
+#TO ADD: Once authenticated, take user through webopen program to open pages w google maps
+import webbrowser
+
 user_list = []
 pass_list = []
 
@@ -25,6 +28,8 @@ if login_flow.lower() == 'n':
     pass1 = input("Password: ")
     if user1 in user_list and pass1 in pass_list:
         print ('Authenticated!')
+        google_search = str(input("What're we Google searching for today? One word only unfortunately "))
+        webbrowser.open('http://www.google.com/?#q=' + google_search, new =1, autoraise = True)
     else:
         print ('Login failed')
     #authenticate(username,password)
@@ -39,5 +44,7 @@ elif login_flow.lower() == 'y':
     print('validating your credentials....')
     if user1 in user_list and pass1 in pass_list:
         print ('Authenticated!')
+        google_search = str(input("What're we Google searching for today? One word only unfortunately "))
+        webbrowser.open('http://www.google.com/?#q=' + google_search, new =1, autoraise = True)
     else:
         print ('Login failed')

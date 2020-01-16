@@ -517,6 +517,7 @@ def cap_me(lst):
         i = i.capitalize()
     return i
 
+#Seems like it should work but doesn't pass Edabit test
 def divides_evenly(a, b):
     if a/b % 2 == 0:
         return True
@@ -530,6 +531,20 @@ def both_zero(n1, n2):
     elif n1 and n2 < 0:
         return True
     elif n1 and n2 > 0:
+        return True
+    else:
+        return False
+
+#Got this on my own, pretty simple!
+def less_than_100(a, b):
+    if a + b < 100:
+        return True
+    else:
+        return False
+
+#Needed a bit of help w this one 
+def check_equality(a, b):
+    if type(a) == type(b):
         return True
     else:
         return False

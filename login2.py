@@ -15,6 +15,9 @@ print("Welcome to Patrick's Login Program 2.0! \n")
 #    if username in user_list and password in pass_list:
 #        return "You've been authenticated!"
 
+#ADD FUNCTIONALITY: ADD while loop/exception handling to this program 
+
+
 login_flow = str(input('Do you have an account with us? Y/N: '))
 if login_flow.lower() == 'n':
     print("Perfect! Let's create an account for you \n")

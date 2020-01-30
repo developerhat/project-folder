@@ -542,9 +542,14 @@ def less_than_100(a, b):
     else:
         return False
 
-#Needed a bit of help w this one 
+#Needed a bit of help w this one
 def check_equality(a, b):
     if type(a) == type(b):
         return True
     else:
         return False
+
+#Way too easy
+def find_perimeter(height, width):
+    result = 2*height + 2*width
+    return result

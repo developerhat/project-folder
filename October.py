@@ -553,3 +553,10 @@ def check_equality(a, b):
 def find_perimeter(height, width):
     result = 2*height + 2*width
     return result
+
+#Supposed to multiply each item in list by 2
+#Can't get it tho
+def get_multiplied_list(lst):
+    for i in lst:
+        i = i * 2
+        return i

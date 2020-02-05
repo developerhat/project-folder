@@ -560,3 +560,31 @@ def get_multiplied_list(lst):
     for i in lst:
         i = i * 2
         return i
+
+#Didn't know .endswith was a valid method
+def is_last_char_n(word):
+    if word.endswith('n'):
+        return True
+    else:
+        return False
+
+#Needed help w this one
+def get_sum_of_elements(lst):
+    total = 0
+    ele = 0
+    while(ele < len(lst)):
+        total = total + lst[ele]
+        ele += 1
+    return total
+
+
+def hello_world(num):
+    if num == 3:
+        return 'Hello'
+    elif num == 5:
+        return 'World'
+    elif num == 15:
+        return 'Hello World'
+
+
+    

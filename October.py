@@ -586,5 +586,30 @@ def hello_world(num):
     elif num == 15:
         return 'Hello World'
 
+#Wow! Got through this on my own!! Good shit
+def limit_number(num, range_low, range_high):
+    for i in range(range_low, range_high):
+        if num < range_low:
+            return range_low
+        elif num > range_high:
+            return range_high
+        elif num in range(range_low, range_high):
+            return num
 
-    
+#Got some help on this one, cheeseballs
+def is_prime(num):
+    if num > 1:
+        for i in range(2, num//2):
+            if (num % i) == 0:
+                return False
+                break
+            else:
+                return True
+
+#Need to solve this, return index position of uppercase chars
+def capital_indexes(str):
+    index_count = []
+    for i in enumerate(str, 0):
+        if i.isupper():
+            index_count.append(i)
+        return index_count

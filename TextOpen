@@ -1,0 +1,3 @@
+#Text file opener & reader program
+
+txt_file = open()

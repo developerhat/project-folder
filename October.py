@@ -613,3 +613,13 @@ def capital_indexes(str):
         if i.isupper():
             index_count.append(i)
         return index_count
+
+#Wow!! Got ths done on my own
+#My 1st idea was to use count(), but wasn't too intuitive
+#Manually counted 
+def capital_letters(txt):
+    capital_counter = 0
+    for letter in txt:
+        if letter.isupper():
+            capital_counter +=1
+    return capital_counter

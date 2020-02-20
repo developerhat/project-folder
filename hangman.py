@@ -1,36 +1,36 @@
 #Hangman game in Python
 import random
 
-hangman_word = ['A','P','P','L','E','S']
+words = ['apples', 'tesla', 'facebook', 'basketball', 'python']
 
+word = random.choice(words)
 print("Welcome to the hangman game! Let's begin..")
 
-user_attempts = str(input('Please enter a letter: '))
+guesses = ''
 
-
-
-while user_attempts not in hangman_word:
-    print("Whoops! Try again!")
-
-
-
-
-
-
-
+turns = 5
 
 user_answer = 0 #Store variable
 
-print("Welcome to the Guess the Number Program 2.0! ")
-print("\n")
+print('Guess the chars')
 
-#Wow got this all on my own!! Keep working
-while user_answer != integer:
-    user_answer = int(input("I'm thinking of a number between 1 and 5, can you guess what it is? "))
-    if user_answer < integer:
-        print("Too low! Keep trying..")
-    elif user_answer > integer:
-        print("That's too high! Keep trying..")
-    elif user_answer == integer:
-        print("You got it mothafucka!! Yeee")
-        print("The number was: ", integer)
+while turns > 0:
+    failed = 0
+    char = str(input('Test: '))
+    for char in word:
+        if char in guesses:
+            print(char)
+        else:
+            print('_')
+            failed +=1
+    if failed == 0:
+        print("You won! The word is: ", word)
+        break
+        guess = str(input("Guess a char: "))
+        guesses += guess
+        if guess not in word:
+            turns -= 1
+            print("wrong!")
+            print('You have,' + turns, 'left')
+            if turns == 0:
+                print("You lose!")

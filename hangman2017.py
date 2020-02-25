@@ -1,6 +1,6 @@
-#Python hangman game 
+#Python hangman game
 
-import random 
+import random
 words = ['subaru', 'culture', 'calabasas', 'honda', 'patek']
 livesRemaining = 14
 #livesRemaining = (int)livesRemaining
@@ -11,16 +11,17 @@ def pickaword():
 	return words[wordPosition]
 
 def play():
+	livesRemaining = 14
 	word=pickaword()
 	while True:
 		guess= getGuess(word)
 		if processGuess(guess, word):
 			print('Congratulations! You won! ')
 			break
-		if processGuess < int(livesRemaining): #Double check this line 
+		if processGuess <= int(livesRemaining): #Double check this line
 			print('Oh no! You just got hung!')
 			print('The word was: ' + word)
-			break 
+			break
 
 def getGuess(word):
 	printWord(word)
@@ -48,11 +49,11 @@ def processGuess(guess, word):
 def wholewordguess(guess, word):
 	global livesRemaining
 	if guess.lower() == word.lower():
-		return 
-		#the word guessed is right, what should be returned? Check this^^ 
+		return
+		#the word guessed is right, what should be returned? Check this^^
 	else:
-		livesRemaining = livesRemaining-1 
-		#^^Check this 
+		livesRemaining = livesRemaining-1
+		#^^Check this
 	return False
 
 def single_letter_guess(guess, word):
@@ -65,7 +66,7 @@ def single_letter_guess(guess, word):
 		guessedLetters = guessedLetters + guess.lower()
 	if all_letters_guessed(word):
 		return True
-	return False 
+	return False
 
 
 def all_letters_guessed(word):
@@ -75,5 +76,3 @@ def all_letters_guessed(word):
 	return True
 
 play()
-
-

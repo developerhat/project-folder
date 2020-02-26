@@ -4,27 +4,28 @@ import random
 
 word = random.choice(['tesla','apple', 'basketball'])
 
-guessed = []
-wrong = []
+guessed = [] #Stores user guesses
+wrong = [] #Stores
 
 tries = 7
+
+print(word)
 
 while tries > 0:
 
     out =''
     for letter in word:
         if letter in guessed:
-            out = out + letter
+            out = out + letter #If they got it right
         else:
-            out = out + "_"
-
+            out = out + "_" #If they got it wrong, add this
     if out == word:
-        print('You guessed:', word)
+        print('You guessed:', word) #If they guessed the whole WORD
         break
 
     print('Guess a letter in the word:', out)
 
-    guess = input()
+    guess = str(input())
 
     if guess in guessed or guess in wrong:
         print("Already guessed", guess)

@@ -44,3 +44,18 @@ def is_leap(year):
             return False
     else:
         return False
+
+#0 & 1 return T/F
+def reverse_boolean(arg):
+    if type(arg) == True:
+        return False
+    elif type(arg) == False:
+        return True
+    else:
+        return 'boolean expected'
+
+
+def total_cups(n):
+    for i in n:
+        if i == 6:
+            return i = i + 1

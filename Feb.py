@@ -59,3 +59,25 @@ def total_cups(n):
     for i in n:
         if i == 6:
             return i = i + 1
+
+#Wow holy shit! got this on my own
+def score_calculator(easy, medium, hard):
+    if easy < 0 or medium <0 or hard <0:
+        return 'invalid'
+    else:
+        return (easy*5)+(medium*10)+(hard*20)
+
+#On my own too! Nice
+def vol_pizza(radius, height):
+    return round((radius**2) * (height * 3.14))
+
+#Checks whehter 2 numbers are zero, negative, or positive
+def both(n1, n2):
+    if n1 and n2 < 0:
+        return False
+    elif n1 and n2 > 0:
+        return True
+    elif n1 == n2:
+        return True
+    else:
+        return False

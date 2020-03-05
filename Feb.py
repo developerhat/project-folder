@@ -73,7 +73,7 @@ def vol_pizza(radius, height):
 
 #Checks whehter 2 numbers are zero, negative, or positive
 def both(n1, n2):
-    if n1 and n2 < 0:
+    if n1 or n2 < 0:
         return False
     elif n1 and n2 > 0:
         return True

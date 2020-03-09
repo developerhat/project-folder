@@ -26,6 +26,7 @@ while attempts_counter < 3:
     else:
         print("Invalid credentials. Please try again! 3 attempts max. ")
         attempts_counter +=1 #Adding for each attempt
+        print('Number of attempts: ', attempts_counter)
         True
         if attempts_counter == 3:
             print("Maximum attempts reached! Please try again later. ")

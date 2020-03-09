@@ -81,3 +81,10 @@ def both(n1, n2):
         return True
     else:
         return False
+
+#Oh shit! Got through w some help here
+def get_multiplied_list(lst):
+    new_list = []
+    for i in lst:
+        new_list.append(i * 2)
+    return new_list #Make sure to return so doesn't return None

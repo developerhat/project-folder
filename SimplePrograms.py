@@ -37,3 +37,9 @@ def is_palindrome(n):
 def count_words(str):
     for i in str:
         return str.count(' ') +1
+
+
+def add_char_string(str, char, num):
+    char = str(char)
+    num = int(num)
+    return str + (char*num)

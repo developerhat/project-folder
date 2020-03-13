@@ -15,15 +15,15 @@ print('5 - Enter a URL')
 
 user_answer = '' #Placeholder here
 
-while True:
+while user_answer.lower() != 'n': #Wow, this works, but it's a bit clunky. Y/N do th opposite of what it's supposed to do..
     user_choice = int(input(''))
     if user_choice == 1:
         webbrowser.open('https://linkedin.com', new =1, autoraise = True)
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
-            continue
+            True
         else:
-            continue
+            False
     elif user_choice == 2:
         webbrowser.open('https://glassdoor.com', new =1, autoraise = True)
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
@@ -42,7 +42,7 @@ while True:
         webbrowser.open('https://youtube.com', new =1, autoraise = True)
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
-            continue #How do we make it so that it just loops back to regular, without having to cancel the program?
+            True #How do we make it so that it just loops back to regular, without having to cancel the program?
         else:
             False
     elif user_choice == 5:
@@ -50,9 +50,9 @@ while True:
         webbrowser.open('https://' + webpage_name + '.com', new =1, autoraise = True)
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
-            continue
+            True
         else:
-            continue
+            False
 
     #if user_answer.lower() == 'y':
     #    continue

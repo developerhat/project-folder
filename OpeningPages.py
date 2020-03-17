@@ -22,6 +22,7 @@ while user_answer.lower() != 'n': #Wow, this works, but it's a bit clunky. Y/N d
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
             True
+            print("What're we opening this time?: ")
         else:
             False
             print('Thank you for using the Page Opener program! :) ')
@@ -30,6 +31,7 @@ while user_answer.lower() != 'n': #Wow, this works, but it's a bit clunky. Y/N d
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
             True
+            print("What're we opening this time?: ")
         else:
             False
             print('Thank you for using the Page Opener program! :) ')
@@ -38,6 +40,7 @@ while user_answer.lower() != 'n': #Wow, this works, but it's a bit clunky. Y/N d
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
             True
+            print("What're we opening this time?: ")
         else:
             False
     elif user_choice == 4:
@@ -45,6 +48,7 @@ while user_answer.lower() != 'n': #Wow, this works, but it's a bit clunky. Y/N d
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
             True #How do we make it so that it just loops back to regular, without having to cancel the program?
+            print("What're we opening this time?: ")
         else:
             False
             print('Thank you for using the Page Opener program! :) ')
@@ -54,6 +58,7 @@ while user_answer.lower() != 'n': #Wow, this works, but it's a bit clunky. Y/N d
         user_answer = str(input('Great! Would you like to open another page? Y/N: '))
         if user_answer.lower() == 'y':
             True
+            print("What're we opening this time?: ")
         else:
             False
             print('Thank you for using the Page Opener program! :) ')

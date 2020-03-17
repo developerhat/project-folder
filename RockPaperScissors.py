@@ -8,7 +8,7 @@ player = False
 loop_placeholder = False
 print("Welcome to the Rock, Paper, Scissors Game! ")
 
-#Wow did this all on my own! 
+#Wow did this all on my own!
 while loop_placeholder == False:
     player = str(input("Rock, Paper, or Scissors? "))
     if player == computer:

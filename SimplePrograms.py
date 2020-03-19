@@ -43,3 +43,10 @@ def add_char_string(str, char, num):
     char = str(char)
     num = int(num)
     return str + (char*num)
+
+
+
+def count_to_n(num):
+    while x != num:
+        return print(num)
+        x += 1

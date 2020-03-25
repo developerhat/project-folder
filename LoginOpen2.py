@@ -17,11 +17,10 @@ password_list.append(password) #Storing credentials in the list
 print("Great! Now, let's login \n")
 
 attempts_counter = 3
-#logout = str(input("Log out of program? "))
 #Find some way to track logout from user, so can log out. Another while loop? fuck..
+logout = ''
 
-
-while attempts_counter > 0:
+while attempts_counter or logout > 0 :
     user_login = str(input("Username: "))
     if user_login in username_list:
         print("Username found! Please enter a password")
@@ -52,6 +51,7 @@ while attempts_counter > 0:
                         False
                         print('Thank you for using the Page Opener program! :) ')
                         break
+                        logout = -1
                         #logout = str(input("Log out of program? "))
                 elif user_choice == 2:
                     webbrowser.open('https://glassdoor.com', new =1, autoraise = True)

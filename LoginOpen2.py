@@ -18,7 +18,7 @@ print("Great! Now, let's login \n")
 
 attempts_counter = 3
 #Find some way to track logout from user, so can log out. Another while loop? fuck..
-logout = ''
+logout = 1
 
 while attempts_counter or logout > 0 :
     user_login = str(input("Username: "))
@@ -47,12 +47,11 @@ while attempts_counter or logout > 0 :
                         True
                         print("What're we opening this time?: ")
                     else:
-                        attempts_counter = 1 #Trying to break the nested while loop above us, seems like this portion works but after hitting N for this loop, loop continues to ask for username
-                        False
+                        attempts_counter = attempts_counter - 4 #Trying to break the nested while loop above us, seems like this portion works but after hitting N for this loop, loop continues to ask for username
+                        logout = logout - 2 #Supposed to stop it here.. keep workin!
                         print('Thank you for using the Page Opener program! :) ')
-                        break
-                        logout = -1
-                        #logout = str(input("Log out of program? "))
+                        print(logout) #So prints value as -1, but doesn't end loop.. maybe b/c loop is scoped outside of program?
+                        False
                 elif user_choice == 2:
                     webbrowser.open('https://glassdoor.com', new =1, autoraise = True)
                     user_answer = str(input('Great! Would you like to open another page? Y/N: '))

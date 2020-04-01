@@ -89,6 +89,11 @@ while attempts_counter or logout > 0 :
                     else:
                         False
                         print('Thank you for using the Page Opener program! :) ')
+            else:
+                #WOW THIS WORKED! Lined up while statement for page opener with this else
+                #DUH!
+                print('Thank you for using the Page Opener program! :) ')
+                break
         elif pass_login not in password_list:
             print("Invalid password. Please try again. ")
             attempts_counter -=1

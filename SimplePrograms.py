@@ -50,3 +50,7 @@ def count_to_n(num):
     while x != num:
         return print(num)
         x += 1
+
+
+def potatoes(string):
+    return string.count('potato')

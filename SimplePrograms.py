@@ -54,3 +54,24 @@ def count_to_n(num):
 
 def potatoes(string):
     return string.count('potato')
+
+def function1(int):
+    result = int /2
+    return result
+
+def function2(int2):
+    result2 = int2 * 4
+    return result2
+
+print(function1(40))
+print(function2(20))
+
+
+def count_true(list):
+    return list.count(True)
+
+def is_safe_bridge(x):
+    if ' ' in x:
+        return False
+    else:
+        return True

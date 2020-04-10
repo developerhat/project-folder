@@ -75,3 +75,6 @@ def is_safe_bridge(x):
         return False
     else:
         return True
+
+def backwords(str):
+    return str[::-1]

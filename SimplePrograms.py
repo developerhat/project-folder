@@ -87,3 +87,6 @@ def sum_first_n_nums(lst, n):
 
 def space_me_out(str):
     return " ".join(str)
+
+def backwords(str):
+    return str[::-1]

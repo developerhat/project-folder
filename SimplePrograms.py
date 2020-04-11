@@ -75,3 +75,15 @@ def is_safe_bridge(x):
         return False
     else:
         return True
+
+def halfQUarterEigth(num):
+    list_results = [num/2, num/.25, num/.83]
+    return list_results
+
+#Doesn't work..
+def sum_first_n_nums(lst, n):
+    for n in range(lst):
+        return sum(n)
+
+def space_me_out(str):
+    return " ".join(str)

@@ -55,18 +55,6 @@ def count_to_n(num):
 def potatoes(string):
     return string.count('potato')
 
-def function1(int):
-    result = int /2
-    return result
-
-def function2(int2):
-    result2 = int2 * 4
-    return result2
-
-print(function1(40))
-print(function2(20))
-
-
 def count_true(list):
     return list.count(True)
 
@@ -90,3 +78,50 @@ def space_me_out(str):
 
 def backwords(str):
     return str[::-1]
+
+
+def count_words(str):
+    return str.count(' ') +1
+
+
+#Doesn't work!
+#Add x chars to start & end of string Edabit
+def string_add(string, char, length):
+    result = string.center(length, char)
+    return result
+
+#What! Converts string equation to actual equation.
+def equation(s):
+    return eval(s)
+
+
+#wow this worked! Cheated tho, used stackoverflow
+def count_syllables(str):
+    count = 0
+    str = str.lower()
+    vowels = 'aeiouy'
+    for i in range(0, len(str)):
+        if str[i] in vowels and str[i -1] not in vowels:
+            count +=1
+    if count == 0:
+        count+=1
+    return count #Trying to count syllables... hm..
+
+
+#Doesn't work!
+#Need for a way to say "If all chars in this string"
+#OH SHIT! Got it to work!
+#Switched all(i) to all(str)
+def get_case(str):
+    for i in str:
+        if all(str) == str.isupper():
+            return 'upper'
+        elif all(str) == str.islower():
+            return 'lower'
+        else:
+           return 'mixed'
+
+    #My solution above, verbose
+
+    #Generator solution?
+    #return any(str.isupper() for i in str)

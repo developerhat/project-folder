@@ -238,18 +238,6 @@ def search(lst, item):
     except:
 	    return -1
 
-#Got through this w a lil help!
-#It works but is rejected by Edabit
-def even_odd_partition(lst):
-    even_list = []
-    odd_list = []
-    for i in lst:
-        if i % 2 == 0:
-            even_list.append(i)
-        else:
-            odd_list.append(i)
-    return even_list, odd_list
-
 
 
 #Got through this w minimal help
@@ -616,7 +604,7 @@ def capital_indexes(str):
 
 #Wow!! Got ths done on my own
 #My 1st idea was to use count(), but wasn't too intuitive
-#Manually counted 
+#Manually counted
 def capital_letters(txt):
     capital_counter = 0
     for letter in txt:

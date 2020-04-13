@@ -68,11 +68,6 @@ def halfQUarterEigth(num):
     list_results = [num/2, num/.25, num/.83]
     return list_results
 
-#Doesn't work..
-def sum_first_n_nums(lst, n):
-    for n in range(lst):
-        return sum(n)
-
 def space_me_out(str):
     return " ".join(str)
 
@@ -125,3 +120,60 @@ def get_case(str):
 
     #Generator solution?
     #return any(str.isupper() for i in str)
+
+
+#Doesn't work..
+def sum_first_n_nums(lst, n):
+    for n in range(lst):
+        return sum(n)
+
+
+def has_key(dictionary, key):
+    if key in dictionary:
+        return True
+    else:
+        return False
+
+#Works
+def wumbo(words):
+	for i in words:
+		if i == 'M':
+			return words.replace('M', 'W')
+		elif i == 'W':
+			return words.replace('W', 'M')
+
+#Not working as planned
+def simplePigLatin(string):
+    return string[:0]  #+ 'ay'
+
+#Got it!
+def has_same_bread(lst1,lst2):
+    if lst1[0] == lst2[0] and lst1[-1] == lst2[-1]:
+        return True
+    else:
+        return False
+
+def yeahNope(b):
+    return "yeah" if b == True else "nope"
+
+#Oh shit! Got this through w some help
+def additive_inverse(lst):
+    for x in range(len(lst)):
+        lst[x] = -lst[x]
+    return lst
+
+
+
+#Got through this w a lil help!
+#It works but is rejected by Edabit
+#Found out why rejected - added final_list 
+def even_odd_partition(lst):
+    even_list = []
+    odd_list = []
+    for i in lst:
+        if i % 2 == 0:
+            even_list.append(i)
+        else:
+            odd_list.append(i)
+    final_list = [even_list, odd_list]
+    return final_list

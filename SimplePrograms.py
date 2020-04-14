@@ -166,7 +166,7 @@ def additive_inverse(lst):
 
 #Got through this w a lil help!
 #It works but is rejected by Edabit
-#Found out why rejected - added final_list 
+#Found out why rejected - added final_list
 def even_odd_partition(lst):
     even_list = []
     odd_list = []
@@ -177,3 +177,33 @@ def even_odd_partition(lst):
             odd_list.append(i)
     final_list = [even_list, odd_list]
     return final_list
+
+def long_burp(num):
+    return 'Bu' + num * 'r' + 'p'
+
+def is_it_true(relation):
+    return eval(relation)
+
+#Simple
+def count_claps(txt):
+    return txt.count('C')
+
+#Does not work
+def can_nest(list1, list2):
+    if list1.min(list1) > list2.min(list2) and list1.max(list1) < list2.max(list2):
+        return True
+    else:
+        return False
+
+#For every 6 cups, add 1
+#not working
+#FIGURE THIS OUT?!
+def total_cups(n):
+    for x in range(n):
+        if x / 6 == 0:
+            return n + 1
+
+#Doens't work?
+def word_lengths(lst):
+    for i in lst:
+        return lst.count(len(i))

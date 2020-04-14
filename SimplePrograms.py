@@ -207,3 +207,22 @@ def total_cups(n):
 def word_lengths(lst):
     for i in lst:
         return lst.count(len(i))
+
+#WTF? Why isn't this one working. Seems so simple
+#NEver returns 1
+def flipBool(b):
+    if b == True or 1:
+        return 0
+    elif b == False or 0:
+        return 1
+
+#Doesn't work yet, want to sum numbers up to integer given
+def add_up_to(n):
+    for i in range(n):
+        i += i
+    return i
+
+#Want to count digits
+def length(str):
+    for i in str:
+        return str.count(i) + 1

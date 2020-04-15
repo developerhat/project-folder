@@ -8,6 +8,9 @@ print("Welcome to the hangman game! Let's begin..")
 
 turns = 5
 
+guess = ''
+guess_word = ''
+
 
 print('Guess the chars\n')
 print('The word is: ', word)

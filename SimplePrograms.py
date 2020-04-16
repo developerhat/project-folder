@@ -226,3 +226,12 @@ def add_up_to(n):
 def length(str):
     for i in str:
         return str.count(i) + 1
+
+def divide(a,b):
+    try:
+        return a/b
+    except:
+        print("Can't divide by Zero!")
+
+def one_odd_one_even(n):
+    number = len(n)

@@ -235,3 +235,18 @@ def divide(a,b):
 
 def one_odd_one_even(n):
     number = len(n)
+
+#Need ot finish, book marked 
+def reverse_title(txt):
+    return txt.swapcase()
+
+
+#Doesn't wokr
+def owofied(sentence):
+    for x in sentence:
+        if x == 'i' or x== 'e':
+            if 'i' in x:
+                x.replace('wi')
+            elif 'e' in x:
+                x.replace('we')
+        return x, sentence

@@ -268,10 +268,71 @@ def one_odd_one_even(n):
     number = len(n)
 
 
-#Got it to work! Was running into spacing tab errors but fixed that 
+#Got it to work! Was running into spacing tab errors but fixed that
 def increment_items(lst):
     new_list = []
 	for i in lst:
 		i += 1
         new_list.append(i)
 	return new_list
+
+#Doesn't work..
+def greet_people(names):
+    for i in names:
+        return 'Hello '.join(names)
+
+#Getting closer on this one.. gotta figure out the formatting
+#Gotta use .join() method
+def greet_people(names):
+    for i in names:
+        return 'Hello', names
+
+#Only returning negative, changed to easy <0, med<0, hard<0
+#Needed a little help
+def score_calculator(easy, med, hard):
+    if easy < 0 or med < 0 or hard < 0:
+        return 'invalid'
+    else:
+        return (easy*5) + (med*10) + (hard *20)
+
+
+#Got this down, but need to account for negative numbers
+def score_calculator(easy, med, hard):
+    for i in easy,med,hard:
+        if i == -i:
+            return "Invalid"
+        else:
+            easy = easy * 5
+            med = med * 10
+            hard = hard * 20
+            return easy + med + hard
+
+#Got some help on this one, went back to previous code added [:]
+def unlucky_13(nums):
+    for i in nums[:]:
+        if i % 13 == 0:
+            nums.remove(i)
+    return nums
+
+#Returns sum of all elements in list
+#Needed bit of help, was tryna use for loop
+def get_sum_of_elements(lst):
+    return sum(lst)
+
+
+def first_vowel(txt):
+	if 'a' or 'e' or 'i' or 'o' or 'u' in txt:
+        return txt.index('aeiou')
+
+def first_vowel(txt):
+	for i in txt:
+            if 'a' or 'e' or 'i' or 'o' or 'u' in txt:
+                vowels = 'aeiou'
+                return txt.index(vowels)
+
+#THIS WORKS!! DAMN! Got a lil help but it CLICKED 
+def first_vowel(txt):
+    vowels = 'aeiouAEIOU'
+    for i in txt:
+        if i in vowels:
+            return txt.index(i)

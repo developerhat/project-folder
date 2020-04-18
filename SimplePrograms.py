@@ -181,39 +181,8 @@ def even_odd_partition(lst):
 def long_burp(num):
     return 'Bu' + num * 'r' + 'p'
 
-#So close! Eval doesn't work with =?
 def is_it_true(relation):
-    if eval(relation) == True:
-        return True
-    elif '=' in relation:
-        relation = relation.replace('=', '==')
-        if eval(relation) == True:
-            return True
-    else:
-        return False
-
-#THIS ONE WORKS! Check the diff
-def is_it_true(relation):
-    if '=' in relation:
-        relation = relation.replace('=', '==')
-        if eval(relation) == True:
-            return True
-        else:
-            return False
-    elif eval(relation) == True:
-        return True
-    else:
-        return False
-
-#Counting list within list
-#Fuck doesnt work
-def measure_the_depth(lst):
-    lst = str(lst)
-	return lst.count('[]')
-
-
-
-
+    return eval(relation)
 
 #Simple
 def count_claps(txt):
@@ -266,73 +235,3 @@ def divide(a,b):
 
 def one_odd_one_even(n):
     number = len(n)
-
-
-#Got it to work! Was running into spacing tab errors but fixed that
-def increment_items(lst):
-    new_list = []
-	for i in lst:
-		i += 1
-        new_list.append(i)
-	return new_list
-
-#Doesn't work..
-def greet_people(names):
-    for i in names:
-        return 'Hello '.join(names)
-
-#Getting closer on this one.. gotta figure out the formatting
-#Gotta use .join() method
-def greet_people(names):
-    for i in names:
-        return 'Hello', names
-
-#Only returning negative, changed to easy <0, med<0, hard<0
-#Needed a little help
-def score_calculator(easy, med, hard):
-    if easy < 0 or med < 0 or hard < 0:
-        return 'invalid'
-    else:
-        return (easy*5) + (med*10) + (hard *20)
-
-
-#Got this down, but need to account for negative numbers
-def score_calculator(easy, med, hard):
-    for i in easy,med,hard:
-        if i == -i:
-            return "Invalid"
-        else:
-            easy = easy * 5
-            med = med * 10
-            hard = hard * 20
-            return easy + med + hard
-
-#Got some help on this one, went back to previous code added [:]
-def unlucky_13(nums):
-    for i in nums[:]:
-        if i % 13 == 0:
-            nums.remove(i)
-    return nums
-
-#Returns sum of all elements in list
-#Needed bit of help, was tryna use for loop
-def get_sum_of_elements(lst):
-    return sum(lst)
-
-
-def first_vowel(txt):
-	if 'a' or 'e' or 'i' or 'o' or 'u' in txt:
-        return txt.index('aeiou')
-
-def first_vowel(txt):
-	for i in txt:
-            if 'a' or 'e' or 'i' or 'o' or 'u' in txt:
-                vowels = 'aeiou'
-                return txt.index(vowels)
-
-#THIS WORKS!! DAMN! Got a lil help but it CLICKED 
-def first_vowel(txt):
-    vowels = 'aeiouAEIOU'
-    for i in txt:
-        if i in vowels:
-            return txt.index(i)

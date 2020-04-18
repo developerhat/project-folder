@@ -163,11 +163,6 @@ def search(lst, item):
             return -1
 
 
-#Getting closer on this one.. gotta figure out the formatting
-def greet_people(names):
-    for i in names:
-        return 'Hello', names
-
 #Doens't work, see answer below. This was my attempt
 def count_vowels(txt):
     for i in txt:

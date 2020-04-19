@@ -236,7 +236,7 @@ def divide(a,b):
 def one_odd_one_even(n):
     number = len(n)
 
-#Need ot finish, book marked 
+#Need ot finish, book marked
 def reverse_title(txt):
     return txt.swapcase()
 
@@ -250,3 +250,22 @@ def owofied(sentence):
             elif 'e' in x:
                 x.replace('we')
         return x, sentence
+
+
+def googlify(n):
+    if n <= 1:
+        return 'invalid'
+    else:
+        return 'g' + ('o'*n) + 'gle'
+
+
+#Having trouble incrementing
+#NVM got this right! Solved it by creating new list, and appending new values to that list
+#Instead of modifying list in place
+
+def increment_items(lst):
+	new_list = []
+	for i in lst:
+		i +=1
+		new_list.append(i)
+	return new_list

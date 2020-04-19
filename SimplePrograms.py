@@ -269,3 +269,31 @@ def increment_items(lst):
 		i +=1
 		new_list.append(i)
 	return new_list
+
+def has_same_bread2(lst1,lst2):
+    if lst1[0] == lst2[0] and lst1[-1] and lst2[-1]:
+        return True
+    else:
+        return False
+
+#Wow needevd help looked in October.py code
+#My solution was to use count, but didn't work
+#Instead iterate through
+def capital_letters(txt):
+    cap_letters_counter = 0
+    for i in txt:
+        if i.isupper():
+            cap_letters_counter += 1
+    return cap_letters_counter
+
+def less_than_100(num1, num2):
+    if num1 + num2 < 100:
+        return True
+    else:
+        return False
+
+def divides_evenly(a,b):
+    if a % b == 0:
+        return True
+    else:
+        return False

@@ -30,7 +30,6 @@ def authenticate():
             if pass_login not in pass_list:
                 attempts -=1
                 print("Damn! Start over. Attempts left: ", attempts) #Make it so that don't have to start over again? Maybe just from password?
-                continue
             elif pass_login in pass_list:
                 print("AWESOME!! Authenticated! ")
                 break

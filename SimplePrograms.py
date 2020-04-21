@@ -317,9 +317,15 @@ def prevent_distractions(txt):
         else:
             return "Safe watching!"
 
-#Got it on my own! Wow! memorized, no help 
+#Got it on my own! Wow! memorized, no help
 def is_identical(s):
     if s[::-1] == s[::]:
+        return True
+    else:
+        return False
+
+def and(a,b):
+    if a and b == True:
         return True
     else:
         return False

@@ -286,6 +286,12 @@ def capital_letters(txt):
             cap_letters_counter += 1
     return cap_letters_counter
 
+
+def reverse_capitalize(txt):
+    txt = txt[::-1]
+    return txt.upper()
+
+
 def less_than_100(num1, num2):
     if num1 + num2 < 100:
         return True
@@ -294,6 +300,26 @@ def less_than_100(num1, num2):
 
 def divides_evenly(a,b):
     if a % b == 0:
+        return True
+    else:
+        return False
+
+#Finish this!
+def search(lst, item):
+    for item in lst:
+        return lst.index(item)
+
+
+def prevent_distractions(txt):
+    for i in txt:
+        if 'anime' or 'meme' or 'vine' or 'roasts' or 'Danny DeVito' in txt:
+            return 'NO!'
+        else:
+            return "Safe watching!"
+
+#Got it on my own! Wow! memorized, no help 
+def is_identical(s):
+    if s[::-1] == s[::]:
         return True
     else:
         return False

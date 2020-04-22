@@ -329,3 +329,9 @@ def and(a,b):
         return True
     else:
         return False
+
+#Damn figured this out!
+
+def rev(n):
+    n = str(abs(n))
+    return n[::-1]

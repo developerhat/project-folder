@@ -335,3 +335,16 @@ def and(a,b):
 def rev(n):
     n = str(abs(n))
     return n[::-1]
+
+#Wow, was using or True & or False here but no need!
+def flip_bool(b):
+    if b == 1:
+        return 0
+    elif b == 0:
+        return 1
+
+def F_to_C(f):
+    return (f - 32) * (5/9)
+
+def C_to_F(c):
+    return (c * 9/5) + 32

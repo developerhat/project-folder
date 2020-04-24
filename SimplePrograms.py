@@ -348,3 +348,38 @@ def F_to_C(f):
 
 def C_to_F(c):
     return (c * 9/5) + 32
+
+
+def get_first_value(number_list):
+    return number_list[0]
+
+#this one's a bit more complicated, solve it later hehe
+#Requires 0 count first
+def count_syllables(txt):
+    return txt.count()
+
+#Damn gotta figure this out!
+def unlucky_13(nums):
+    new_list = []
+    for i in nums:
+        if i % 13 == 0:
+            new_list.append(i)
+        return new_list
+
+#Couldn't figure this out!!
+def hello_world(num):
+    if num % 5 and num % 3 == 0:
+        return 'Hello World'
+    elif num % 3 == 0:
+        return 'Hello'
+    elif num % 5 == 0:
+        return 'World'
+
+
+def hello_world(num):
+    if num % 3 == 0:
+        return 'Hello'
+    elif num % 5 == 0:
+        return 'World'
+    elif num % 3 and num % 5 == 0:
+        return 'Hello World'

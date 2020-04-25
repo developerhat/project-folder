@@ -377,9 +377,16 @@ def hello_world(num):
 
 
 def hello_world(num):
-    if num % 3 == 0:
+    if num % 15 == 0:
+        return 'Hello World'
+    elif num % 3 == 0:
         return 'Hello'
     elif num % 5 == 0:
-        return 'World'
-    elif num % 3 and num % 5 == 0:
-        return 'Hello World'
+        return  'World'
+
+def get_multiplied_list(lst):
+    new_list = []
+    for i in lst:
+        i = i * 2
+        new_list.append(i)
+    return new_list

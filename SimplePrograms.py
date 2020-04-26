@@ -390,3 +390,29 @@ def get_multiplied_list(lst):
         i = i * 2
         new_list.append(i)
     return new_list
+
+
+def remove_none(lst):
+    new_list = []
+    for i in lst:
+        if i != None:
+            new_list.append(i)
+    return new_list
+
+def has_spaces(txt):
+    if ' ' in txt:
+        return True
+    else:
+        return False
+
+#Doesn't work gotta return number of capital letters
+def capital_letters(txt):
+    for i in txt:
+        if i.isupper():
+            return i.count(txt)
+
+def k_to_k(n, k):
+    if k**k == n:
+        return True
+    else:
+        return False

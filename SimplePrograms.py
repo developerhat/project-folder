@@ -222,11 +222,6 @@ def add_up_to(n):
         i += i
     return i
 
-#Want to count digits
-def length(str):
-    for i in str:
-        return str.count(i) + 1
-
 def divide(a,b):
     try:
         return a/b
@@ -416,3 +411,51 @@ def k_to_k(n, k):
         return True
     else:
         return False
+
+#Want to count digits
+def length(str):
+    for i in str:
+        return str.count(i)
+
+#Got from hacker rank
+def conditional(n):
+    if n % 2 == 1:
+        return 'Weird'
+    elif n % 2 == 0 and n in range(2,5):
+        return 'Not Weird'
+    elif n % 2 == 0 and n in range(6,20):
+        return 'Weird'
+    elif n % 2 == 0 and n > 20:
+        return 'Not Weird'
+
+#Got it w minimal help!
+#Was fucken up w/ max(lst), wrote it as lst.max()
+def difference_max_min(lst):
+    for i in lst:
+        return max(lst) - min(lst)
+
+
+def concat_list(lst1,lst2):
+    return lst1 + lst2
+
+
+#DAMN! Pretty much solved this on my own
+#Had trouble w/ format for count(), was using count(hashes) instead of hashes.count()
+def hash_plus_count(txt):
+    hashes = []
+    pluses = []
+    for i in txt:
+        if i == '#':
+            hashes.append(i)
+        elif i == '+':
+            pluses.append(i)
+    return [hashes.count('#'), pluses.count('+')]
+
+#Ouh this was a fun one!
+#Solved on my own!! OH SHIT! 
+def remove_none(lst):
+    new_list = []
+    for i in lst:
+        if i != None:
+            new_list.append(i)
+    return new_list

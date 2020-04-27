@@ -452,10 +452,29 @@ def hash_plus_count(txt):
     return [hashes.count('#'), pluses.count('+')]
 
 #Ouh this was a fun one!
-#Solved on my own!! OH SHIT! 
+#Solved on my own!! OH SHIT!
 def remove_none(lst):
     new_list = []
     for i in lst:
         if i != None:
             new_list.append(i)
+    return new_list
+
+
+def get_word(left, right):
+    return left.title() + right
+
+
+#DOESNT WORK! FIGURE THIS ONE OUT
+def is_palindrome(txt):
+    rev_text = reverse(txt)
+    if txt[::-1] == rev_text:
+        return True
+    else:
+        return False
+
+def first_last(lst):
+    new_list = []
+    new_list.append(lst[0])
+    new_list.append(lst[-1])
     return new_list

@@ -354,12 +354,13 @@ def count_syllables(txt):
     return txt.count()
 
 #Damn gotta figure this out!
+#Got it! Switched logic from is 13, to if not 13
 def unlucky_13(nums):
     new_list = []
     for i in nums:
-        if i % 13 == 0:
+        if i % 13 != 0:
             new_list.append(i)
-        return new_list
+    return new_list
 
 #Couldn't figure this out!!
 def hello_world(num):
@@ -478,3 +479,17 @@ def first_last(lst):
     new_list.append(lst[0])
     new_list.append(lst[-1])
     return new_list
+
+#Returns the mean of number
+def mean(nums):
+    result = sum(nums) / len(nums)
+    return round(result, 1)
+
+#Swaps the cases
+def reverse_case(txt):
+    return txt.swapcase()
+
+
+def find_digit_amount(num):
+    num = str(num)
+    return len(num)

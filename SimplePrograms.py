@@ -232,8 +232,10 @@ def one_odd_one_even(n):
     number = len(n)
 
 #Need ot finish, book marked
+#got it! on my own
 def reverse_title(txt):
-    return txt.swapcase()
+    result = txt.title()
+    return result.swapcase()
 
 
 #Doesn't wokr
@@ -521,3 +523,11 @@ def no_odds(lst):
         if i % 2 == 0:
             no_odds.append(i)
     return no_odds
+
+
+
+def greet_people(names):
+    new_list = []
+    for i in names:
+        new_list.append(i)
+    return new_list.join('Hello, ', new_list[0])

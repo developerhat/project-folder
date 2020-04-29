@@ -467,9 +467,11 @@ def get_word(left, right):
 
 
 #DOESNT WORK! FIGURE THIS ONE OUT
+#GOT IT!
 def is_palindrome(txt):
-    rev_text = reverse(txt)
-    if txt[::-1] == rev_text:
+    #rev_text = reverse(txt)
+    #Dont need rev_text, since the code below is already reversed
+    if txt[::-1] == txt:
         return True
     else:
         return False
@@ -493,3 +495,29 @@ def reverse_case(txt):
 def find_digit_amount(num):
     num = str(num)
     return len(num)
+
+#Checks if all elementsi n list are same
+#Not sure how count does this?
+def jackpot(result):
+    if result.count(result[0]) == len(result):
+        return True
+    else:
+        return False
+
+#DAMN! DID THIS ON MY OWN!
+def count_vowels(txt):
+    vowels = 'aeiou'
+    vowel_count = 0
+    for i in txt:
+        if i in vowels:
+            vowel_count += 1
+    return vowel_count
+
+#Got it down yee yee
+#One of the first few problems I solved on Edabit
+def no_odds(lst):
+    no_odds = []
+    for i in lst:
+        if i % 2 == 0:
+            no_odds.append(i)
+    return no_odds

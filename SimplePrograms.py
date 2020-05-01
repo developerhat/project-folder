@@ -576,16 +576,9 @@ def get_only_evens(nums):
 
 
 #I GOT IT! BUT DOESNT do it in right format, why?
-
+#Oh got it! Just add as an integer 
 def reverse_list(num):
     new_list = []
     for i in str(num):
-        new_list.append(i)
-    return new_list[::-1]
-
-
-def reverse_list(num):
-    new_list = []
-    for i in str(num):
-        new_list.append(i)
+        new_list.append(int(i))
     return new_list[::-1]

@@ -216,11 +216,6 @@ def flipBool(b):
     elif b == False or 0:
         return 1
 
-#Doesn't work yet, want to sum numbers up to integer given
-def add_up_to(n):
-    for i in range(n):
-        i += i
-    return i
 
 def divide(a,b):
     try:
@@ -232,10 +227,8 @@ def one_odd_one_even(n):
     number = len(n)
 
 #Need ot finish, book marked
-#got it! on my own
 def reverse_title(txt):
-    result = txt.title()
-    return result.swapcase()
+    return txt.swapcase()
 
 
 #Doesn't wokr
@@ -524,9 +517,28 @@ def no_odds(lst):
             no_odds.append(i)
     return no_odds
 
-
-
+#Not working?
 def greet_people(names):
+    hello = 'Hello'
+    for i in names:
+        result = hello.join(names)
+    return result
+
+#Doesn't work yet, want to sum numbers up to integer given
+def add_up_to(n):
+    for i in range(0, n):
+        i += i
+    return i
+
+#doesn't work
+def sum_even_nums_in_range(start, stop):
+    for i in range(start, stop):
+        if i % 2 == 0:
+            return sum(i)
+
+
+#OH SHOOT! Got this right no help
+def findLargestNums(lst):
     new_list = []
     for i in names:
         new_list.append(i)
@@ -564,6 +576,13 @@ def get_only_evens(nums):
 
 
 #I GOT IT! BUT DOESNT do it in right format, why?
+
+def reverse_list(num):
+    new_list = []
+    for i in str(num):
+        new_list.append(i)
+    return new_list[::-1]
+
 
 def reverse_list(num):
     new_list = []

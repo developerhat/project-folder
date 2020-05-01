@@ -531,3 +531,42 @@ def greet_people(names):
     for i in names:
         new_list.append(i)
     return new_list.join('Hello, ', new_list[0])
+
+
+#Couldn't get this, return later
+def add_odd_to_n(n):
+    num_list = range(n)
+    for i in num_list:
+        if i % 2 != 0:
+            sum_result = sum(i)
+    return sum_result
+
+
+#def add_odd_to_n(n):
+    #sum = int()
+    #for i in range(n):
+        #if i % 2 != 0:
+
+def get_fillings(sandwich):
+    new_list = []
+    for i in sandwich:
+        if i != 'bread':
+            new_list.append(i)
+    return new_list
+
+
+def get_only_evens(nums):
+    new_list = []
+    for i in range(0, nums):
+        if i % 2 == 0:
+            new_list.append(i)
+    return new_list
+
+
+#I GOT IT! BUT DOESNT do it in right format, why?
+
+def reverse_list(num):
+    new_list = []
+    for i in str(num):
+        new_list.append(i)
+    return new_list[::-1]

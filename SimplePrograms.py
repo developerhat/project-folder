@@ -576,9 +576,14 @@ def get_only_evens(nums):
 
 
 #I GOT IT! BUT DOESNT do it in right format, why?
-#Oh got it! Just add as an integer 
+#Oh got it! Just add as an integer
 def reverse_list(num):
     new_list = []
     for i in str(num):
         new_list.append(int(i))
     return new_list[::-1]
+
+
+#?? Doesn't work
+def measure_the_depth(lst):
+    return str(lst).count('[]')

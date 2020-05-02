@@ -587,3 +587,30 @@ def reverse_list(num):
 #?? Doesn't work
 def measure_the_depth(lst):
     return str(lst).count('[]')
+
+
+def is_avg_whole(arr):
+    result = sum(arr) / len(arr)
+    if result.is_integer():
+        return True
+    else:
+        return False
+
+#Got it!
+
+def divisible(lst):
+    result = 1
+    for i in lst: #This for loop returns the product of all ele in list
+        result = result * i
+    if result % sum(lst) == 0:
+        return True
+    else:
+        return False
+
+#EZ
+#Tried doing it in 1 line initially: return(abs(sum(lst))), but didn't work 
+def get_abs_sum(lst):
+    new_list = []
+    for i in lst:
+        new_list.append(abs(i))
+    return sum(new_list)

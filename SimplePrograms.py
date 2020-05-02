@@ -638,9 +638,15 @@ def sum_even_nums_in_range(start, stop):
             even_nums.append(i)
     return sum(even_nums)
 
+#got this!
+#Could also use count = 0, count=+1
 def count_evens(nums):
     even_nums = []
     for num in nums:
         if num % 2 == 0:
             even_nums.append(num)
     return len(even_nums)
+
+
+def big_diff(nums):
+    return max(nums) - min(nums)

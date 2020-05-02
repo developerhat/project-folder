@@ -530,11 +530,7 @@ def add_up_to(n):
         i += i
     return i
 
-#doesn't work
-def sum_even_nums_in_range(start, stop):
-    for i in range(start, stop):
-        if i % 2 == 0:
-            return sum(i)
+
 
 
 #OH SHOOT! Got this right no help
@@ -608,9 +604,43 @@ def divisible(lst):
         return False
 
 #EZ
-#Tried doing it in 1 line initially: return(abs(sum(lst))), but didn't work 
+#Tried doing it in 1 line initially: return(abs(sum(lst))), but didn't work
 def get_abs_sum(lst):
     new_list = []
     for i in lst:
         new_list.append(abs(i))
     return sum(new_list)
+
+
+#Work in progress, bookmarked
+def mirror(lst):
+    new_list = []
+    for i in lst:
+        new_list.append(i)
+    new_list.append(lst[::-1])
+    return new_list
+
+#Thought for sure this would work for 2D matrix
+#Only works w/ 1 array
+def sum_of_evens(lst):
+    even_list = []
+    for i in lst:
+        if (i % 2 == 0):
+            even_list.append(i)
+    return sum(even_list)
+
+
+#doesn't work
+def sum_even_nums_in_range(start, stop):
+    even_nums = []
+    for i in range(start, stop):
+        if i % 2 == 0:
+            even_nums.append(i)
+    return sum(even_nums)
+
+def count_evens(nums):
+    even_nums = []
+    for num in nums:
+        if num % 2 == 0:
+            even_nums.append(num)
+    return len(even_nums)

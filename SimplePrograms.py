@@ -687,7 +687,7 @@ def reverse_and_not(i):
     return i.join(result)
 
 #Increment +1 for odd, -1 for even
-#Got 'em! Getting better!! 
+#Got 'em! Getting better!!
 def transform(lst):
     final_list = []
     for i in lst:
@@ -698,3 +698,11 @@ def transform(lst):
             i += 1
             final_list.append(i)
     return final_list
+
+#Remove 1st last not complete 
+def remove_first_last(txt):
+    new_word = ''
+    for i in txt:
+        new_word.append(i[0])
+        new_word.append(i[-1])
+    return txt

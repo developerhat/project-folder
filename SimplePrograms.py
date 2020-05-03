@@ -408,10 +408,6 @@ def k_to_k(n, k):
     else:
         return False
 
-#Want to count digits
-def length(str):
-    for i in str:
-        return str.count(i)
 
 #Got from hacker rank
 def conditional(n):
@@ -647,6 +643,58 @@ def count_evens(nums):
             even_nums.append(num)
     return len(even_nums)
 
-
+#CodingBat
 def big_diff(nums):
     return max(nums) - min(nums)
+#CodingBat
+def make_ends(nums):
+    new_list = []
+    new_list.append(nums[0])
+    new_list.append(nums[-1])
+    return new_list
+
+
+#CodingBat
+def sum2(sums):
+    new_list = []
+    new_list.append(sums[0])
+    new_list.append(sums[1])
+    return sum(new_list)
+
+#1st list nests inside 2nd
+def can_nest(list1,list2):
+    if min(list1) > min(list2) and max(list1) < max(list2):
+        return True
+    else:
+        return False
+
+
+
+#Want to count digits without using len()
+#Got it! Was trying to use a list, but use count in this case
+#Count() doesn't work here
+def length(str):
+    count = 0
+    for i in str:
+        count += 1
+    return count
+
+#Can't figure out the formatting here
+def reverse_and_not(i):
+    result = str(i)
+    i = str(i)
+    i = reversed(i)
+    return i.join(result)
+
+#Increment +1 for odd, -1 for even
+#Got 'em! Getting better!! 
+def transform(lst):
+    final_list = []
+    for i in lst:
+        if i % 2 == 0:
+            i -= 1
+            final_list.append(i)
+        elif i % 2 != 0:
+            i += 1
+            final_list.append(i)
+    return final_list

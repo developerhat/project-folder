@@ -122,11 +122,6 @@ def get_case(str):
     #return any(str.isupper() for i in str)
 
 
-#Doesn't work..
-def sum_first_n_nums(lst, n):
-    for n in range(lst):
-        return sum(n)
-
 
 def has_key(dictionary, key):
     if key in dictionary:
@@ -537,19 +532,6 @@ def findLargestNums(lst):
     return new_list.join('Hello, ', new_list[0])
 
 
-#Couldn't get this, return later
-def add_odd_to_n(n):
-    num_list = range(n)
-    for i in num_list:
-        if i % 2 != 0:
-            sum_result = sum(i)
-    return sum_result
-
-
-#def add_odd_to_n(n):
-    #sum = int()
-    #for i in range(n):
-        #if i % 2 != 0:
 
 def get_fillings(sandwich):
     new_list = []
@@ -699,10 +681,65 @@ def transform(lst):
             final_list.append(i)
     return final_list
 
-#Remove 1st last not complete 
+#Remove 1st last not complete
+#Figure out list slicing notation
 def remove_first_last(txt):
     new_word = ''
     for i in txt:
         new_word.append(i[0])
         new_word.append(i[-1])
     return txt
+
+
+#Couldn't get this, return later
+def add_odd_to_n(n):
+    num_list = range(n)
+    for i in num_list:
+        if i % 2 != 0:
+            sum_result = sum(num_list)
+    return sum_result
+
+
+#def add_odd_to_n(n):
+    #sum = int()
+    #for i in range(n):
+        #if i % 2 != 0:
+
+#Incomplete return later
+def max_total(nums):
+    sorted = sort(nums)
+    result = sum(sorted)
+    return result
+
+#How do you inlcude integer? 1 should return 1,0
+def countdown(start):
+    count = []
+    for i in range(start):
+        count.append(i)
+    return count[::-1]
+
+
+def calculate_scores(txt):
+    return [txt.count('A'), txt.count('B'), txt.count('C')]
+
+
+#Logic practice
+def should_serve_drinks(age, on_break):
+    if age >= 21 and on_break == False:
+        return True
+    elif age >= 21 and on_break == True:
+        return False
+    elif age <= 20 and on_break == False:
+        return False
+    elif age <= 20 and on_break == True:
+        return False
+
+#Doesn't work..
+def sum_first_n_nums(lst, n):
+    for n in range(lst):
+        return sum(n)
+
+#Revised code, nice!!! 
+def sum_first_n_nums(lst, n):
+    first_n_num = lst[:n]
+    return sum(first_n_num)

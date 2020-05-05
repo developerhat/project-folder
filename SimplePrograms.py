@@ -197,12 +197,6 @@ def total_cups(n):
     for x in range(n):
         if x / 6 == 0:
             return n + 1
-
-#Doens't work?
-def word_lengths(lst):
-    for i in lst:
-        return lst.count(len(i))
-
 #WTF? Why isn't this one working. Seems so simple
 #NEver returns 1
 def flipBool(b):
@@ -739,7 +733,42 @@ def sum_first_n_nums(lst, n):
     for n in range(lst):
         return sum(n)
 
-#Revised code, nice!!! 
+#Revised code, nice!!!
 def sum_first_n_nums(lst, n):
     first_n_num = lst[:n]
     return sum(first_n_num)
+
+
+#Doens't work?
+def word_lengths(lst):
+    for i in lst:
+        return lst.count(len(i))
+
+
+#My new solution! Look @ the progress
+def word_lengths(lst):
+    word_lengths = []
+    for i in lst:
+        word_lengths.append(len(i))
+    return word_lengths
+
+#Redid this for memory
+def divisible(lst):
+    product = 1
+    for i in lst:
+        product = i * product
+    if product % sum(lst) == 0:
+        return True
+    else:
+        return False
+
+def transform(lst):
+    new_list = []
+    for i in lst:
+        if i % 2 == 0:
+            i = i -1
+            new_list.append(i)
+        elif i % 2 != 0:
+            i = i + 1
+            new_list.append(i)
+    return new_list

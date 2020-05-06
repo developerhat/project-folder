@@ -786,9 +786,17 @@ def can_nest(list1, list2):
     else:
         return False
 
-#Solve this tonight!
+#Redid this for memory
 def word_lengths(lst):
     word_lengths = []
     for i in lst:
-        word_lengths.append(i)
-    return [len(word_lengths)]
+        word_lengths.append(len(i))
+    return word_lengths
+
+#redid this one from memory too, nice!! 
+def reverse_list(num):
+    final_list = []
+    num = str(num)
+    for i in num:
+        final_list.append(int(i))
+    return final_list[::-1]

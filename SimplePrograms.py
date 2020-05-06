@@ -772,3 +772,23 @@ def transform(lst):
             i = i + 1
             new_list.append(i)
     return new_list
+
+#Redid this for memory
+#Had to go back & check former answer
+def sum_first_n_nums(lst, n):
+    first_n_num = lst[::n]
+    return sum(first_n_num)
+
+#Logic here, redid for practice
+def can_nest(list1, list2):
+    if min(list1) > min(list2) and max(list1) < max(list2):
+        return True
+    else:
+        return False
+
+#Solve this tonight!
+def word_lengths(lst):
+    word_lengths = []
+    for i in lst:
+        word_lengths.append(i)
+    return [len(word_lengths)]

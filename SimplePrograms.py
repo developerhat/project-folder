@@ -602,14 +602,6 @@ def sum_of_evens(lst):
     return sum(even_list)
 
 
-#doesn't work
-def sum_even_nums_in_range(start, stop):
-    even_nums = []
-    for i in range(start, stop):
-        if i % 2 == 0:
-            even_nums.append(i)
-    return sum(even_nums)
-
 #got this!
 #Could also use count = 0, count=+1
 def count_evens(nums):
@@ -656,11 +648,12 @@ def length(str):
     return count
 
 #Can't figure out the formatting here
+#Getting closer! tried joining while the string is reversed
+#Couldn't use join() method, used my own
 def reverse_and_not(i):
     result = str(i)
     i = str(i)
-    i = reversed(i)
-    return i.join(result)
+    return int(i[::-1] + result)
 
 #Increment +1 for odd, -1 for even
 #Got 'em! Getting better!!
@@ -706,9 +699,10 @@ def max_total(nums):
     return result
 
 #How do you inlcude integer? 1 should return 1,0
+#Figured it out, must add +1 so that it counts itself
 def countdown(start):
     count = []
-    for i in range(start):
+    for i in range(start + 1):
         count.append(i)
     return count[::-1]
 
@@ -793,10 +787,38 @@ def word_lengths(lst):
         word_lengths.append(len(i))
     return word_lengths
 
-#redid this one from memory too, nice!! 
+#redid this one from memory too, nice!!
 def reverse_list(num):
     final_list = []
     num = str(num)
     for i in num:
         final_list.append(int(i))
     return final_list[::-1]
+
+#Got this on my own!
+#Figured out how to "APPEND" to strings
+def detect_word(txt):
+    new_word = ''
+    for i in txt:
+        if i.islower():
+            new_word +=i
+    return new_word
+
+
+#doesn't work, calculation is off by a small margin
+#Probably related to the range
+def sum_even_nums_in_range(start, stop):
+    even_nums = []
+    for i in range(start, stop):
+        if i % 2 == 0:
+            even_nums.append(i)
+    return sum(even_nums)
+
+#Works, but trying to only extract unique elements
+#WIP
+def count_unique(s1, s2):
+    unique_chars = ''
+    for i in s1, s2:
+        if i not in unique_chars:
+            unique_chars += i
+    return len(unique_chars)

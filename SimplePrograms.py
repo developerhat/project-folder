@@ -668,14 +668,7 @@ def transform(lst):
             final_list.append(i)
     return final_list
 
-#Remove 1st last not complete
-#Figure out list slicing notation
-def remove_first_last(txt):
-    new_word = ''
-    for i in txt:
-        new_word.append(i[0])
-        new_word.append(i[-1])
-    return txt
+
 
 
 #Couldn't get this, return later
@@ -822,3 +815,54 @@ def count_unique(s1, s2):
         if i not in unique_chars:
             unique_chars += i
     return len(unique_chars)
+
+
+#Gotem
+def mirror(lst):
+    return lst + lst[-2:]
+
+#Got it on this one! took a lot of trial & error
+def mirror(lst):
+    return lst + lst[-2::-1]
+
+
+#Thought this would be more simple, got it down tho!
+#Nice
+def str_is_in_order(txt):
+    lst = []
+    for i in txt:
+        lst.append(i)
+    lst = sorted(lst)
+    sorted_word = ''.join(lst)
+    if txt == sorted_word:
+        return True
+    else:
+        return False
+
+
+
+#Remove 1st last not complete
+#Figure out list slicing notation
+def remove_first_last(txt):
+    new_word = ''
+    for i in txt:
+        new_word.append(i[0])
+        new_word.append(i[-1])
+    return txt
+
+
+#Remove 1st last not complete
+#Figure out list slicing notation
+def remove_first_last(txt):
+    new_word = []
+    for i in txt:
+        new_word.append(txt[1:-2])
+    return new_word
+
+
+#Got it! Strengthening list comprehension!!!
+def remove_first_last(txt):
+    if len(txt) <= 2:
+        return txt
+    else:
+        return txt[1:-1]

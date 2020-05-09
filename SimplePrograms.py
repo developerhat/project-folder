@@ -585,13 +585,6 @@ def get_abs_sum(lst):
     return sum(new_list)
 
 
-#Work in progress, bookmarked
-def mirror(lst):
-    new_list = []
-    for i in lst:
-        new_list.append(i)
-    new_list.append(lst[::-1])
-    return new_list
 
 #Thought for sure this would work for 2D matrix
 #Only works w/ 1 array
@@ -817,6 +810,55 @@ def count_unique(s1, s2):
             unique_chars += i
     return len(unique_chars)
 
+#Work in progress!
+def filter_digit_length(lst, num):
+    filtered_list = []
+    for i in lst:
+        if len(str(i)) <= len(str(num)):
+            filtered_list.append(i)
+    return filtered_list
+
+#Takes a string & adds all ecen-indexed & odd-indexed together
+#Getting close, but missing the last character.. how
+#Figured it out, using -1 only counts from the right most of the string (in reverse)
+#So, key is to not specify this & use 0:: & 1::
+def index_shuffle(txt):
+    even_words = txt[0::2]
+    odd_words = txt[1::2]
+    return even_words + odd_words
+
+
+#The challenges was to do this without converting to INT, but couldn't figure it out, oh well! Works
+def smaller_num(n1, n2):
+    n1, n2 = int(n1), int(n2)
+    lst = [n1, n2]
+    sorted_list = sorted(lst)
+    return str(min(sorted_list))
+
+#Not complete, WIP, need to yse all()
+def check_all_even(lst):
+    for i in lst:
+        if i % 2 == 0:
+            return True
+        else:
+            return False
+#Work on this! To be continued
+def add_nums(nums):
+    nums = nums.split(', ')
+    return sum(nums)
+
+
+
+
+
+#Work in progress, bookmarked
+def mirror(lst):
+    new_list = []
+    for i in lst:
+        new_list.append(i)
+    new_list.append(lst[::-1])
+    return new_list
+
 
 #Gotem
 def mirror(lst):
@@ -825,6 +867,7 @@ def mirror(lst):
 #Got it on this one! took a lot of trial & error
 def mirror(lst):
     return lst + lst[-2::-1]
+
 
 
 #Thought this would be more simple, got it down tho!
@@ -867,40 +910,3 @@ def remove_first_last(txt):
         return txt
     else:
         return txt[1:-1]
-
-#Work in progress!
-def filter_digit_length(lst, num):
-    filtered_list = []
-    for i in lst:
-        if len(str(i)) <= len(str(num)):
-            filtered_list.append(i)
-    return filtered_list
-
-#Takes a string & adds all ecen-indexed & odd-indexed together
-#Getting close, but missing the last character.. how
-#Figured it out, using -1 only counts from the right most of the string (in reverse)
-#So, key is to not specify this & use 0:: & 1::
-def index_shuffle(txt):
-    even_words = txt[0::2]
-    odd_words = txt[1::2]
-    return even_words + odd_words
-
-
-#The challenges was to do this without converting to INT, but couldn't figure it out, oh well! Works
-def smaller_num(n1, n2):
-    n1, n2 = int(n1), int(n2)
-    lst = [n1, n2]
-    sorted_list = sorted(lst)
-    return str(min(sorted_list))
-
-#Not complete, WIP, need to yse all()
-def check_all_even(lst):
-    for i in lst:
-        if i % 2 == 0:
-            return True
-        else:
-            return False
-#Work on this! To be continued
-def add_nums(nums):
-    nums = nums.split(', ')
-    return sum(nums)

@@ -505,9 +505,8 @@ def no_odds(lst):
 
 #Not working?
 def greet_people(names):
-    hello = 'Hello'
     for i in names:
-        result = hello.join(names)
+        result = 'Hello '.join(i)
     return result
 
 #Doesn't work yet, want to sum numbers up to integer given
@@ -842,13 +841,16 @@ def check_all_even(lst):
             return True
         else:
             return False
+
+
 #Work on this! To be continued
 def add_nums(nums):
     nums = nums.split(', ')
     return sum(nums)
 
 
-
+def add_nums(nums):
+	return sum(eval(nums))
 
 
 #Work in progress, bookmarked
@@ -910,3 +912,110 @@ def remove_first_last(txt):
         return txt
     else:
         return txt[1:-1]
+
+
+#Damn got it down! Noice
+#Nice, got stuck on reverting negative to positive but got it down!!
+
+def negate(lst):
+    negated_list = []
+    for i in lst:
+        if i < 0:
+            i = -i
+            negated_list.append(i)
+        elif i > 0:
+            i = -+i
+            negated_list.append(i)
+    return negated_list
+
+#Works but returns True instead of False for last test in Edabit
+def hurdle_jump(hurdles, jump_height):
+    if len(hurdles) <= 0:
+        return True
+    else:
+        for i in hurdles:
+            if len(hurdles) <= jump_height: #Hurdler can clear height if jump height is less than or equal to hurdle height
+                return True
+            else:
+                return False
+
+
+#2nd attempt, doesn't work
+def hurdle_jump(hurdles, jump_height):
+    if len(hurdles) < 0:
+        return True
+    else:
+        for i in range(hurdles):
+            if jump_height >= i:
+                return True
+            else:
+                return False
+
+
+
+def exists_higher(lst, n):
+    if len(lst) < 0:
+        return False
+    else:
+        for i in lst:
+            if i >= n:
+                return True
+            else:
+                return False
+
+
+def exists_higher(lst, n):
+    for i in lst:
+        if i >= n:
+            return True
+        else:
+            return False
+
+#Wow, keep it simple!!
+#Upper 2 code is complex, no need for the loop. The instructions tricky interpretation
+def exists_higher(lst, n):
+    if len(lst) < 0:
+        return False
+    elif max(lst) >= n:
+        return True
+    else:
+        return False
+
+#Simple problem
+#not completed, adds instead of removing
+def join_path(portion1, portion2):
+    if '/' not in portion1 and portion2:
+        return portion1 + '/' + portion2
+    elif '/' in portion1:
+        return portion1.strip('/') + '/' + portion2
+    elif '/' in portion2:
+        return portion2.strip('/') + '/' + portion2
+
+
+#Returning only words that are 4 letters, WIP
+def is_four_letters(lst):
+    four_letters = []
+    for i in lst:
+        if len(i) == 4:
+            four_letters.append(i)
+    return four_letters
+
+#WIP, look @ bookmark
+def amplify(num):
+    final_list = []
+    for i in range(num):
+        if i % 4 == 0:
+            i = i * 10
+            final_list.append(i)
+        else:
+            final_list.append(i)
+    return final_list
+
+
+#Good problem to solve, keep wokrin
+def index_of_caps(word):
+    cap_indexes = []
+    for i in range(word):
+        if i.isupper():
+            cap_indexes.append(i)
+    return cap_indexes

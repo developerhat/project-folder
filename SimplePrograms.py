@@ -1019,3 +1019,25 @@ def index_of_caps(word):
         if i.isupper():
             cap_indexes.append(i)
     return cap_indexes
+
+
+#Resolved out of memory (Sunday)
+def reverse_list(num):
+    reversed_list = []
+    num = str(num)
+    for i in num:
+        reversed_list.append(int(i))
+    return reversed_list[::-1]
+
+#Resolved out of memory (Sunday)
+def reverse_title(txt):
+    titled_txt = txt.title()
+    return titled_txt.swapcase()
+
+#Resolved out of memory (Sunday)
+def increment_items(lst):
+    new_list = []
+    for i in lst:
+        i += 1
+        new_list.append(i)
+    return new_list

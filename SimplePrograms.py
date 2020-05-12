@@ -149,6 +149,7 @@ def has_same_bread(lst1,lst2):
     else:
         return False
 
+
 def yeahNope(b):
     return "yeah" if b == True else "nope"
 
@@ -1041,3 +1042,38 @@ def increment_items(lst):
         i += 1
         new_list.append(i)
     return new_list
+
+#Redid from memory
+def has_same_bread(lst1, lst2):
+    if lst1[0] == lst2[0] and lst1[-1] == lst2[-1]:
+        return True
+    else:
+        return False
+
+#Needed hints on this one
+def sum_first_n_nums(lst, n):
+    first_n_num = lst[:n]
+    return sum(first_n_num)
+
+#Redid from memory
+def detect_word(txt):
+    new_word = ''
+    for i in txt:
+        if i.islower():
+            new_word += i
+    return new_word
+
+#Memory
+def increment_items(lst):
+    new_list = []
+    for i in lst:
+        i+=1
+        new_list.append(i)
+    return new_list
+
+#Memory 
+def length(s):
+    str_len = 0
+    for i in s:
+        str_len += 1
+    return str_len

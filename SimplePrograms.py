@@ -1071,9 +1071,30 @@ def increment_items(lst):
         new_list.append(i)
     return new_list
 
-#Memory 
+#Memory
 def length(s):
     str_len = 0
     for i in s:
         str_len += 1
     return str_len
+
+#Good string comprehension practice
+def modify_last(txt, n):
+    last_char = txt[-1] * n
+    return txt[0:-1] + last_char
+
+
+#Memory, nice!
+def is_four_letters(lst):
+    four_list = []
+    for i in lst:
+        if len(i) == 4:
+            four_list.append(i)
+    return four_list
+
+#Complete this 
+def spelling(txt):
+    word = []
+    for i in txt:
+        word.append(i)
+    return word

@@ -222,16 +222,6 @@ def reverse_title(txt):
     return txt.swapcase()
 
 
-#Doesn't wokr
-def owofied(sentence):
-    for x in sentence:
-        if x == 'i' or x== 'e':
-            if 'i' in x:
-                x.replace('wi')
-            elif 'e' in x:
-                x.replace('we')
-        return x, sentence
-
 
 def googlify(n):
     if n <= 1:
@@ -1092,9 +1082,68 @@ def is_four_letters(lst):
             four_list.append(i)
     return four_list
 
-#Complete this 
+#Complete this
 def spelling(txt):
     word = []
     for i in txt:
         word.append(i)
     return word
+
+#Practiced using eval
+def greater_than_one(frac):
+    if eval(frac) > 1:
+        return True
+    else:
+        return False
+
+
+#Doesn't work (OLD CODE)
+def owofied(sentence):
+    for x in sentence:
+        if x == 'i' or x == 'e':
+            if 'i' in x:
+                x.replace('wi')
+            elif 'e' in x:
+                x.replace('we')
+        return x, sentence
+
+
+#New code, WIP
+def owofied(sentence):
+    new_sentence = ''
+    for x in sentence:
+        if x == 'i':
+            x.replace(x, 'wi')
+            new_sentence += x
+        elif x == 'e':
+            x.replace(x, 'we')
+            new_sentence += x
+    return x, new_sentence
+
+#endswith() practice
+def check_ending(str1, str2):
+    if str1.endswith(str2):
+        return True
+    else:
+        return False
+
+#WIP
+#Trying to strip chars from sentence
+def strip_sentence(txt, chars):
+    new_string = txt.replace(chars, '') #Only works with 1 letter
+    return new_string
+
+#WIP
+def both(n1, n2):
+    if n1 and n2 > 0 or n1 and n2 < 0 or n1 and n2 == 0:
+        return True
+    else:
+        return False
+
+#Doesn't include number itself
+def find_even_nums(num):
+    new_list = []
+    for i in range(num):
+        if i % 2 == 0:
+            new_list.append(i)
+    return new_list

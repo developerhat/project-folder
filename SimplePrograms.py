@@ -1147,3 +1147,54 @@ def find_even_nums(num):
         if i % 2 == 0:
             new_list.append(i)
     return new_list
+
+
+#Redid from memory
+def reverse_and_not(i):
+    str_integer = str(i)
+    return int(str_integer[::-1] + str_integer)
+
+#Memory
+def reverse_title(txt):
+    title_case = txt.title()
+    return title_case.swapcase()
+
+
+def get_case(txt):
+    for i in txt:
+        if i.isupper():
+            return 'upper'
+        elif i.islower():
+            return 'lower'
+        elif i != i.lower() and i != i.upper():
+            return 'mixed'
+
+
+
+def get_case(txt):
+    for i in txt:
+        if not i.isupper() and not i.islower():
+            return 'mixed'
+        elif i.islower():
+            return 'lower'
+        elif i.isupper():
+            return 'upper'
+
+
+#3 attempts from memory, nice!
+def get_case(txt):
+    mixed_case = not txt.isupper() and not txt.islower()
+    for i in txt:
+        if mixed_case == True:
+            return 'mixed'
+        elif i.islower():
+            return 'lower'
+        elif i.isupper():
+            return 'upper'
+
+#Memory 
+def word_lengths(lst):
+    wordlen_list = []
+    for i in lst:
+        wordlen_list.append(len(i))
+    return wordlen_list

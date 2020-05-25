@@ -1192,9 +1192,34 @@ def get_case(txt):
         elif i.isupper():
             return 'upper'
 
-#Memory 
+#Memory
 def word_lengths(lst):
     wordlen_list = []
     for i in lst:
         wordlen_list.append(len(i))
     return wordlen_list
+
+#Counting cap words, memory
+def count_caps(word):
+    cap_letters = 0
+    for i in word:
+        if i.isupper():
+            cap_letters += 1
+    return cap_letters
+#Memory
+def modify_last(txt, n):
+    last_letter = txt[-1]
+    return txt[0:-1] + (last_letter * n)
+
+#memory
+def long_burp(num):
+    num = num - 1
+    word = "Burp"
+    return word[0:2] + (word[2] * num) + word[2::]
+
+#Memory :)
+def is_it_true(relation):
+    if eval(relation) == True:
+        return True
+    else:
+        return False

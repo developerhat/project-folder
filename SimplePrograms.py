@@ -1223,3 +1223,15 @@ def is_it_true(relation):
         return True
     else:
         return False
+
+#Memory
+def minus_one(lst):
+    new_list = lst[0:-1]
+    return new_list
+
+#Memory
+def reverse_title(txt):
+    first_cap = txt.title()
+    return first_cap.swapcase()
+
+3

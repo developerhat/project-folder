@@ -1234,4 +1234,37 @@ def reverse_title(txt):
     first_cap = txt.title()
     return first_cap.swapcase()
 
-3
+#Failed attempt, revisit :(
+def fizz_buzz(num):
+    for i in range(num):
+        if i % 3 == 0 and i % 5 == 0:
+            return 'FizzBuzz'
+        elif i % 3 == 0:
+            return 'Fizz'
+        elif i % 5 == 0:
+            return 'Buzz'
+
+#Memory
+def max_difference(num):
+    return max(num) - min(num)
+
+#Memory
+def rev(n):
+    n = abs(n)
+    n = str(n)
+    return n[::-1]
+
+#Memory, nice!
+def word_lengths(lst):
+    wordlen_list = []
+    for i in lst:
+        wordlen_list.append(len(i))
+    return wordlen_list
+
+#Memory, nice 3
+def get_multiplied_list(lst):
+    mult_list = []
+    for i in lst:
+        i = i*2
+        mult_list.append(i)
+    return mult_list

@@ -1207,7 +1207,7 @@ def count_caps(word):
             cap_letters += 1
     return cap_letters
 #Memory
-def modify_last(txt, n):
+def modify_last(txt, n):7
     last_letter = txt[-1]
     return txt[0:-1] + (last_letter * n)
 

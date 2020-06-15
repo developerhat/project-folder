@@ -1268,3 +1268,29 @@ def get_multiplied_list(lst):
         i = i*2
         mult_list.append(i)
     return mult_list
+
+#memory
+def reverse_list(num):
+    num = str(num)
+    num_list = []
+    for i in num:
+        num_list.append(int(i))
+    return num_list[::-1]
+
+#Easy
+def first_last(name):
+    return name[0] + name[-1]
+
+#Easy
+def repetition(txt, n):
+    return txt*n
+
+#Easy
+#Took awhile tho, needed hints
+#Keep working!
+def detect_word(txt):
+    low_word = ''
+    for i in txt:
+        if i.islower():
+            low_word += i
+    return low_word

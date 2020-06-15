@@ -1294,3 +1294,16 @@ def detect_word(txt):
         if i.islower():
             low_word += i
     return low_word
+
+#From w3resource
+def csv_input(nums):
+    nums_list = []
+    for i in str(nums):
+        nums_list.append(int(i))
+    return nums_list
+
+#INteresting one! Goal is to get 5+55+555
+def w3_problem1(n):
+    n2 = str(n) + str(n)
+    n3 = str(n) + str(n) + str(n)
+    return n + int(n2) + int(n3)

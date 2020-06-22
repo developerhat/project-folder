@@ -1307,3 +1307,21 @@ def w3_problem1(n):
     n2 = str(n) + str(n)
     n3 = str(n) + str(n) + str(n)
     return n + int(n2) + int(n3)
+
+
+#New problem, nice
+def yen_to_usd(yen):
+    return round(yen / 107.5, 2)
+
+#Doesn't work invalid syntax if 2=2? Solve
+def is_it_true(relation):
+    if eval(relation) == True:
+        return True
+    else:
+        return False
+#Memory! Nice!
+def length(s):
+    count = 0
+    for i in s:
+        count +=1
+    return count

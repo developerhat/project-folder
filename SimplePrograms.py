@@ -839,10 +839,12 @@ def add_nums(nums):
     nums = nums.split(', ')
     return sum(nums)
 
-
 def add_nums(nums):
 	return sum(eval(nums))
 
+def add_nums(nums):
+    nums = nums.split(', ')
+    return nums
 
 #Work in progress, bookmarked
 def mirror(lst):
@@ -1338,5 +1340,20 @@ def highest_digit(num):
     num = str(num)
     num_list = []
     for x in num:
-        num_list.append(x)
+        num_list.append(int(x))
     return max(num_list)
+
+
+def is_odd(num):
+    if num % 2 == 1:
+        return True
+    else:
+        return False
+
+def new_word(word):
+    return word[1::]
+
+
+def football_points(wins, draws, losses):
+    wins = wins * 3
+    return wins + draws + losses 

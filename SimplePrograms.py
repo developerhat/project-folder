@@ -1325,3 +1325,18 @@ def length(s):
     for i in s:
         count +=1
     return count
+
+
+def first_last(name):
+    return name[0] + name[-1]
+
+
+def potatoes(potato):
+	return potato.count('potato')
+
+def highest_digit(num):
+    num = str(num)
+    num_list = []
+    for x in num:
+        num_list.append(x)
+    return max(num_list)

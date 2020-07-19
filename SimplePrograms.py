@@ -1356,4 +1356,5 @@ def new_word(word):
 
 def football_points(wins, draws, losses):
     wins = wins * 3
-    return wins + draws + losses 
+    losses = 0
+    return wins + draws + losses

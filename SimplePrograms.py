@@ -1358,3 +1358,14 @@ def football_points(wins, draws, losses):
     wins = wins * 3
     losses = 0
     return wins + draws + losses
+
+
+def give_me_something(a):
+    new_word = 'something ' + a
+    return new_word
+
+def bomb(txt):
+    if 'bomb' in txt.lower():
+        return 'Duck!!!'
+    else:
+        return "There is no bomb, relax"

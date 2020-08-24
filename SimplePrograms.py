@@ -1369,3 +1369,28 @@ def bomb(txt):
         return 'Duck!!!'
     else:
         return "There is no bomb, relax"
+
+#trying to return last index item but not working
+def last_ind(lst):
+    if not:
+        return None
+    else:
+        return lst[-1]
+
+#Figure out eval syntax
+def calculate(num1, num2, op):
+    op = str(op)
+    return eval(op, num1, num2)
+
+def modify_last(txt, n):
+    last_char = txt[-1] * n
+    return txt[0:-1] + last_char
+
+def highest_digit(num):
+    num_list = []
+    for i in str(num):
+        num_list.append(int(i))
+    return max(num_list)
+
+def repetition(txt, n):
+    return txt * n 

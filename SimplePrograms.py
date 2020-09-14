@@ -1393,4 +1393,17 @@ def highest_digit(num):
     return max(num_list)
 
 def repetition(txt, n):
-    return txt * n 
+    return txt * n
+
+#Complicated this answer haha
+def count_true(lst):
+    true_list = []
+    for i in lst:
+        if i == True:
+            true_list.append(i)
+    return true_list.count(True)
+
+
+def get_fillings(sandwich):
+    fillings = sandwich[1:-1]
+    return fillings

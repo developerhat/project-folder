@@ -1407,3 +1407,17 @@ def count_true(lst):
 def get_fillings(sandwich):
     fillings = sandwich[1:-1]
     return fillings
+
+
+def reverse_list(num):
+    lst = []
+    for i in str(num):
+        lst.append(int(i))
+    return lst[::-1]
+
+def equation(s):
+    return eval(s)
+
+def reverse_title(txt):
+    rev_text = txt.title()
+    return rev_text.swapcase()

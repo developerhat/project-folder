@@ -1421,3 +1421,29 @@ def equation(s):
 def reverse_title(txt):
     rev_text = txt.title()
     return rev_text.swapcase()
+
+def last_ind(lst):
+    if len(lst) < 1:
+        return None
+    else:
+	    return lst[-1]
+
+
+def second_largest(lst):
+    sorted_list = []
+    for i in lst:
+        sorted_list.append(i)
+    sorted_list.sort()
+    return sorted_list[-2]
+
+def str_odd_or_even(word):
+    if len(word) % 2 == 0:
+        return True
+    else:
+        return False
+
+def list_to_string(lst):
+    string = ''
+    for i in lst:
+        string += str(i)
+    return string

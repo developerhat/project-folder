@@ -1447,3 +1447,45 @@ def list_to_string(lst):
     for i in lst:
         string += str(i)
     return string
+
+
+def list_less_than_100(lst):
+    if sum(lst) < 100:
+        return True
+    else:
+        return False
+
+def make_pair(num1, num2):
+    return [num1, num2]
+
+def count_vowels(txt):
+    vowels = 'a'
+    vowel_count = 0
+    for i in txt:
+        if vowels in txt:
+            vowel_count +=1
+    return vowel_count
+    #Look at old program.. damn good effort
+
+#Failed this, couldn't figure out how to return # of parameters passsed
+def number_args():
+    obj_list = []
+    for i in input:
+        obj_list.append(i)
+    return len(obj_list)
+
+
+def min_max(nums):
+    return [min(nums),max(nums)]
+
+#Damn! Got this!!!
+def detect_word(txt):
+    word = ''
+    for i in txt:
+        if i.islower():
+            word += i
+    return word
+
+#1 line 
+def get_fillings(sandwich):
+    return sandwich[1:-1]

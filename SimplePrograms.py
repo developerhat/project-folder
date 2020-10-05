@@ -1486,6 +1486,31 @@ def detect_word(txt):
             word += i
     return word
 
-#1 line 
+#1 line
 def get_fillings(sandwich):
     return sandwich[1:-1]
+
+
+def bomb(txt):
+    if 'bomb' in txt.lower():
+        return 'Duck!!!'
+    else:
+        return 'There is no bomb, relax.'
+
+def less_than_100(lst):
+    if sum(lst) < 100:
+        return True
+    else:
+        return False
+
+def say_hello_bye(name, num):
+    if num == 1:
+        return "Hello " + name.title()
+    elif num == 0:
+        return "Bye " + name.title()
+
+def list_to_string(lst):
+    str = []
+    for i in lst:
+        str.append(str(i))
+    return str 

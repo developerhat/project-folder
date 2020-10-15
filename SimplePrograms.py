@@ -1510,7 +1510,108 @@ def say_hello_bye(name, num):
         return "Bye " + name.title()
 
 def list_to_string(lst):
-    str = []
+    word = ''
     for i in lst:
-        str.append(str(i))
-    return str 
+        word += str(i)
+    return word
+
+def num_to_dashes(num):
+    return num * '-'
+
+
+def no_odds(lst):
+    even_vals = []
+    for i in lst:
+        if i % 2 == 0:
+            even_vals.append(i)
+    return even_vals
+
+def unlucky_13(nums):
+    no_13_lst = []
+    for i in nums:
+        if i % 13 != 0:
+            no_13_lst.append(i)
+    return no_13_lst
+
+def number_syllables(word):
+    return word.count('-') + 1
+
+def is_avg_whole(arr):
+    avg_lst_num = sum(arr) / len(arr)
+    if avg_lst_num.is_integer():
+        return True
+    else:
+        return False
+
+def highest_digit(num):
+    num_list = []
+    for i in str(num):
+        num_list.append(int(i))
+    return max(num_list)
+
+
+def cap_me(lst):
+    capped_list = []
+    for i in lst:
+        capped_list.append(i.title())
+    return capped_list
+
+def word_lengths(lst):
+    word_length = []
+    for i in lst:
+        word_length.append(len(i))
+    return word_length
+    #Needed help on this one, went back & looked at code
+
+
+def check_num_inlist(lst, el):
+    if el in lst:
+        return True
+    else:
+        return False
+
+def smaller_num(n1, n2):
+    n1 = int(n1)
+    n2 = int(n2)
+    min_num = min(n1, n2)
+    return str(min_num)
+
+#Can't figure this one out!
+def countdown(start):
+    pass
+
+
+def reverse_capitalize(txt):
+    rev_text = txt[::-1]
+    return rev_text.swapcase()
+
+def is_identical(s):
+    pass
+#Solve this!!
+
+
+def get_abs_sum(lst):
+    abs_list = []
+    for i in lst:
+        abs_list.append(abs(i))
+    return sum(abs_list)
+
+def get_multiplied_list(lst):
+    mult_list = []
+    for i in lst:
+        mult_list.append(i*2)
+    return mult_list
+
+def last_ind(lst):
+    if len(lst) > 0:
+        return lst[-1]
+    else:
+        return None
+
+def hash_plus_count(txt):
+    hashes = txt.count('#')
+    pluses = txt.count('+')
+    if len(txt) > 0:
+        return [hashes, pluses]
+    else:
+        return [0,0]

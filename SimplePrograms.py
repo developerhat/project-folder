@@ -1615,3 +1615,32 @@ def hash_plus_count(txt):
         return [hashes, pluses]
     else:
         return [0,0]
+#Do this one! Check if all lower case
+#checked former answer on this one
+#Couldn't get hthe syntax down
+def get_case(txt):
+    if all(txt) == txt.isupper():
+        return 'upper'
+    elif all(txt) == txt.islower():
+        return 'lower'
+    else:
+        return 'mixed'
+
+def difference_max_min(lst):
+    return max(lst) - min(lst)
+
+def is_palindrome(txt):
+    if txt == txt[::-1]:
+        return True
+    else:
+        return False
+
+def even_odd_partition(lst):
+    even_list = []
+    odd_list = []
+    for i in lst:
+        if i % 2 == 0:
+            even_list.append(i)
+        else:
+            odd_list.append(i)
+    return [even_list,odd_list]

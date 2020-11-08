@@ -1644,3 +1644,99 @@ def even_odd_partition(lst):
         else:
             odd_list.append(i)
     return [even_list,odd_list]
+
+def calculate_scores(txt):
+    a = txt.count('A')
+    b = txt.count('B')
+    c = txt.count('C')
+    return [a,b,c]
+
+def min_max(nums):
+    min_max_lst = min(nums), max(nums)
+    return list(min_max_lst)
+
+def reverse_and_not(i):
+    i = str(i)
+    reversed = i[::-1] + i
+    return int(reversed)
+
+#Needed help on this one
+def list_to_string(lst):
+    strng = ''
+    for i in lst:
+        strng += str(i) #Had to add str() here
+    return strng
+
+def is_leap(year):
+    if year % 400 == 0:
+        return True
+    elif year % 4 == 0 and year % 100 != 0:
+        return True
+    else:
+        return False
+
+def find_digit_amount(num):
+    result = len(str(num))
+    return result
+
+def get_fillings(sandwich):
+    return sandwich[1:-1]
+
+#Easy problems from edabit
+def sort_by_length(lst):
+    sorted_list = []
+    for i in lst:
+        sorted_list.append(i)
+    return sorted(sorted_list)
+
+def double_char(txt):
+    word = ''
+    for i in txt:
+        word += (i*2)
+    return word
+#Good shit!
+def next_in_line(lst, num):
+    if len(lst) <= 0:
+        return 'No list has been selected'
+    else:
+        lst.append(num)
+        del lst[0]
+        return lst
+
+def oddeven(lst):
+    odd_list = []
+    even_list = []
+    for i in lst:
+        if i % 2 == 0:
+            even_list.append(i)
+        else:
+            odd_list.append(i)
+    if len(odd_list) > len(even_list):
+        return True
+    else:
+        return False
+
+def filter_list(l):
+    int_only = []
+    for i in l:
+        if isinstance(i, int):
+            int_only.append(i)
+    return int_only
+
+def greet_people(names):
+    guests = []
+    for i in names:
+        guests.append('Hello ',i)
+    return str(guests)
+
+def greet_people(names):
+    for i in names:
+        result = 'Hello '.join(i)
+    return result
+
+def secret_society(friends):
+    friends.sort()
+    society_name = ''
+    for i in friends:
+        society_name += str(i[0])
+    return society_name.upper()

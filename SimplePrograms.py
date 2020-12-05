@@ -2026,3 +2026,43 @@ def numbers_sum(lst):
         elif isinstance(i, int):
             integers.append(i)
     return sum(integers)
+
+
+def reverse(txt):
+    rev_text = ''
+    for i in txt:
+        rev_text += i
+    rev_text = rev_text[::-1]
+    return rev_text.swapcase()
+
+def count_vowels(txt):
+    vowel_count = 0
+    vowels = 'aeiou'
+    for i in txt:
+        if i.lower() in vowels:
+            vowel_count += 1
+    return vowel_count
+
+def return_only_integer(lst):
+    ints_only = []
+    bool_only = []
+    for i in lst:
+        if isinstance(i, bool):
+            bool_only.append(i)
+        elif isinstance(i, int):
+            ints_only.append(i)
+    return ints_only
+
+def unique_sort(lst):
+    no_duplicates = []
+    for i in lst:
+        if i not in no_duplicates:
+            no_duplicates.append(i)
+    return sorted(no_duplicates)
+
+
+def is_symmetrical(num):
+    if str(num) == str(num)[::-1]:
+        return True
+    else:
+        return False

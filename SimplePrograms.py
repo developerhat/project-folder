@@ -1740,3 +1740,289 @@ def secret_society(friends):
     for i in friends:
         society_name += str(i[0])
     return society_name.upper()
+
+#was over complicating it, commented out!
+#Good shit!
+def cap_to_front(s):
+    low_digits = ''
+    hi_digits = ''
+    for i in s:
+        if i.islower():
+            low_digits += str(i)
+        else:
+            hi_digits += str(i)
+    result = sorted(hi_digits+low_digits)
+    #sorted_str = ''
+    #for x in result:
+#        sorted_str += str(x)
+    return hi_digits +low_digits
+
+def is_valid_pin(pin):
+    if len(pin) == 4 or len(pin) == 6:
+        for i in pin:
+            if i.isdigit():
+                return True
+            else:
+                return False
+    else:
+        return False
+
+
+#Almost.. only returns index position of 1st upper
+def index_of_caps(word):
+    in_list = []
+    for x in word:
+        if x.isupper():
+            in_list.append(word.index(x))
+    return in_list
+
+
+
+def filter_list(lst):
+    no_strings = []
+    for i in lst:
+        if i.isdigit():
+            no_strings.append(i)
+    return no_strings
+
+#Only returns integers
+def filter_list(lst):
+    no_strings = []
+    for i in lst:
+        if isinstance(i, int):
+            no_strings.append(i)
+    return no_strings
+
+def return_only_integer(lst):
+    int_only = []
+    for i in lst:
+        if isinstance(i, int):
+            int_only.append(i)
+    return int_only
+
+#? Getting lost here. REplaces some vowels but not all..
+def replace_vowels(txt, ch):
+    vowels = ['a','e','i','o','u']
+    for vowels in txt:
+    #    if i in vowels:
+        result = txt.replace(vowels, ch)
+    return result
+
+def mean(num):
+    sum_list = []
+    for i in str(num):
+        sum_list.append(int(i))
+    result = sum(sum_list)
+    final_result = result / len(str(num))
+    return final_result
+
+
+def count_vowels(txt):
+    vowels = 'aeiou'
+    vowel_count = 0
+    for i in txt:
+        if i in vowels:
+            vowel_count += 1
+    return vowel_count
+
+def oddeven(lst):
+    even_nums = []
+    odd_nums = []
+    for i in lst:
+        if i % 2 == 0:
+            even_nums.append(i)
+        else:
+            odd_nums.append(i)
+    if len(odd_nums) > len(even_nums):
+        return True
+    else:
+        return False
+
+def to_list(num):
+    num_list = []
+    for i in str(num):
+        num_list.append(int(i))
+    return num_list
+
+def to_number(lst):
+    num_result = ''
+    for i in lst:
+        num_result += str(i)
+    return int(num_result)
+
+def alphabet_soup(txt):
+    sorted_txt = []
+    for i in txt:
+        sorted_txt.append(i)
+    result = sorted(sorted_txt)
+    str_result = ''
+    for i in result:
+        str_result += str(i)
+    return str_result
+
+def is_symmerical(num):
+    rev_txt = str(num)
+    if rev_txt[::-1] == str(num):
+        return True
+    else:
+        return False
+
+def count_vowels(txt):
+    vowels = 'aeiou'
+    vowel_count = 0
+    for i in txt:
+        if i in vowels:
+            vowel_count += 1
+    return vowel_count
+
+def oddeven(lst):
+    even_nums = []
+    odd_nums = []
+    for i in lst:
+        if i % 2 == 0:
+            even_nums.append(i)
+        else:
+            odd_nums.append(i)
+    if len(odd_nums) > len(even_nums):
+        return True
+    else:
+        return False
+
+def next_in_line(lst, num):
+    new_list = []
+    if len(lst) <= 0:
+        return 'No list has been selected'
+    else:
+        for i in lst:
+            new_list.append(i)
+    new_list.append(num)
+    return new_list[1::]
+
+def double_char(txt):
+    new_char = ''
+    for i in txt:
+        new_char += (i*2)
+    return new_char
+
+def split(txt):
+    vowels = 'aeiou'
+    vowel_letters = []
+    cons_letters = []
+    for i in txt:
+        if i in vowels:
+            vowel_letters.append(i)
+        else:
+            cons_letters.append(i)
+    #return vowel_letters, cons_letters
+    #vowel_str = ''
+    #cons_str = ''
+    #for x in vowel_letters, cons_letters:
+    #    if x in vowels:
+    #        vowel_str += x
+    #    else:
+    #        cons_str += x
+    #return vowel_str
+
+
+#WOW! Simple solution! Look at what you tried doing while lit^^
+def split(txt):
+    vowels = 'aeiou'
+    vowel_letters = ''
+    cons_letters = ''
+    for i in txt:
+        if i in vowels:
+            vowel_letters += i
+        else:
+            cons_letters += i
+    return vowel_letters + cons_letters
+    #return vowel_letters, cons_letters
+    #vowel_str = ''
+    #cons_str = ''
+    #for x in vowel_letters, cons_letters:
+    #    if x in vowels:
+    #        vowel_str += x
+    #    else:
+    #        cons_str += x
+    #return vowel_str
+
+def sort_descending(num):
+    nums = []
+    for i in str(num):
+        nums.append(int(i))
+    sorted_nums = sorted(nums)
+    rev_sorted_nums = sorted_nums[::-1]
+    str_sorted = ''
+    for i in rev_sorted_nums:
+        str_sorted += str(i)
+    return int(str_sorted)
+
+#Damn! Almost had this one
+#Go back to this
+#Negative numbers shouldn't be counted, bookmarked
+def sum_two_smallest_nums(lst):
+    lowest_num = min(lst)
+    for i in lst:
+        if i == lowest_num:
+            lst.remove(i)
+    second_low = min(lst)
+    return lowest_num + second_low
+
+
+#Damn! CANT figure this out! So close
+#Using edge case [] empty string still returns 0,0
+#Keep solving this
+
+def sum_neg(lst):
+    positive_nums = 0
+    negative_nums = []
+    for i in lst:
+        if i > 0:
+            positive_nums += 1
+        elif i < 0:
+            negative_nums.append(i)
+        elif len(lst) < 1:
+            return lst
+    neg_sum = sum(negative_nums)
+    final_list = []
+    final_list.append(positive_nums)
+    final_list.append(neg_sum)
+    return final_list
+
+def sum_neg(lst):
+    positive_nums = 0
+    negative_nums = []
+    for i in lst:
+        if len(lst) < 1:
+            return lst
+        elif i > 0:
+            positive_nums += 1
+        elif i < 0:
+            negative_nums.append(i)
+    neg_sum = sum(negative_nums)
+    final_list = []
+    if len(final_list) > 0:
+        return lst
+    else:
+        final_list.append(positive_nums)
+        final_list.append(neg_sum)
+        return final_list
+
+def numbers_sum(lst):
+    integers = []
+    not_int = []
+    for i in lst:
+        if isinstance(i, int):
+            integers.append(i)
+        elif isinstance(i, bool):
+            not_int.append(i)
+    return sum(integers)
+
+def numbers_sum(lst):
+    integers = []
+    not_int = []
+    for i in lst:
+        if isinstance(i, bool):
+            not_int.append(i)
+        elif isinstance(i, int):
+            integers.append(i)
+    return sum(integers)

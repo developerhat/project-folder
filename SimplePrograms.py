@@ -1723,17 +1723,6 @@ def filter_list(l):
             int_only.append(i)
     return int_only
 
-def greet_people(names):
-    guests = []
-    for i in names:
-        guests.append('Hello ',i)
-    return str(guests)
-
-def greet_people(names):
-    for i in names:
-        result = 'Hello '.join(i)
-    return result
-
 def secret_society(friends):
     friends.sort()
     society_name = ''
@@ -1800,13 +1789,6 @@ def return_only_integer(lst):
             int_only.append(i)
     return int_only
 
-#? Getting lost here. REplaces some vowels but not all..
-def replace_vowels(txt, ch):
-    vowels = ['a','e','i','o','u']
-    for vowels in txt:
-    #    if i in vowels:
-        result = txt.replace(vowels, ch)
-    return result
 
 def mean(num):
     sum_list = []
@@ -2103,3 +2085,76 @@ def numbers_sum(lst):
         elif isinstance(i, int):
             numbers_only.append(i)
     return sum(numbers_only)
+
+
+#? Getting lost here. REplaces some vowels but not all..
+#GOt it! Simple, just had wrong indexes in places
+#Didn't wrk tho was exclude vowels
+def replace_vowels(txt, ch):
+    vowels = 'aeiou'
+    for i in txt:
+        if i.lower() in vowels:
+            result = txt.replace(i, ch)
+    return result
+
+#Someone elses solutoin
+def replace_vowels(txt, ch):
+
+    for char in txt:
+
+        if char in "aeiou":
+
+            txt = txt.replace(char,ch)
+
+    return txt
+
+def sum2(a, b):
+    summed_ab = []
+    summed_ab.append(int(a))
+    summed_ab.append(int(b))
+    return str(sum(summed_ab))
+
+#Couldn't figure this out
+def square_digits(n):
+    squared_nums = 1
+    for i in str(n):
+         i = (i**2)
+         squared_nums += str(i)
+    return squared_nums
+
+#Can't figure out join()
+def greet_people(names):
+    guests = []
+    for i in names:
+        guests.append('Hello ',i)
+    return str(guests)
+
+def greet_people(names):
+    for i in names:
+        result = 'Hello '.join(i)
+    return result
+
+def steps_to_convert(txt):
+    step_count = 0
+    for i in txt:
+        if i.isupper():
+            step_count += 1
+    return step_count
+
+#Ouh nice! got this w little help!
+def index_of_caps(word):
+    index_pos = []
+    for i in word:
+        if i.isupper():
+            index_pos.append(word.index(i))
+    return index_pos
+
+#Ouh nice! Figured this out on my own! list comprehension! 
+def last(a, n):
+    last_n_ele = []
+    if n > len(a):
+        return 'invalid'
+    elif n == 0:
+        return last_n_ele
+    else:
+        return a[-n:]

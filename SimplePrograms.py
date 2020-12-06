@@ -2066,3 +2066,40 @@ def is_symmetrical(num):
         return True
     else:
         return False
+
+def alphabet_soup(txt):
+    sorted_str = []
+    for i in txt:
+        sorted_str.append(i)
+    res_sorted = ''
+    sorted_str = sorted(sorted_str)
+    for i in sorted_str:
+        res_sorted+= i
+    return res_sorted
+
+def next_in_line(lst, num):
+    if len(lst) < 1:
+        return 'No list has been selected'
+    else:
+        lst.append(num)
+        return lst[1::]
+
+
+def reverse(txt):
+    return txt.swapcase()[::-1]
+
+def letters_only(txt):
+    letters_only = ''
+    for i in txt:
+        if i.isalpha():
+            letters_only += i
+    return letters_only
+
+def numbers_sum(lst):
+    numbers_only = []
+    for i in lst:
+        if isinstance(i, bool):
+            continue #Woah! Actually error handled here!
+        elif isinstance(i, int):
+            numbers_only.append(i)
+    return sum(numbers_only)

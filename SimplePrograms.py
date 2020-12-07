@@ -2149,7 +2149,7 @@ def index_of_caps(word):
             index_pos.append(word.index(i))
     return index_pos
 
-#Ouh nice! Figured this out on my own! list comprehension! 
+#Ouh nice! Figured this out on my own! list comprehension!
 def last(a, n):
     last_n_ele = []
     if n > len(a):
@@ -2158,3 +2158,56 @@ def last(a, n):
         return last_n_ele
     else:
         return a[-n:]
+
+
+def letters_only(txt):
+    str_only = ''
+    for i in txt:
+        if i.isalpha():
+            str_only += i
+    return str_only
+
+#Fuck! Get this right
+#Not feeling today
+def replace_vowels(txt, ch):
+    vowels = 'aeiou'
+    for i in txt:
+        if i in vowels:
+            txt.replace(i,ch)
+    return txt
+
+#did it different here, actually removed
+#Before would jsut call lst[1] not actually removing just passing test
+def stand_in_line(lst, num):
+    if len(lst) < 1:
+        return 'No list has been selected'
+    else:
+        lst.append(num)
+        lst.remove(lst[0])
+        return lst
+
+#did it differently again!
+def remove_vowels(txt):
+    vowels = 'aeiou'
+    no_vows = ''
+    for i in txt:
+        if i.lower() not in vowels:
+            no_vows += i
+    return no_vows
+
+def sum2(a, b):
+    ab_list = []
+    ab_list.append(int(a))
+    ab_list.append(int(b))
+    return str(sum(ab_list))
+
+def split(txt):
+    vowels = 'aeiou'
+    vowel_str = ''
+    cons_str = ''
+    for i in txt:
+        if i.lower() in vowels:
+            vowel_str += i
+        else:
+            cons_str += i
+    return vowel_str + cons_str

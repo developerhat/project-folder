@@ -1682,12 +1682,6 @@ def find_digit_amount(num):
 def get_fillings(sandwich):
     return sandwich[1:-1]
 
-#Easy problems from edabit
-def sort_by_length(lst):
-    sorted_list = []
-    for i in lst:
-        sorted_list.append(i)
-    return sorted(sorted_list)
 
 def double_char(txt):
     word = ''
@@ -2211,3 +2205,54 @@ def split(txt):
         else:
             cons_str += i
     return vowel_str + cons_str
+
+#Easy problems from edabit
+#Sort by length, not alphabetical
+def sort_by_length(lst):
+    sorted_list = []
+    for i in lst:
+        sorted_list.append(i)
+    return sorted(sorted_list)
+
+def remove_dups(lst):
+    no_dupes = []
+    for i in lst:
+        if i not in no_dupes:
+            no_dupes.append(i)
+    return no_dupes
+
+#Almost there! Need to implement error check to handle negative ints
+#Why is the -723 showing up in this case?
+
+#AH! So tough. Ended up just making separate list then doing logic on that
+#Remove method wasn't working as expected
+def sum_two_smallest_nums(lst):
+    two_nums = []
+    no_neg = []
+    for i in lst:
+        if i < 0:
+            continue
+        else:
+            no_neg.append(i)
+    no_neg = sorted(no_neg)
+    two_nums.append(no_neg[0])
+    two_nums.append(no_neg[1])
+    return sum(two_nums)
+
+
+def sum_neg(lst):
+    positive_count = 0
+    neg_nums = []
+    result = []
+    if len(lst) < 1:
+        return []
+    elif len(lst) > 1:
+        for i in lst:
+            if i < 0:
+                neg_nums.append(i)
+            else:
+                positive_count += 1
+    sum_neg_nums = sum(neg_nums)
+    result.append(positive_count)
+    result.append(sum_neg_nums)
+    return result

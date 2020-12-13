@@ -2256,3 +2256,46 @@ def sum_neg(lst):
     result.append(positive_count)
     result.append(sum_neg_nums)
     return result
+
+
+#an't figure this one out
+def is_vowel_sandwich(s):
+    vowels = 'aeiou'
+    if len(s) == 3:
+        if s[0] and s[2] not in vowels and s[1] in vowels:
+            return True
+        elif s[1] not in vowels or s[0] and s[2] in vowels:
+            return False
+    else:
+        return False
+
+def remove_enemies(names, enemies):
+    no_enemies = []
+    for i in names:
+        if i not in enemies:
+            no_enemies.append(i)
+    return no_enemies
+
+def asc_des_none(lst, s):
+    if s == 'Asc':
+        return sorted(lst)
+    elif s == 'Des':
+        return sorted(lst)[::-1]
+    elif s == 'None':
+        return lst
+
+def remove_special_characters(txt):
+    special_char = ".,`?!@#$%^&*\()+=[]{}<>~|':;"
+    no_chars = ''
+    for i in txt:
+        if i not in special_char:
+            no_chars += i
+    return no_chars
+
+def remove_special_characters(txt):
+    special_char = ".!@#$%^&*\()"
+    no_chars = ''
+    for i in txt:
+        if i.isalnum():
+            no_chars += i
+    return no_chars

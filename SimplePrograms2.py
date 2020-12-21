@@ -41,3 +41,14 @@ def sum_two_smallest_nums(lst):
     two_lowest_nums.append(positives[0])
     two_lowest_nums.append(positives[1])
     return sum(two_lowest_nums)
+
+def unique_lst(lst):
+    unique_positives = []
+    for i in lst:
+        if i > 0:
+            unique_positives.append(i)
+    no_dupes = []
+    for i in unique_positives:
+        if i not in no_dupes:
+            no_dupes.append(i)
+    return no_dupes

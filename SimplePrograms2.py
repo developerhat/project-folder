@@ -52,3 +52,37 @@ def unique_lst(lst):
         if i not in no_dupes:
             no_dupes.append(i)
     return no_dupes
+
+
+def filter_list(lst):
+    ints_only = []
+    for i in lst:
+        if isinstance(i, bool):
+            continue
+        elif isinstance(i, int):
+            ints_only.append(i)
+    return ints_only
+
+def index_of_caps(word):
+    index_pos = []
+    for i in word:
+        if i.isupper():
+            index_pos.append(word.index(i))
+    return index_pos
+
+def setify(lst):
+    no_dupes = []
+    for i in lst:
+        if i not in no_dupes:
+            no_dupes.append(i)
+    return no_dupes
+
+def cap_to_front(s):
+    cap_letters = ''
+    low_letters = ''
+    for i in s:
+        if i.isupper():
+            cap_letters += i
+        else:
+            low_letters += i
+    return cap_letters + low_letters

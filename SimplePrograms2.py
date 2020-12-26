@@ -86,3 +86,22 @@ def cap_to_front(s):
         else:
             low_letters += i
     return cap_letters + low_letters
+
+
+def sum_two_smallest_nums(lst):
+    two_smallest_nums = []
+    no_negs = []
+    for i in lst:
+        if i > 0:
+            no_negs.append(i)
+    no_negs = sorted(no_negs)
+    two_smallest_nums.append(no_negs[0])
+    two_smallest_nums.append(no_negs[1])
+    return sum(two_smallest_nums)
+
+def replace_vowels(txt, ch):
+    vowels = 'aeiou'
+    for i in txt:
+        if i in vowels:
+            txt = txt.replace(i, ch)
+    return txt

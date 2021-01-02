@@ -125,3 +125,13 @@ def unique_sort(lst):
         if i not in no_dupes:
             no_dupes.append(i)
     return sorted(no_dupes)
+
+def stutter(word):
+    new_word = ''
+    for i in word:
+        new_word += i
+    return new_word[:2] + '... ' + new_word[:2] + '... ' + new_word +'?'
+
+
+def reverse(txt):
+    return txt.swapcase()[::-1]

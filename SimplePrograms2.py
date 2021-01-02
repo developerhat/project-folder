@@ -105,3 +105,23 @@ def replace_vowels(txt, ch):
         if i in vowels:
             txt = txt.replace(i, ch)
     return txt
+
+#Weird & inefficent solution
+def is_in_order(txt):
+    sorted_txt = []
+    nosorttxt = []
+    for i in txt:
+        sorted_txt.append(i)
+        nosorttxt.append(i)
+    if sorted(sorted_txt) == nosorttxt:
+        return True
+    else:
+        return False
+
+
+def unique_sort(lst):
+    no_dupes = []
+    for i in lst:
+        if i not in no_dupes:
+            no_dupes.append(i)
+    return sorted(no_dupes)

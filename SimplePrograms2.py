@@ -133,5 +133,23 @@ def stutter(word):
     return new_word[:2] + '... ' + new_word[:2] + '... ' + new_word +'?'
 
 
-def reverse(txt):
-    return txt.swapcase()[::-1]
+def sum_two_smallest_nums(lst):
+    two_nums = []
+    no_negs = []
+    for i in lst:
+        if i > 0:
+            no_negs.append(i)
+        else:
+            continue
+    no_negs = sorted(no_negs)
+    two_nums.append(no_negs[0])
+    two_nums.append(no_negs[1])
+    return sum(two_nums)
+
+
+def unique_sort(lst):
+    no_dupes = []
+    for i in lst:
+        if i not in no_dupes:
+            no_dupes.append(i)
+    return sorted(no_dupes)

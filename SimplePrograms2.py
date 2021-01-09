@@ -153,3 +153,32 @@ def unique_sort(lst):
         if i not in no_dupes:
             no_dupes.append(i)
     return sorted(no_dupes)
+
+#Come back & do this one!
+def remove_enemies(names, enemies):
+    if len(enemies) < 1:
+        return names
+    else:
+        return names.remove(enemies)
+
+def is_harshad(num):
+    harshad_num = []
+    if num == 0:
+        return False
+    else:
+        for i in str(num):
+            harshad_num.append(int(i))
+            harshad_num = sum(harshad_num)
+            if int(num) % harshad_num == 0:
+                return True
+            else:
+                return False
+
+def filter_list(lst):
+    ints_only = []
+    for i in lst:
+        if isinstance(i, bool):
+            continue
+        elif isinstance(i, int):
+            ints_only.append(i)
+    return ints_only

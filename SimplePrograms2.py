@@ -173,12 +173,3 @@ def is_harshad(num):
                 return True
             else:
                 return False
-
-def filter_list(lst):
-    ints_only = []
-    for i in lst:
-        if isinstance(i, bool):
-            continue
-        elif isinstance(i, int):
-            ints_only.append(i)
-    return ints_only

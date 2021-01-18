@@ -173,3 +173,22 @@ def is_harshad(num):
                 return True
             else:
                 return False
+
+
+def society_name(friends):
+    secret_word = ''
+    word = []
+    for i in friends:
+        word.append(i[0])
+    word = sorted(word)
+    for i in word:
+        secret_word += i
+    return secret_word
+
+
+def remove_dups(lst):
+    no_dupes = []
+    for i in lst:
+        if i not in no_dupes:
+            no_dupes.append(i)
+    return no_dupes

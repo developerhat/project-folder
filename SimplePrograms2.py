@@ -184,11 +184,3 @@ def society_name(friends):
     for i in word:
         secret_word += i
     return secret_word
-
-
-def remove_dups(lst):
-    no_dupes = []
-    for i in lst:
-        if i not in no_dupes:
-            no_dupes.append(i)
-    return no_dupes

@@ -184,3 +184,15 @@ def society_name(friends):
     for i in word:
         secret_word += i
     return secret_word
+
+
+def sum_two_smallest_nums(lst):
+    two_nums = []
+    pos_nums = []
+    for i in lst:
+        if i > 0:
+            pos_nums.append(i)
+    pos_nums = sorted(pos_nums)
+    two_nums.append(pos_nums[0])
+    two_nums.append(pos_nums[1])
+    return sum(two_nums)

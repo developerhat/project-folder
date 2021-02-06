@@ -196,3 +196,24 @@ def sum_two_smallest_nums(lst):
     two_nums.append(pos_nums[0])
     two_nums.append(pos_nums[1])
     return sum(two_nums)
+
+def disemvowel(string):
+    vowels = 'aeiou'
+    for i in string:
+        if i.lower() in vowels:
+            string = string.replace(i, '')
+    return string
+
+
+def xo(s):
+    x_count = 0
+    o_count = 0
+    for i in s:
+        if i.lower() == 'x':
+            x_count += 1
+        elif i.lower() == 'o':
+            o_count += 1
+    if x_count == o_count:
+        return True
+    else:
+        return False

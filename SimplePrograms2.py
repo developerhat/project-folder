@@ -217,3 +217,33 @@ def xo(s):
         return True
     else:
         return False
+
+
+def validate_pin(pin):
+    digits = []
+    if len(pin) == 4 or len(pin) == 6:
+        for
+    else:
+        return 'nope'
+
+def secret_society(friends):
+    result = ''
+    initials = []
+    for i in friends:
+        initials.append(i[0])
+    initials = sorted(initials)
+    for i in initials:
+        result += i
+    return result
+
+def array_plus_array(arr1, arr2):
+    lst_1 = sum(arr1)
+    lst_2 = sum(arr2)
+    return lst_1 + lst_2
+
+def shortcut(s):
+    vowels = 'aeiou'
+    for i in s:
+        if i in vowels:
+            s = s.replace(i, '')
+    return s

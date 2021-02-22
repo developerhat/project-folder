@@ -247,3 +247,12 @@ def shortcut(s):
         if i in vowels:
             s = s.replace(i, '')
     return s
+
+
+def opposite(number):
+    if number < 0:
+        return abs(number)
+    elif number >= 1:
+        return -number
+    elif number == 0:
+        return 0

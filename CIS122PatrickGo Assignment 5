@@ -1,0 +1,12 @@
+#PatrickGo Assignment 5.py
+#Author: Patrick Go
+#Date last modified: 02/21/21
+#Purpose: Functions with Return
+
+#Program uses: Using functions to calculate given data & return a result
+
+#Assignment 5 - Functions with Return
+
+#Problem 1
+
+def get_avg(nums):

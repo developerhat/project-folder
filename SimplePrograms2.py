@@ -256,3 +256,13 @@ def opposite(number):
         return -number
     elif number == 0:
         return 0
+
+def feast(beast, dish):
+    if dish[0] == beast[0] and dish[-1] == beast[-1]:
+        return True
+    else:
+        return False
+
+
+def remove_char(s):
+    return s[1:-1]

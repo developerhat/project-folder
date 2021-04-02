@@ -264,5 +264,8 @@ def feast(beast, dish):
         return False
 
 
-def remove_char(s):
-    return s[1:-1]
+def mean(num):
+    sum_digits = []
+    for i in str(num):
+        sum_digits.append(int(i))
+    return sum(sum_digits) / len(str(num))

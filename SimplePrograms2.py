@@ -263,9 +263,15 @@ def feast(beast, dish):
     else:
         return False
 
-
-def mean(num):
-    sum_digits = []
-    for i in str(num):
-        sum_digits.append(int(i))
-    return sum(sum_digits) / len(str(num))
+def max_redigit(num):
+    if num < 1 or num == 0 or len(str(num)) != 3:
+        return None
+    else:
+        lst_num = []
+        for i in str(num):
+            lst_num.append(int(i))
+        lst_num = sorted(lst_num)[::-1]
+        res = ''
+        for i in lst_num:
+            res += str(i)
+        return int(res)

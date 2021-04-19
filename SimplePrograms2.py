@@ -275,3 +275,12 @@ def max_redigit(num):
         for i in lst_num:
             res += str(i)
         return int(res)
+
+def reverse(arg):
+    if isinstance(arg, bool):
+        if arg == True:
+            return False
+        else:
+            return True
+    else:
+        return 'boolean expected'
